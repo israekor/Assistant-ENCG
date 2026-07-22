@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: chat-service
+
+  datasource:
+    url: jdbc:postgresql://${CHAT_DB_HOST:localhost}:${CHAT_DB_PORT:5432}/${CHAT_DB_NAME:chatbot_db}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 3000
+            readTimeout: 5000
+            loggerLevel: full
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost/auth/realms/encg-assistant
+          jwk-set-uri: http://keycloak:8080/auth/realms/encg-assistant/protocol/openid-connect/certs
+
+services:
+  user:
+    url: ${SERVICES_USER_URL}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.springframework.transaction: TRACE
+
+    feign: DEBUG
+    ma.encg.chatservice.client: DEBUG
+
+server:
+  port: 8080
+
+  servlet:
+    context-path: /api
+
+  forward-headers-strategy: framework

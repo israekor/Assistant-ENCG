@@ -1,0 +1,7 @@
+.venv/
+app/__pychache__/
+app/.idea/
+app/exceptions/__pychache__/
+app/routes/__pychache__/
+app/schemas/__pychache__/
+app/services/__pychache__/
