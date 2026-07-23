@@ -17,11 +17,15 @@ const conversationService = {
     return api.post('/conversations/link-guest');
   },
 
-  archive(id) {
+  archiveConversation(id) {
     return api.patch(`/conversations/${id}/archive`);
   },
 
-  delete(id) {
+  restoreConversation(id) {
+    return api.patch(`/conversations/${id}/restore`);
+  },
+
+  deleteConversation(id) {
     return api.delete(`/conversations/${id}`);
   },
 };

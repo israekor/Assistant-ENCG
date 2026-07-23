@@ -23,6 +23,8 @@ public interface ConversationService {
 
     void archiveConversation(UUID conversationId);
 
+    void restoreConversation(UUID conversationId);
+
     void deleteConversation(UUID conversationId);
 
     void generateTitleIfNecessary(Conversation conversation);

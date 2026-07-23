@@ -1,5 +1,4 @@
 import {
-    MessageSquare,
     History,
     User,
     Settings,
@@ -8,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { NavLink, useNavigate } from "react-router-dom";
+import ConversationItem from "../sidebar/ConversationItem";
 
 import useAuth from "../../auth/useAuth";
 import useChat from "../../hooks/useChat";
@@ -19,12 +19,8 @@ export default function Sidebar() {
     const navigate = useNavigate();
 
     const {
-
         conversations,
-        currentConversation,
-        openConversation,
         newConversation
-
     } = useChat();
 
     const handleNewConversation = () => {
@@ -32,14 +28,6 @@ export default function Sidebar() {
         newConversation();
 
         navigate("/chat");
-
-    };
-
-    const handleOpenConversation = async (conversation) => {
-
-        await openConversation(conversation);
-
-        navigate(`/chat/${conversation.idConversation}`);
 
     };
 
@@ -88,53 +76,10 @@ export default function Sidebar() {
 
                         conversations.map(conversation => (
 
-                            <button
-
+                            <ConversationItem
                                 key={conversation.idConversation}
-
-                                onClick={() =>
-                                    handleOpenConversation(conversation)
-                                }
-
-                                className={`
-
-                                    w-full
-                                    text-left
-                                    flex
-                                    items-center
-                                    gap-3
-                                    px-3
-                                    py-3
-                                    rounded-lg
-                                    transition
-
-                                    ${
-
-                                        currentConversation?.idConversation ===
-                                        conversation.idConversation
-
-                                        ?
-
-                                        "bg-emerald-600 text-white"
-
-                                        :
-
-                                        "hover:bg-slate-800"
-
-                                    }
-
-                                `}
-                            >
-
-                                <MessageSquare size={18} />
-
-                                <span className="truncate">
-
-                                    {conversation.title}
-
-                                </span>
-
-                            </button>
+                                conversation={conversation}
+                            />
 
                         ))
 

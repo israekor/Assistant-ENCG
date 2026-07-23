@@ -182,6 +182,14 @@ public class ConversationServiceImpl
     }
 
     @Override
+    public void restoreConversation(UUID conversationId) {
+
+        Conversation conversation = findCurrentUserConversation(conversationId);
+
+        conversation.setStatus(Status.ACTIVE);
+    }
+
+    @Override
     public void deleteConversation(UUID conversationId) {
 
         Conversation conversation = findCurrentUserConversation(conversationId);

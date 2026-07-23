@@ -1,6 +1,7 @@
 package ma.encg.chatservice.repository;
 
 import ma.encg.chatservice.entity.Conversation;
+import ma.encg.chatservice.entity.enums.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,6 +16,11 @@ public interface ConversationRepository extends JpaRepository<Conversation, UUID
     Optional<Conversation> findByIdConversationAndUserId(
             UUID conversationId,
             UUID userId
+    );
+
+    List<Conversation> findByUserIdAndStatusOrderByUpdatedAtDesc(
+            UUID userId,
+            Status status
     );
 
     List<Conversation> findByUserIdOrderByUpdatedAtDesc(UUID userId);

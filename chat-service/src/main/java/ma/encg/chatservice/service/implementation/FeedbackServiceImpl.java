@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import ma.encg.chatservice.entity.Feedback;
 import ma.encg.chatservice.entity.ResponseAi;
 import ma.encg.chatservice.entity.enums.FeedbackType;
+import ma.encg.chatservice.exception.FeedbackNotFoundException;
+import ma.encg.chatservice.exception.MessageNotFoundException;
 import ma.encg.chatservice.repository.FeedbackRepository;
 import ma.encg.chatservice.service.FeedbackService;
 import ma.encg.chatservice.service.ResponseService;
@@ -22,30 +24,42 @@ public class FeedbackServiceImpl implements FeedbackService {
     private final ResponseService responseService;
 
     @Override
-    public Feedback addFeedback(UUID responseId,
+    public Feedback saveOrUpdateFeedback(UUID responseId,
                                 FeedbackType type,
                                 String comment) {
 
         ResponseAi response =
                 responseService.getResponse(responseId);
 
-        Feedback feedback = Feedback.builder()
-                .feedbackType(type)
-                .comment(comment)
-                .responseAi(response)
-                .build();
+        Feedback feedback = feedbackRepository
+                .findByResponseAiIdResponse(responseId)
+                .orElseGet(() -> {
+                    Feedback f = Feedback.builder()
+                            .responseAi(response)
+                            .build();
+
+                    response.setFeedback(f);
+
+                    return f;
+                });
+
+        feedback.setFeedbackType(type);
+        feedback.setComment(comment);
 
         return feedbackRepository.save(feedback);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public List<Feedback> getResponseFeedback(UUID responseId) {
+    public Feedback getFeedback(UUID responseId) {
 
         responseService.getResponse(responseId);
 
-        return feedbackRepository
-                .findByResponseAiIdResponse(responseId);
+        return feedbackRepository.findByResponseAiIdResponse(responseId)
+                .orElseThrow(() ->
+                        new FeedbackNotFoundException(
+                                "Feedback introuvable."
+                        ));
     }
 
 }

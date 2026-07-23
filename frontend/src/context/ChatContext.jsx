@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 import chatService from "../services/chatService";
 import conversationService from "../services/conversationService";
@@ -64,7 +65,10 @@ export function ChatProvider({ children }) {
                         ? "user"
                         : "assistant",
 
-                content: message.content
+                content: message.content,
+                responseId: message.responseId,
+                feedback: message.feedback
+
 
             }));
 
@@ -88,8 +92,8 @@ export function ChatProvider({ children }) {
     const newConversation = () => {
 
         setCurrentConversation(null);
-
         setMessages([]);
+        setLoadingConversation(false);
 
     };
 
@@ -168,7 +172,11 @@ export function ChatProvider({ children }) {
 
                 role: "assistant",
 
-                content: data.answer
+                content: data.answer,
+                
+                responseId: data.responseId,
+
+                feedback: null
 
             };
 
@@ -211,6 +219,72 @@ export function ChatProvider({ children }) {
 
     };
 
+    //-------------------- Envoyer un feedback -------------------
+    const sendFeedback = async (responseId, feedbackType) => {
+
+        await feedbackService.addFeedback(
+            responseId,
+            {
+                feedbackType,
+                comment: null
+            }
+        );
+        toast.success("Merci pour votre retour !");
+
+        setMessages(prev =>
+            prev.map(message =>
+                message.responseId === responseId
+                    ? {
+                        ...message,
+                        feedback: {
+                            feedbackType
+                        }
+                    }
+                    : message
+            )
+        );
+
+    };
+
+    //-------------------- Archiver une conversation -------------------
+    const archiveConversation = async (conversationId) => {
+
+        await conversationService.archiveConversation(conversationId);
+        toast.success("Conversation archivée");
+
+        setConversations(prev => prev.filter(c => c.idConversation !== conversationId) );
+
+        if (currentConversation?.idConversation === conversationId) {
+            newConversation();
+        }
+    };
+
+    //-------------------- Restaurer une conversation -------------------
+    const restoreConversation = async (conversationId) => {
+
+        await conversationService.restoreConversation(conversationId);
+
+        toast.success("Conversation restaurée");
+
+        await loadConversations();
+
+    };
+
+    //-------------------- Supprimer une conversation -------------------
+    const deleteConversation = async (conversationId) => {
+
+        await conversationService.deleteConversation(conversationId);
+        toast.success("Conversation supprimée");
+
+        setConversations(prev =>
+            prev.filter(c => c.idConversation !== conversationId)
+        );
+
+        if (currentConversation?.idConversation === conversationId) {
+            newConversation();
+        }
+    };
+
     return (
 
         <ChatContext.Provider
@@ -228,6 +302,10 @@ export function ChatProvider({ children }) {
                 newConversation,
                 addConversation,
                 sendMessage,
+                sendFeedback,
+                archiveConversation,
+                deleteConversation,
+                restoreConversation,
 
                 setCurrentConversation,
                 setMessages

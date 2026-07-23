@@ -3,18 +3,17 @@ package ma.encg.chatservice.service;
 import ma.encg.chatservice.entity.Feedback;
 import ma.encg.chatservice.entity.enums.FeedbackType;
 
-import java.util.List;
 import java.util.UUID;
 
 public interface FeedbackService {
 
-    Feedback addFeedback(
+    Feedback saveOrUpdateFeedback(
             UUID responseId,
             FeedbackType type,
             String comment
     );
 
-    List<Feedback> getResponseFeedback(
+    Feedback getFeedback(
             UUID responseId
     );
 

@@ -32,7 +32,7 @@ public class SecurityConfig {
                         ).permitAll()
                         .requestMatchers("/chat").permitAll()
                         .requestMatchers("/conversations/**").authenticated()
-                        .requestMatchers("/responses/**").authenticated()
+                        .requestMatchers("/responses/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 ->

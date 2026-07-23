@@ -123,6 +123,25 @@ public class ConversationController {
     }
 
     @Operation(
+            summary = "Restaurer une conversation"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "204",
+                    description = "Conversation restaurée avec succès"
+            ),
+            @ApiResponse(responseCode = "404", description = "Conversation introuvable")
+    })
+    @PatchMapping("/{conversationId}/restore")
+    public ResponseEntity<Void> restoreConversation(
+            @PathVariable UUID conversationId) {
+
+        conversationService.restoreConversation(conversationId);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @Operation(
             summary = "Supprimer une conversation"
     )
     @ApiResponses({

@@ -1,6 +1,14 @@
 import { Bot, User } from "lucide-react";
+import FeedbackButtons from "./FeedbackButtons";
 
-export default function ChatMessage({ role, content }) {
+export default function ChatMessage({
+    role,
+    content,
+    responseId,
+    feedback,
+    onFeedback
+}) {
+
     const isUser = role === "user";
 
     return (
@@ -29,6 +37,14 @@ export default function ChatMessage({ role, content }) {
                 <p className="leading-7 whitespace-pre-wrap">
                     {content}
                 </p>
+
+                {!isUser && responseId && (
+                    <FeedbackButtons
+                        responseId={responseId}
+                        feedback={feedback}
+                        onFeedback={onFeedback}
+                    />
+                )}
             </div>
 
             {isUser && (

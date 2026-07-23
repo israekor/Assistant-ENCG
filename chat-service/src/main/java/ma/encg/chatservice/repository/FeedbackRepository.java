@@ -8,7 +8,6 @@ import java.util.UUID;
 
 public interface FeedbackRepository extends JpaRepository<Feedback, UUID> {
 
-    List<Feedback> findByResponseAiIdResponse(UUID idResponse);
+    Optional<Feedback> findByResponseAiIdResponse(UUID idResponse);
 
-    Optional<Feedback> findById(UUID id);
 }

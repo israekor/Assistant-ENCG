@@ -22,7 +22,8 @@ export default function ChatPage() {
         loadingConversation,
         loadingMessage,
         openConversation,
-        sendMessage
+        sendMessage,
+        sendFeedback
 
     } = useChat();
 
@@ -144,10 +145,11 @@ export default function ChatPage() {
                             <ChatMessage
 
                                 key={message.id}
-
                                 role={message.role}
-
                                 content={message.content}
+                                responseId={message.responseId}
+                                feedback={message.feedback}
+                                onFeedback={sendFeedback}
 
                             />
 

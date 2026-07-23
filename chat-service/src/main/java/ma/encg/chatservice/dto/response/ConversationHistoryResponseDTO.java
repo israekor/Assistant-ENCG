@@ -21,5 +21,7 @@ public class ConversationHistoryResponseDTO {
 
     private UUID responseId;
 
+    private FeedbackResponseDTO feedback;
+
     private LocalDateTime createdAt;
 }

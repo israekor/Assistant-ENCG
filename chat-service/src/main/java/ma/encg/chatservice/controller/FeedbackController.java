@@ -53,7 +53,7 @@ public class FeedbackController {
             @Valid
             @RequestBody FeedbackRequestDTO request) {
 
-        Feedback feedback = feedbackService.addFeedback(
+        Feedback feedback = feedbackService.saveOrUpdateFeedback(
                 responseId,
                 request.getFeedbackType(),
                 request.getComment()
@@ -65,26 +65,23 @@ public class FeedbackController {
 
     @Operation(
             summary = "Afficher les feedbacks d'une réponse",
-            description = "Retourne tous les feedbacks associés à une réponse générée par l'IA."
+            description = "Retourne le feedback associés à une réponse générée par l'IA."
     )
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Liste des feedbacks récupérée avec succès"),
             @ApiResponse(responseCode = "404", description = "Réponse IA introuvable"),
     })
     @GetMapping("/{responseId}/feedback")
-    public ResponseEntity<List<FeedbackResponseDTO>> getResponseFeedback(
+    public ResponseEntity<FeedbackResponseDTO> getResponseFeedback(
             @Parameter(
                     description = "Identifiant de la réponse IA",
                     required = true
             )
             @PathVariable UUID responseId
     ){
-        List<FeedbackResponseDTO> feedbacks =
-                feedbackService.getResponseFeedback(responseId)
-                        .stream()
-                        .map(feedbackMapper::toResponseDTO)
-                        .toList();
-
-        return ResponseEntity.ok(feedbacks);
+        Feedback feedback = feedbackService.getFeedback(responseId);
+        return ResponseEntity.ok(
+                feedbackMapper.toResponseDTO(feedback)
+        );
     }
 }

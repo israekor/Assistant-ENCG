@@ -1,8 +1,19 @@
-import api from './api.js';
+import api from './api';
 
 const feedbackService = {
-  send(data) {
-    return api.post('/chat/feedback', data);
+  async addFeedback(responseId, feedbackType, comment = '') {
+    const { data } = await api.post(`/responses/${responseId}/feedback`, {
+      feedbackType,
+      comment,
+    });
+
+    return data;
+  },
+
+  async getFeedback(responseId) {
+    const { data } = await api.get(`/responses/${responseId}/feedback`);
+
+    return data;
   },
 };
 

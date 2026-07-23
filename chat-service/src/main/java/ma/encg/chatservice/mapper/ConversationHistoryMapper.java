@@ -7,13 +7,14 @@ import ma.encg.chatservice.entity.enums.ChatRole;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring", imports = ChatRole.class)
+@Mapper(componentModel = "spring", imports = ChatRole.class, uses = FeedbackMapper.class)
 public interface ConversationHistoryMapper {
 
     @Mapping(target = "id", source = "idMessage")
     @Mapping(target = "role", expression = "java(ChatRole.USER)")
     @Mapping(target = "content", source = "content")
     @Mapping(target = "responseId", ignore = true)
+    @Mapping(target = "feedback", ignore = true)
     @Mapping(target = "createdAt", source = "createdAt")
     ConversationHistoryResponseDTO toUserDTO(Message message);
 
@@ -21,6 +22,7 @@ public interface ConversationHistoryMapper {
     @Mapping(target = "role", expression = "java(ChatRole.ASSISTANT)")
     @Mapping(target = "content", source = "content")
     @Mapping(target = "responseId", source = "idResponse")
+    @Mapping(target = "feedback", source = "feedback")
     @Mapping(target = "createdAt", source = "createdAt")
     ConversationHistoryResponseDTO toAssistantDTO(ResponseAi response);
 

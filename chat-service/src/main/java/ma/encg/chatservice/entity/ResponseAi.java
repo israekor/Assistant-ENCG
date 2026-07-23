@@ -28,8 +28,11 @@ public class ResponseAi extends BaseEntity {
     @JoinColumn(name = "id_message", nullable = false, unique = true)
     private Message message;
 
-    @OneToMany(mappedBy = "responseAi", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Feedback> feedbacks;
+    @OneToOne(mappedBy = "responseAi",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    private Feedback feedback;
 
     @OneToMany(mappedBy = "responseAi", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ChunkResponse> chunkResponses;

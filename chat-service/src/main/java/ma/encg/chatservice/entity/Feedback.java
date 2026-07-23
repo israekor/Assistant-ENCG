@@ -26,7 +26,11 @@ public class Feedback extends BaseEntity {
     @Column(length = 500)
     private String comment;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_response", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(
+            name = "id_response",
+            unique = true,
+            nullable = false
+    )
     private ResponseAi responseAi;
 }
