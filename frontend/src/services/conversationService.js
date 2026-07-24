@@ -32,6 +32,11 @@ const conversationService = {
   deleteConversation(id) {
     return api.patch(`/conversations/${id}`);
   },
+
+  async deleteAll() {
+    const response = await api.delete('/conversations');
+    return response.data;
+  },
 };
 
 export default conversationService;

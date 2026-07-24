@@ -222,6 +222,23 @@ public class ConversationServiceImpl
         conversation.setStatus(Status.CLOSED);
     }
 
+    @Override
+    public void deleteAllCurrentUserConversations() {
+
+        UUID userId = currentUserService
+                .getCurrentUser()
+                .getIdUser();
+
+        List<Conversation> conversations =
+                conversationRepository.findAllByUserId(userId);
+        if (conversations.isEmpty()) {
+            return;
+        }
+
+        conversationRepository.deleteAll(conversations);
+
+    }
+
     private String generateTemporaryTitle(String message) {
 
         String title = message.trim();

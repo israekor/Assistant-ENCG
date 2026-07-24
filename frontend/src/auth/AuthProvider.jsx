@@ -36,7 +36,7 @@ export default function AuthProvider({ children }) {
 
             setAuthenticated(authenticated);
             setToken(AuthService.getToken());
-            setProfile(AuthService.getProfile());
+            setProfile(AuthService.getProfile() ?? {});
 
             setInitialized(true);
 

@@ -299,6 +299,17 @@ export function ChatProvider({ children }) {
         }
     };
 
+    //------------------- Supprimer toutes les conversations --------------
+    const deleteAllConversations = async () => {
+
+        await conversationService.deleteAll();
+
+        setConversations([]);
+        setMessages([]);
+        setCurrentConversation(null);
+
+    };
+
     //---------------------- Load statistics ------------------------------
     const loadStatistics = async () => {
 
@@ -336,6 +347,7 @@ export function ChatProvider({ children }) {
                 sendFeedback,
                 archiveConversation,
                 deleteConversation,
+                deleteAllConversations,
                 restoreConversation,
 
                 setCurrentConversation,

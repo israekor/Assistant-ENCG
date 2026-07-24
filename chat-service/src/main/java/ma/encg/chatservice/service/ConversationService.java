@@ -31,4 +31,6 @@ public interface ConversationService {
 
     void generateTitleIfNecessary(Conversation conversation, String firstMessage);
 
+    void deleteAllCurrentUserConversations();
+
 }

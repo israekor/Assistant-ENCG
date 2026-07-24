@@ -68,4 +68,6 @@ public interface ConversationRepository extends JpaRepository<Conversation, UUID
             Status status
     );
 
+    List<Conversation> findAllByUserId(UUID userId);
+
 }

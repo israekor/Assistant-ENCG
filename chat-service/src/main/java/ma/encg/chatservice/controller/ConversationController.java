@@ -164,6 +164,25 @@ public class ConversationController {
     }
 
     @Operation(
+            summary = "Supprimer toutes les conversations d'un utilisateur"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "204",
+                    description = "Liste des conversations supprimée avec succès"
+            ),
+            @ApiResponse(responseCode = "404", description = "Liste des sonversation introuvable")
+    })
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAllConversations() {
+
+        conversationService.deleteAllCurrentUserConversations();
+
+        return ResponseEntity.noContent().build();
+
+    }
+
+    @Operation(
             summary = "Supprimer une conversation"
     )
     @ApiResponses({

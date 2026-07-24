@@ -8,27 +8,32 @@ import "./index.css";
 import App from "./App";
 import AuthProvider from "./auth/AuthProvider";
 import { ChatProvider } from "./context/ChatContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 createRoot(document.getElementById("root")).render(
 
     <AuthProvider>
 
-        <ChatProvider>
+        <ThemeProvider>
 
-            <BrowserRouter>
+            <ChatProvider>
 
-                <App />
-                
-                <Toaster
-                    position="bottom-right"
-                    toastOptions={{
-                        duration: 3000
-                    }}
-                />
+                <BrowserRouter>
 
-            </BrowserRouter>
+                    <App />
+                    
+                    <Toaster
+                        position="bottom-right"
+                        toastOptions={{
+                            duration: 3000
+                        }}
+                    />
 
-        </ChatProvider>
+                </BrowserRouter>
+
+            </ChatProvider>
+
+        </ThemeProvider>
 
     </AuthProvider>
 
