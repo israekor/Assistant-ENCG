@@ -52,7 +52,9 @@ public class ChatServiceImpl implements ChatService {
                         answer
                 );
 
-        conversationService.generateTitleIfNecessary(conversation);
+        conversationService.generateTitleIfNecessary(
+                conversation,
+                message.getContent());
 
         return chatMapper.toChatResponse(
                 conversation,

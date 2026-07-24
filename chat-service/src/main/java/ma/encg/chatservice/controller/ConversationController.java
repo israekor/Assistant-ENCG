@@ -52,6 +52,28 @@ public class ConversationController {
     }
 
     @Operation(
+            summary = "Afficher la liste des conversations actives"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Liste des conversations actives récupérée avec succès"
+            ),
+            @ApiResponse(responseCode = "404", description = "Liste introuvable")
+    })
+    @GetMapping("/active")
+    public ResponseEntity<List<ConversationResponseDTO>> getActiveConversations() {
+
+        List<ConversationResponseDTO> conversations =
+                conversationService.getActiveConversations()
+                        .stream()
+                        .map(conversationMapper::toResponseDTO)
+                        .toList();
+
+        return ResponseEntity.ok(conversations);
+    }
+
+    @Operation(
             summary = "Afficher une conversation"
     )
     @ApiResponses({
@@ -151,7 +173,7 @@ public class ConversationController {
             ),
             @ApiResponse(responseCode = "404", description = "Conversation introuvable")
     })
-    @DeleteMapping("/{conversationId}")
+    @PatchMapping("/{conversationId}")
     public ResponseEntity<Void> deleteConversation(
             @PathVariable UUID conversationId) {
 

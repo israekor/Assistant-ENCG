@@ -2,7 +2,7 @@ import MainLayout from "../layouts/MainLayout";
 
 export default function SettingsPage() {
     return (
-        <MainLayout>
+        <MainLayout showSidebar={false}>
             <div className="p-6 text-white">
                 <h1 className="text-3xl font-bold">
                     Paramètres

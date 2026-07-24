@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 
 import chatService from "../services/chatService";
 import conversationService from "../services/conversationService";
+import profileService from "../services/profileService";
 
 export const ChatContext = createContext();
 
@@ -18,12 +19,14 @@ export function ChatProvider({ children }) {
 
     const [loadingMessage, setLoadingMessage] = useState(false);
 
+    const [statistics, setStatistics] = useState(null);
+
     //-------------- Charger les conversations -------------------
     const loadConversations = async () => {
 
         try {
 
-            const response = await conversationService.getAll();
+            const response = await conversationService.getActive();
 
             setConversations(response.data);
 
@@ -42,8 +45,16 @@ export function ChatProvider({ children }) {
     useEffect(() => {
 
         loadConversations();
+        loadStatistics();
 
     }, []);
+
+    //-------------- Load History ------------------------------
+    const loadHistory = async () => {
+        const response = await conversationService.getAll();
+
+        return response.data;
+    };
 
     //-------------- Ouvrir une conversation -------------------
     const openConversation = async (conversation) => {
@@ -231,6 +242,8 @@ export function ChatProvider({ children }) {
         );
         toast.success("Merci pour votre retour !");
 
+        await loadStatistics();
+
         setMessages(prev =>
             prev.map(message =>
                 message.responseId === responseId
@@ -252,7 +265,8 @@ export function ChatProvider({ children }) {
         await conversationService.archiveConversation(conversationId);
         toast.success("Conversation archivée");
 
-        setConversations(prev => prev.filter(c => c.idConversation !== conversationId) );
+        await loadConversations();
+        await loadStatistics();
 
         if (currentConversation?.idConversation === conversationId) {
             newConversation();
@@ -267,6 +281,7 @@ export function ChatProvider({ children }) {
         toast.success("Conversation restaurée");
 
         await loadConversations();
+        await loadStatistics();
 
     };
 
@@ -276,13 +291,29 @@ export function ChatProvider({ children }) {
         await conversationService.deleteConversation(conversationId);
         toast.success("Conversation supprimée");
 
-        setConversations(prev =>
-            prev.filter(c => c.idConversation !== conversationId)
-        );
+        await loadConversations();
+        await loadStatistics();
 
         if (currentConversation?.idConversation === conversationId) {
             newConversation();
         }
+    };
+
+    //---------------------- Load statistics ------------------------------
+    const loadStatistics = async () => {
+
+        try {
+
+            const response = await profileService.getStatistics();
+
+            setStatistics(response.data);
+
+        } catch (error) {
+
+            console.error(error);
+
+        }
+
     };
 
     return (
@@ -308,7 +339,9 @@ export function ChatProvider({ children }) {
                 restoreConversation,
 
                 setCurrentConversation,
-                setMessages
+                setMessages,
+                statistics,
+                loadStatistics
 
             }}
         >

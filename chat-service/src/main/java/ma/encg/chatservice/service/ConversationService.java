@@ -21,12 +21,14 @@ public interface ConversationService {
 
     List<Conversation> getCurrentUserConversations();
 
+    List<Conversation> getActiveConversations();
+
     void archiveConversation(UUID conversationId);
 
     void restoreConversation(UUID conversationId);
 
     void deleteConversation(UUID conversationId);
 
-    void generateTitleIfNecessary(Conversation conversation);
+    void generateTitleIfNecessary(Conversation conversation, String firstMessage);
 
 }

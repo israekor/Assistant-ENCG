@@ -23,6 +23,16 @@ public interface ConversationRepository extends JpaRepository<Conversation, UUID
             Status status
     );
 
+    List<Conversation>findByUserIdAndStatusInOrderByUpdatedAtDesc(
+            UUID userId,
+            List<Status> statuses
+    );
+
+    List<Conversation> findByGuestIdAndStatusOrderByUpdatedAtDesc(
+            UUID guestId,
+            Status status
+    );
+
     List<Conversation> findByUserIdOrderByUpdatedAtDesc(UUID userId);
 
     Optional<Conversation> findByIdConversationAndGuestId(
@@ -42,6 +52,20 @@ public interface ConversationRepository extends JpaRepository<Conversation, UUID
     void transferGuestConversation(
             @Param("guestId") UUID guestId,
             @Param("userId") UUID userId
+    );
+
+    long countByUserId(UUID userId);
+
+    long countByGuestId(UUID guestId);
+
+    long countByUserIdAndStatus(
+            UUID userId,
+            Status status
+    );
+
+    long countByGuestIdAndStatus(
+            UUID guestId,
+            Status status
     );
 
 }

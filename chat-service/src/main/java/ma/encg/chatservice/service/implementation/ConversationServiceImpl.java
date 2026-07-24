@@ -142,14 +142,39 @@ public class ConversationServiceImpl
         if(currentUser.isAuthenticated()){
 
             return conversationRepository
-                    .findByUserIdOrderByUpdatedAtDesc(
-                            currentUser.getIdUser()
+                    .findByUserIdAndStatusInOrderByUpdatedAtDesc(
+                            currentUser.getIdUser(),
+                            List.of(Status.ACTIVE, Status.ARCHIVED)
                     );
         }
 
         return conversationRepository
-                .findByGuestIdOrderByUpdatedAtDesc(
-                        currentUser.getGuestId()
+                .findByUserIdAndStatusInOrderByUpdatedAtDesc(
+                        currentUser.getGuestId(),
+                        List.of(Status.ACTIVE, Status.ARCHIVED)
+                );
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Conversation> getActiveConversations() {
+
+        CurrentUserDTO currentUser =
+                currentUserService.getCurrentUser();
+
+        if(currentUser.isAuthenticated()){
+
+            return conversationRepository
+                    .findByUserIdAndStatusOrderByUpdatedAtDesc(
+                            currentUser.getIdUser(),
+                            Status.ACTIVE
+                    );
+        }
+
+        return conversationRepository
+                .findByGuestIdAndStatusOrderByUpdatedAtDesc(
+                        currentUser.getGuestId(),
+                        Status.ACTIVE
                 );
     }
 
@@ -194,18 +219,35 @@ public class ConversationServiceImpl
 
         Conversation conversation = findCurrentUserConversation(conversationId);
 
-        conversationRepository.delete(conversation);
+        conversation.setStatus(Status.CLOSED);
+    }
+
+    private String generateTemporaryTitle(String message) {
+
+        String title = message.trim();
+
+        if (title.length() > 50) {
+            title = title.substring(0, 50) + "...";
+        }
+
+        return title;
     }
 
     @Override
-    public void generateTitleIfNecessary(Conversation conversation) {
+    public void generateTitleIfNecessary(Conversation conversation, String firstMessage) {
 
-        // TODO
-        // Après intégration du LLM :
-        // - récupérer les premiers messages
-        // - générer un titre
-        // - mettre à jour la conversation
+        if (!"Nouvelle conversation".equals(conversation.getTitle())) {
+            return;
+        }
+
+        if (conversation.getMessages() == null ||
+                conversation.getMessages().isEmpty()) {
+            return;
+        }
+
+        conversation.setTitle(
+                generateTemporaryTitle(firstMessage)
+        );
     }
-
 
 }

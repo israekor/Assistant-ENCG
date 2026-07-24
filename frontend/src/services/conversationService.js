@@ -5,6 +5,10 @@ const conversationService = {
     return api.get('/conversations');
   },
 
+  getActive() {
+    return api.get('/conversations/active');
+  },
+
   getConversation(id) {
     return api.get(`/conversations/${id}`);
   },
@@ -26,7 +30,7 @@ const conversationService = {
   },
 
   deleteConversation(id) {
-    return api.delete(`/conversations/${id}`);
+    return api.patch(`/conversations/${id}`);
   },
 };
 
