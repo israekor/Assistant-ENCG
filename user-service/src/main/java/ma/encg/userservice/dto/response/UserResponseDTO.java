@@ -1,4 +1,4 @@
-package ma.encg.userservice.dto;
+package ma.encg.userservice.dto.response;
 
 import lombok.*;
 

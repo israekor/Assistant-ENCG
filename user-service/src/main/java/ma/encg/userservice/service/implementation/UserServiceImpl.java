@@ -1,9 +1,12 @@
 package ma.encg.userservice.service.implementation;
 
 import lombok.RequiredArgsConstructor;
+import ma.encg.userservice.dto.request.RegisterRequestDTO;
 import ma.encg.userservice.entity.User;
+import ma.encg.userservice.exception.EmailAlreadyExistsException;
 import ma.encg.userservice.exception.UserNotFoundException;
 import ma.encg.userservice.repository.UserRepository;
+import ma.encg.userservice.service.KeycloakAdminService;
 import ma.encg.userservice.service.UserService;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
@@ -17,6 +20,7 @@ import java.util.UUID;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final KeycloakAdminService keycloakAdminService;
 
     @Override
     public User getCurrentUser(Jwt jwt) {
@@ -72,5 +76,29 @@ public class UserServiceImpl implements UserService {
 
                     return saved;
                 });
+    }
+
+    @Override
+    public User register(RegisterRequestDTO request) {
+
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new EmailAlreadyExistsException("Cette adresse email est déjà utilisée.");
+        }
+
+        String keycloakId = keycloakAdminService.createUser(
+                request.getFirstname(),
+                request.getLastname(),
+                request.getEmail(),
+                request.getPassword()
+        );
+
+        User user = User.builder()
+                .keycloakId(keycloakId)
+                .firstname(request.getFirstname())
+                .lastname(request.getLastname())
+                .email(request.getEmail())
+                .build();
+
+        return userRepository.save(user);
     }
 }

@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import ma.encg.userservice.dto.UserResponseDTO;
+import ma.encg.userservice.dto.response.UserResponseDTO;
 import ma.encg.userservice.entity.User;
 import ma.encg.userservice.mapper.UserMapper;
 import ma.encg.userservice.service.UserService;

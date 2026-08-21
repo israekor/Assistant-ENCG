@@ -12,7 +12,9 @@ const AuthService = {
   },
 
   login() {
-    return keycloak.login();
+    return keycloak.login({
+      redirectUri: `${window.location.origin}/chat`,
+    });
   },
 
   logout() {

@@ -13,7 +13,8 @@ llm_service = LLMService()
 def chat(request: ChatRequest):
 
     try:
-        response = llm_service.generate_response(request.message)
+        response = llm_service.generate_response(
+            request.message, request.context)
 
         return ChatResponse(
             response=response

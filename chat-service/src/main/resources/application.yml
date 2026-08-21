@@ -21,8 +21,8 @@ spring:
       client:
         config:
           default:
-            connectTimeout: 3000
-            readTimeout: 5000
+            connectTimeout: 10000
+            readTimeout: 300000
             loggerLevel: full
 
   security:
@@ -35,6 +35,8 @@ spring:
 services:
   user:
     url: ${SERVICES_USER_URL}
+  ai:
+    url: ${SERVICES_AI_URL}
 
 springdoc:
   api-docs:

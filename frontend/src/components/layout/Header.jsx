@@ -1,10 +1,12 @@
 import { Bot } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import useAuth from "../../auth/useAuth";
 import useChat from "../../hooks/useChat";
 
 export default function Header() {
 
     const auth = useAuth();
+    const navigate = useNavigate();
     const { currentConversation } = useChat();
 
     return (
@@ -74,12 +76,23 @@ export default function Header() {
 
                     :
 
-                    <button
-                        onClick={auth.login}
-                        className="bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-lg transition"
-                    >
-                        Se connecter
-                    </button>
+                    <div className="flex items-center gap-2">
+
+                        <button
+                            onClick={auth.login}
+                            className="px-4 py-2 rounded-lg text-slate-200 hover:bg-slate-800 transition"
+                        >
+                            Se connecter
+                        </button>
+
+                        <button
+                            onClick={() => navigate("/register")}
+                            className="bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-lg transition"
+                        >
+                            S'inscrire
+                        </button>
+
+                    </div>
 
             }
 

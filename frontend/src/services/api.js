@@ -11,6 +11,10 @@ api.interceptors.request.use(async (config) => {
 
   config.headers['X-Guest-Id'] = getGuestId();
 
+  console.log('API REQUEST:', config.url);
+  console.log('Keycloak authenticated:', keycloak.authenticated);
+  console.log('Keycloak token:', keycloak.token);
+
   if (keycloak.authenticated) {
     await keycloak.updateToken(30);
 
