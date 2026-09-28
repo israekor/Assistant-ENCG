@@ -49,28 +49,28 @@ export default function FeedbackButtons({ responseId }) {
 
     return (
 
-        <div className="flex items-center gap-2 mt-2">
+        <div className="flex items-center gap-1 mt-2.5 -ml-1.5">
 
             <button
                 onClick={() => send("LIKE")}
-                className={`p-1 rounded ${
+                className={`p-1.5 rounded-lg transition-colors ${
                     feedback === "LIKE"
-                        ? "text-green-500"
-                        : "text-gray-400 hover:text-green-500"
+                        ? "text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-500/10"
+                        : "text-neutral-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-neutral-100 dark:hover:bg-neutral-700"
                 }`}
             >
-                <ThumbsUp size={18}/>
+                <ThumbsUp size={15}/>
             </button>
 
             <button
                 onClick={() => send("DISLIKE")}
-                className={`p-1 rounded ${
+                className={`p-1.5 rounded-lg transition-colors ${
                     feedback === "DISLIKE"
-                        ? "text-red-500"
-                        : "text-gray-400 hover:text-red-500"
+                        ? "text-red-500 bg-red-50 dark:bg-red-500/10"
+                        : "text-neutral-400 hover:text-red-500 hover:bg-neutral-100 dark:hover:bg-neutral-700"
                 }`}
             >
-                <ThumbsDown size={18}/>
+                <ThumbsDown size={15}/>
             </button>
 
         </div>

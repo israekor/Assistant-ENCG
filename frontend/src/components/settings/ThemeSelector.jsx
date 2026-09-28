@@ -1,73 +1,49 @@
 import { Monitor, Moon, Palette, Sun } from "lucide-react";
 import SettingsSection from "./SettingsSection";
+import useTheme from "../../hooks/useTheme";
 
 const themes = [
-    {
-        id: "dark",
-        name: "Dark",
-        description: "Current theme",
-        icon: Moon,
-        active: true,
-    },
-    {
-        id: "light",
-        name: "Light",
-        description: "Coming soon",
-        icon: Sun,
-        active: false,
-    },
-    {
-        id: "system",
-        name: "System",
-        description: "Coming soon",
-        icon: Monitor,
-        active: false,
-    },
+    { id: "light", name: "Clair", description: "Fond clair, idéal en journée", icon: Sun },
+    { id: "dark", name: "Sombre", description: "Fond sombre, idéal le soir", icon: Moon },
+    { id: "system", name: "Système", description: "Suit les réglages de l'appareil", icon: Monitor },
 ];
 
 export default function ThemeSelector() {
+
+    const { theme, setTheme } = useTheme();
+
     return (
         <SettingsSection
-            icon={<Palette size={22} />}
-            title="Appearance"
-            description="Choose the appearance of your application."
+            icon={<Palette size={20} />}
+            title="Apparence"
+            description="Choisissez l'apparence de l'application."
         >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {themes.map((theme) => {
-                    const Icon = theme.icon;
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                {themes.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = theme === item.id;
 
                     return (
                         <button
-                            key={theme.id}
-                            disabled={!theme.active}
-                            className={`
-                                p-5
-                                rounded-xl
-                                border
-                                transition-all
-                                text-left
-                                ${
-                                    theme.active
-                                        ? "border-cyan-500 bg-cyan-500/10 cursor-default"
-                                        : "border-slate-700 bg-slate-900/40 opacity-60 cursor-not-allowed"
-                                }
-                            `}
+                            key={item.id}
+                            onClick={() => setTheme(item.id)}
+                            className={`p-5 rounded-xl border transition-all text-left ${
+                                isActive
+                                    ? "border-brand-500 bg-brand-50 dark:bg-brand-500/10"
+                                    : "border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
+                            }`}
                         >
                             <Icon
-                                size={24}
-                                className={
-                                    theme.active
-                                        ? "text-cyan-400"
-                                        : "text-slate-400"
-                                }
+                                size={22}
+                                className={isActive ? "text-brand-600 dark:text-brand-400" : "text-neutral-400"}
                             />
 
-                            <h3 className="mt-4 font-semibold">
-                                {theme.name}
+                            <h3 className="mt-3 font-semibold text-sm">
+                                {item.name}
                             </h3>
 
-                            <p className="mt-1 text-sm text-slate-400">
-                                {theme.description}
+                            <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                                {item.description}
                             </p>
                         </button>
                     );

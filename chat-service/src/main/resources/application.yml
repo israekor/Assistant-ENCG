@@ -37,6 +37,8 @@ services:
     url: ${SERVICES_USER_URL}
   ai:
     url: ${SERVICES_AI_URL}
+  rag:
+    url: ${RAG_SERVICE_URL}
 
 springdoc:
   api-docs:

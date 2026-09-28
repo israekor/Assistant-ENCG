@@ -62,6 +62,18 @@ services:
     networks:
       - chatbot-network
 
+  postgres-rag:
+    image: pgvector/pgvector:pg17
+    container_name: postgres_rag
+    environment:
+      POSTGRES_DB: ${POSTGRES_RAG_DB}
+      POSTGRES_USER: ${POSTGRES_RAG_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_RAG_PASSWORD}
+    volumes:
+      - postgres_rag_data:/var/lib/postgresql/data
+    networks:
+      - chatbot-network
+
   keycloak:
     image: quay.io/keycloak/keycloak:26.6.4
     container_name: keycloak
@@ -112,6 +124,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${CHAT_DB_PASSWORD}
       SERVICES_USER_URL: http://user-service:8081/api
       SERVICES_AI_URL: http://ai-service:8000/ai
+      SERVICES_RAG_URL: http://rag-service:8000
 
     ports:
       - '8080:8080'
@@ -122,6 +135,7 @@ services:
   user-service:
     build: ./user-service
     container_name: user-service
+    restart: unless-stopped
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://${USER_DB_HOST}:${USER_DB_PORT}/${USER_DB_NAME}
       SPRING_DATASOURCE_USERNAME: ${USER_DB_USER}
@@ -159,6 +173,23 @@ services:
 
     networks:
       - chatbot-network
+
+  rag-service:
+    build:
+      context: ./rag-service
+      dockerfile: Dockerfile
+    container_name: rag-service
+    ports:
+      - '8001:8000'
+    volumes:
+      - ./rag-service/app:/app/app
+      - ./rag-service/documents:/app/documents
+      - ./rag-service/alembic:/app/alembic
+      - ./rag-service/alembic.ini:/app/alembic.ini
+      - rag-huggingface-cache:/root/.cache/huggingface
+    networks:
+      - chatbot-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
 
   ollama:
     image: ollama/ollama
@@ -203,7 +234,9 @@ volumes:
   postgres_chat_data:
   postgres_user_data:
   postgres_keycloak_data:
+  postgres_rag_data:
   ollama_data:
+  rag-huggingface-cache:
 
 networks:
   chatbot-network:

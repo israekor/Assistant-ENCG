@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Search } from "lucide-react";
 
 import MainLayout from "../layouts/MainLayout";
 import useChat from "../hooks/useChat";
@@ -38,98 +39,92 @@ export default function HistoryPage() {
         });
 
     }, [conversations, search, filter]);
-  
+
     return (
         <MainLayout showSidebar={false}>
 
-            <div className="mb-8">
+            <div className="max-w-4xl mx-auto p-6 sm:p-8">
 
-                <h1 className="text-3xl font-bold text-white">
+                <div className="mb-8">
 
-                    Historique
+                    <h1 className="text-2xl sm:text-3xl font-bold">
 
-                </h1>
+                        Historique
 
-                <p className="text-slate-400 mt-2">
+                    </h1>
 
-                    Gérez vos conversations actives et archivées.
+                    <p className="text-neutral-500 dark:text-neutral-400 mt-2">
 
-                </p>
+                        Gérez vos conversations actives et archivées.
 
-            </div>
+                    </p>
 
-            <input
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Rechercher une conversation..."
-                className="
-                    w-full
-                    rounded-lg
-                    bg-slate-800
-                    border
-                    border-slate-700
-                    px-4
-                    py-3
-                    text-white
-                    placeholder:text-slate-500
-                    mb-6
-                "
-            />
+                </div>
 
-            <div className="flex gap-3 mb-8">
+                <div className="relative mb-5">
 
-                {filters.map(value => (
+                    <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
 
-                    <button
-                        key={value}
-                        onClick={() => setFilter(value)}
-                        className={`
-                            px-4
-                            py-2
-                            rounded-lg
-                            ${
+                    <input
+                        type="text"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder="Rechercher une conversation..."
+                        className="w-full rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 pl-11 pr-4 py-3 text-sm placeholder:text-neutral-400 outline-none focus:ring-2 ring-brand-500/40"
+                    />
+
+                </div>
+
+                <div className="flex gap-2 mb-8">
+
+                    {filters.map(value => (
+
+                        <button
+                            key={value}
+                            onClick={() => setFilter(value)}
+                            className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
                                 filter === value
-                                    ? "bg-emerald-600"
-                                    : "bg-slate-800 hover:bg-slate-700"
-                            }
-                        `}
-                    >
-                        {value === "ALL"
-                            ? "Toutes"
-                            : value === "ACTIVE"
-                                ? "Actives"
-                                : "Archivées"}
-                    </button>
+                                    ? "bg-brand-600 text-white"
+                                    : "bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+                            }`}
+                        >
+                            {value === "ALL"
+                                ? "Toutes"
+                                : value === "ACTIVE"
+                                    ? "Actives"
+                                    : "Archivées"}
+                        </button>
 
-                ))}
+                    ))}
 
-            </div>
+                </div>
 
-            <div className="grid gap-4">
+                <div className="grid gap-3">
 
-                {
-                    filteredConversations.length === 0 ? (
+                    {
+                        filteredConversations.length === 0 ? (
 
-                        <div className="text-center text-slate-400 py-20">
+                            <div className="text-center text-neutral-400 dark:text-neutral-500 py-20">
 
-                            Aucune conversation trouvée.
+                                Aucune conversation trouvée.
 
-                        </div>
+                            </div>
 
-                    ) : (
+                        ) : (
 
-                        filteredConversations.map(conversation => (
+                            filteredConversations.map(conversation => (
 
-                            <HistoryItem
-                                key={conversation.idConversation}
-                                conversation={conversation}
-                            />
+                                <HistoryItem
+                                    key={conversation.idConversation}
+                                    conversation={conversation}
+                                />
 
-                        ))
+                            ))
 
-                    )
-                }
+                        )
+                    }
+
+                </div>
 
             </div>
 

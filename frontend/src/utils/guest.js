@@ -1,5 +1,3 @@
-// utils/guest.js
-
 const GUEST_ID_KEY = 'guestId';
 const GUEST_LINKED_KEY = 'guestLinked';
 

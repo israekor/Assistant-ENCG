@@ -1,0 +1,395 @@
+[
+  {
+    "id": "q01",
+    "category": "filiere",
+    "difficulty": "easy",
+    "question": "Quels sont les débouchés de la filière Contrôle, Audit et Conseil ?",
+    "relevant": [
+      {
+        "source": "03_filieres/02_controle_audit_conseil.md",
+        "section": "Débouchés"
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "category": "filiere",
+    "difficulty": "easy",
+    "question": "Quels sont les objectifs de la filière Finance ?",
+    "relevant": [
+      {
+        "source": "03_filieres/03_finance.md",
+        "section": "Objectifs"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "category": "programme",
+    "difficulty": "easy",
+    "question": "Quelles sont les matières de Finance au semestre 5 ?",
+    "relevant": [
+      {
+        "source": "03_filieres/03_finance.md",
+        "section": "PROGRAMME",
+        "subsection": "Semestre 5"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "category": "programme",
+    "difficulty": "easy",
+    "question": "Quelles sont les matières de Finance en S5 ?",
+    "relevant": [
+      {
+        "source": "03_filieres/03_finance.md",
+        "section": "PROGRAMME",
+        "subsection": "Semestre 5"
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "category": "programme",
+    "difficulty": "medium",
+    "question": "Quelles sont les matières de la filière Finance ?",
+    "relevant": [
+      {
+        "source": "03_filieres/03_finance.md",
+        "section": "PROGRAMME"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "category": "filiere",
+    "difficulty": "easy",
+    "question": "Quels sont les débouchés de la filière Marketing ?",
+    "relevant": [
+      {
+        "source": "03_filieres/05_marketing_action_commerciale.md",
+        "section": "Débouchés"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "category": "filiere",
+    "difficulty": "easy",
+    "question": "Quels sont les objectifs de la filière Commerce International ?",
+    "relevant": [
+      {
+        "source": "03_filieres/06_commerce_international.md",
+        "section": "Objectifs"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "category": "filiere",
+    "difficulty": "easy",
+    "question": "Quels sont les objectifs de la filière Achats et Supply Chain Management ?",
+    "relevant": [
+      {
+        "source": "03_filieres/01_achats_supply_chain_management.md",
+        "section": "Objectifs"
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "category": "architecture",
+    "difficulty": "medium",
+    "question": "Combien de semestres comprend le cycle des ENCG ?",
+    "relevant": [
+      {
+        "source": "09_reglement/01_presentation_architecture_cursus.md",
+        "section": "Architecture du cursus (Article 3)"
+      },
+      {
+        "source": "02_formation/02_formation_initiale.md",
+        "section": "Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)"
+      },
+      {
+        "source": "09_reglement/01_presentation_architecture_cursus.md",
+        "section": "Organisation des semestres et système de crédits (Article 4)"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "category": "architecture",
+    "difficulty": "medium",
+    "question": "Combien de semestres comprend le cursus complet menant au diplôme de l'ENCG ?",
+    "relevant": [
+      {
+        "source": "09_reglement/01_presentation_architecture_cursus.md",
+        "section": "Architecture du cursus (Article 3)"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "category": "formation",
+    "difficulty": "medium",
+    "question": "Combien de semestres durent les deux années préparatoires aux ENCG ?",
+    "relevant": [
+      {
+        "source": "09_reglement/01_presentation_architecture_cursus.md",
+        "section": "Architecture du cursus (Article 3)"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "category": "formation",
+    "difficulty": "easy",
+    "question": "Combien de semestres dure le cycle ENCG après les deux années préparatoires ?",
+    "relevant": [
+      {
+        "source": "02_formation/02_formation_initiale.md",
+        "section": "Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)"
+      },
+      {
+        "source": "09_reglement/01_presentation_architecture_cursus.md",
+        "section": "Architecture du cursus (Article 3)"
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "category": "formation",
+    "difficulty": "easy",
+    "question": "Quelle est la durée du stage d'initiation du cycle ENCG ?",
+    "relevant": [
+      {
+        "source": "02_formation/02_formation_initiale.md",
+        "section": "Diplôme de l'ENCG (DENCG)",
+        "subsection": "Stage d'initiation"
+      },
+      {
+        "source": "09_reglement/06_stages_pfe.md",
+        "section": "Stages et Projet de Fin d'Études (Article 11)",
+        "subsection": "Stage d'initiation"
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "category": "formation",
+    "difficulty": "medium",
+    "question": "Combien de temps dure le stage d'approfondissement ?",
+    "relevant": [
+      {
+        "source": "09_reglement/06_stages_pfe.md",
+        "section": "Stages et Projet de Fin d'Études (Article 11)",
+        "subsection": "Stage d'approfondissement"
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "category": "formation",
+    "difficulty": "medium",
+    "question": "À quel semestre le PFE est-il réalisé et quelle est sa durée ?",
+    "relevant": [
+      {
+        "source": "09_reglement/06_stages_pfe.md",
+        "section": "Stages et Projet de Fin d'Études (Article 11)",
+        "subsection": "Projet de Fin d'Études (PFE)"
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "category": "reglement",
+    "difficulty": "medium",
+    "question": "Quelles sont les conditions de validation du Cycle ENCG ?",
+    "relevant": [
+      {
+        "source": "09_reglement/07_validation_cycles_diplomation.md",
+        "section": "Validation des Cycles et Diplomation (Article 12)",
+        "subsection": "Validation du Cycle ENCG (CENCG)"
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "category": "reglement",
+    "difficulty": "easy",
+    "question": "À partir de quelle note un étudiant peut-il accéder à la session de rattrapage ?",
+    "relevant": [
+      {
+        "source": "09_reglement/04_session_rattrapage.md",
+        "section": "Session de Rattrapage (Article 9)",
+        "subsection": "Conditions d'accès"
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "category": "reglement",
+    "difficulty": "medium",
+    "question": "Comment est calculée la note finale d'un module en session normale ?",
+    "relevant": [
+      {
+        "source": "09_reglement/03_evaluation_controle_continu_examen.md",
+        "section": "Contrôle Continu et Examen Final (Article 8)"
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "category": "reglement",
+    "difficulty": "easy",
+    "question": "Dans quel délai faut-il fournir un justificatif après une absence ?",
+    "relevant": [
+      {
+        "source": "09_reglement/08_assiduite_absences.md",
+        "section": "Absences, Justificatifs et Conséquences Pédagogiques (Article 14)",
+        "subsection": "Délai et procédure de justification"
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "category": "reglement",
+    "difficulty": "medium",
+    "question": "Est-il interdit d'utiliser un téléphone pendant une évaluation ?",
+    "relevant": [
+      {
+        "source": "09_reglement/10_integrite_academique_fraude.md",
+        "section": "Intégrité Académique, Fraude et Plagiat (Article 16)",
+        "subsection": "Manquements à l'intégrité académique (liste non limitative)"
+      }
+    ]
+  },
+  {
+    "id": "q21",
+    "category": "master",
+    "difficulty": "easy",
+    "question": "Combien de semestres comprend le Master Management Portuaire, Multimodal, Digitalisation et Cybersécurité ?",
+    "relevant": [
+      {
+        "source": "04_masters/04_masters.md",
+        "section": "Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)",
+        "subsection": "Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)"
+      }
+    ]
+  },
+  {
+    "id": "q22",
+    "category": "master",
+    "difficulty": "easy",
+    "question": "Quel est le niveau de diplôme requis pour accéder au Master MRHEP ?",
+    "relevant": [
+      {
+        "source": "04_masters/04_masters.md",
+        "section": "Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP)",
+        "subsection": "Conditions d'éligibilité et profils acceptés"
+      }
+    ]
+  },
+  {
+    "id": "q23",
+    "category": "master",
+    "difficulty": "easy",
+    "question": "Combien de semestres comprend le Master Ingénierie Managériale et Transformation Digitale ?",
+    "relevant": [
+      {
+        "source": "04_masters/04_masters.md",
+        "section": "Master Ingénierie Managériale et Transformation Digitale (IMTD)",
+        "subsection": "Cursus (4 semestres)"
+      }
+    ]
+  },
+  {
+    "id": "q24",
+    "category": "formation_continue",
+    "difficulty": "easy",
+    "question": "Combien de semestres dure le DCA ?",
+    "relevant": [
+      {
+        "source": "05_formation_continue/02_dca.md",
+        "section": "Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3"
+      }
+    ]
+  },
+  {
+    "id": "q25",
+    "category": "formation_continue",
+    "difficulty": "easy",
+    "question": "Combien de semestres dure le DCESS ?",
+    "relevant": [
+      {
+        "source": "05_formation_continue/03_dcess.md",
+        "section": "Diplôme du Cycle des Études Supérieures Spécialisées (DCESS) -- BAC+5"
+      }
+    ]
+  },
+  {
+    "id": "q26",
+    "category": "mobilite",
+    "difficulty": "medium",
+    "question": "Quelle est la durée maximale d'une mobilité Erasmus+ pour un étudiant ?",
+    "relevant": [
+      {
+        "source": "10_partenariats_academiques/02_erasmus_plus.md",
+        "section": "Erasmus+"
+      }
+    ]
+  },
+  {
+    "id": "q27",
+    "category": "mobilite",
+    "difficulty": "medium",
+    "question": "Combien de diplômes un étudiant peut-il obtenir dans le cadre de la double diplomation avec l'ISCID-CO / ULCO ?",
+    "relevant": [
+      {
+        "source": "10_partenariats_academiques/01_double_diplomation.md",
+        "section": "Convention de Double Diplomation avec l'ISCID-CO Dunkerque / ULCO (France)"
+      }
+    ]
+  },
+  {
+    "id": "q28",
+    "category": "admission",
+    "difficulty": "easy",
+    "question": "Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?",
+    "relevant": [
+      {
+        "source": "11_admission/01_admission.md",
+        "section": "Voies d'accès à l'ENCG Tanger"
+      },
+      {
+        "source": "11_admission/01_admission.md",
+        "section": "TAFEM -- Test d'Admissibilité à la Formation En Management"
+      }
+    ]
+  },
+  {
+    "id": "q29",
+    "category": "admission",
+    "difficulty": "medium",
+    "question": "Quel concours permet aux élèves des classes préparatoires d'intégrer directement le Cycle ENCG ?",
+    "relevant": [
+      {
+        "source": "11_admission/01_admission.md",
+        "section": "CNAEM -- Concours National d'Accès aux Écoles de Management"
+      }
+    ]
+  },
+  {
+    "id": "q30",
+    "category": "admission",
+    "difficulty": "medium",
+    "question": "À quels niveaux d'études le concours TAFSEM permet-il d'accéder au Cycle ENCG ?",
+    "relevant": [
+      {
+        "source": "11_admission/01_admission.md",
+        "section": "TAFSEM -- Concours Passerelle (accès direct en 3ème ou 4ème année)"
+      }
+    ]
+  }
+]

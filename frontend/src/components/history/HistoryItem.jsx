@@ -1,7 +1,8 @@
 import {
     MessageSquare,
     ArchiveRestore,
-    Trash2
+    Trash2,
+    ArrowRight
 } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
@@ -23,7 +24,8 @@ export default function HistoryItem({ conversation }) {
 
     };
 
-    const handleRestore = async () => {
+    const handleRestore = async (e) => {
+        e.stopPropagation();
 
         await restoreConversation(
             conversation.idConversation
@@ -31,7 +33,8 @@ export default function HistoryItem({ conversation }) {
 
     };
 
-    const handleDelete = async () => {
+    const handleDelete = async (e) => {
+        e.stopPropagation();
 
         if (
             !window.confirm(
@@ -47,103 +50,61 @@ export default function HistoryItem({ conversation }) {
 
     };
 
-    const statusLabel =
-        conversation.status === "ACTIVE"
-            ? "Active"
-            : "Archivée";
-
-    const statusColor =
-        conversation.status === "ACTIVE"
-            ? "bg-emerald-500"
-            : "bg-amber-500";
+    const isActive = conversation.status === "ACTIVE";
 
     return (
 
         <div
-            className="
-                bg-slate-800
-                rounded-xl
-                border
-                border-slate-700
-                p-5
-                flex
-                items-center
-                justify-between
-            "
+            onClick={handleOpen}
+            className="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-5 flex items-center justify-between gap-4 hover:border-brand-300 dark:hover:border-brand-600 hover:shadow-sm transition cursor-pointer group"
         >
 
-            <div
-                className="flex items-center gap-4 cursor-pointer flex-1"
-            >
+            <div className="flex items-center gap-4 min-w-0 flex-1">
 
-                <div className="p-3 rounded-lg bg-slate-700">
+                <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 shrink-0">
 
                     <MessageSquare size={20} />
 
                 </div>
 
-                <div>
+                <div className="min-w-0">
 
-                    <h3 className="font-semibold">
+                    <h3 className="font-semibold truncate">
 
                         {conversation.title}
 
                     </h3>
-                    <p className="text-sm text-slate-400">
-                        Dernière modification :
-                        {new Date(conversation.updatedAt).toLocaleDateString()}
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">
+                        Modifiée le {new Date(conversation.updatedAt).toLocaleDateString("fr-FR")}
                     </p>
 
                     <div className="mt-2 flex items-center gap-2">
 
                         <span
-                            className={`w-2.5 h-2.5 rounded-full ${statusColor}`}
-                        />
-
-                        <span
-                            className={`
-                                px-2
-                                py-0.5
-                                rounded-full
-                                text-xs
-                                bg-slate-700
-                                text-slate-300
-                            `}
+                            className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                isActive
+                                    ? "bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-400"
+                                    : "bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400"
+                            }`}
                         >
-                            {statusLabel}
+                            {isActive ? "Active" : "Archivée"}
                         </span>
 
                     </div>
-                    <button
-                        onClick={handleOpen}
-                        className="
-                            px-3
-                            py-2
-                            rounded-lg
-                            bg-slate-700
-                            hover:bg-slate-600
-                        "
-                    >
-                        Ouvrir
-                    </button>
 
                 </div>
 
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2 shrink-0">
 
                 {
                     conversation.status === "ARCHIVED" && (
 
                         <button
                             onClick={handleRestore}
-                            className="
-                                p-2
-                                rounded-lg
-                                bg-emerald-600
-                                hover:bg-emerald-700
-                            "
+                            title="Restaurer"
+                            className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:bg-brand-50 dark:hover:bg-brand-500/10 hover:text-brand-600 dark:hover:text-brand-400 transition"
                         >
 
                             <ArchiveRestore size={18} />
@@ -155,17 +116,15 @@ export default function HistoryItem({ conversation }) {
 
                 <button
                     onClick={handleDelete}
-                    className="
-                        p-2
-                        rounded-lg
-                        bg-red-600
-                        hover:bg-red-700
-                    "
+                    title="Supprimer"
+                    className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:bg-red-50 dark:hover:bg-red-500/10 hover:text-red-500 transition"
                 >
 
                     <Trash2 size={18} />
 
                 </button>
+
+                <ArrowRight size={18} className="text-neutral-300 dark:text-neutral-600 group-hover:text-brand-500 group-hover:translate-x-0.5 transition-transform ml-1" />
 
             </div>
 

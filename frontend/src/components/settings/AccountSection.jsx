@@ -15,110 +15,65 @@ export default function AccountSection() {
     const fullName =
         `${profile?.given_name ?? ""} ${profile?.family_name ?? ""}`.trim() ||
         profile?.preferred_username ||
-        "Unknown";
+        "Inconnu";
 
     const handleManageAccount = () => {
 
         window.open(
-            "http://localhost/auth/realms/encg-assistant/account",
+            "/auth/realms/encg-assistant/account",
             "_blank"
         );
 
     };
 
+    const rows = [
+        { icon: UserCircle, label: "Nom", value: fullName },
+        { icon: Mail, label: "Email", value: profile?.email },
+        { icon: KeyRound, label: "Authentification", value: "Keycloak" },
+    ];
+
     return (
 
         <SettingsSection
-            icon={<UserCircle size={22} />}
-            title="Account"
-            description="Manage your account information."
+            icon={<UserCircle size={20} />}
+            title="Compte"
+            description="Gérez les informations de votre compte."
         >
 
             <div className="space-y-5">
 
-                <div className="flex items-center gap-4">
+                {rows.map(({ icon: Icon, label, value }) => (
 
-                    <UserCircle
-                        size={20}
-                        className="text-slate-400"
-                    />
+                    <div className="flex items-center gap-4" key={label}>
 
-                    <div>
+                        <Icon size={20} className="text-neutral-400 shrink-0" />
 
-                        <p className="text-sm text-slate-400">
-                            Name
-                        </p>
+                        <div className="min-w-0">
 
-                        <p className="font-medium">
-                            {fullName}
-                        </p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                                {label}
+                            </p>
 
-                    </div>
+                            <p className="font-medium text-sm truncate">
+                                {value}
+                            </p>
 
-                </div>
-
-                <div className="flex items-center gap-4">
-
-                    <Mail
-                        size={20}
-                        className="text-slate-400"
-                    />
-
-                    <div>
-
-                        <p className="text-sm text-slate-400">
-                            Email
-                        </p>
-
-                        <p className="font-medium">
-                            {profile?.email}
-                        </p>
+                        </div>
 
                     </div>
 
-                </div>
-
-                <div className="flex items-center gap-4">
-
-                    <KeyRound
-                        size={20}
-                        className="text-slate-400"
-                    />
-
-                    <div>
-
-                        <p className="text-sm text-slate-400">
-                            Authentication
-                        </p>
-
-                        <p className="font-medium">
-                            Keycloak
-                        </p>
-
-                    </div>
-
-                </div>
+                ))}
 
                 <div className="pt-2">
 
                     <button
                         onClick={handleManageAccount}
-                        className="
-                            flex
-                            items-center
-                            gap-2
-                            px-4
-                            py-2
-                            rounded-lg
-                            bg-cyan-600
-                            hover:bg-cyan-700
-                            transition-colors
-                        "
+                        className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-neutral-900 text-sm font-medium transition-colors"
                     >
 
-                        <ExternalLink size={18} />
+                        <ExternalLink size={16} />
 
-                        Manage Account
+                        Gérer mon compte
 
                     </button>
 

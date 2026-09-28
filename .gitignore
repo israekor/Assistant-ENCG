@@ -1,2 +1,4 @@
 .env
 .vscode/settings.json
+.env.prod
+keycloak/encg-assistant-realm.json

@@ -3,7 +3,6 @@ package ma.encg.chatservice.dto.response;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -22,8 +21,6 @@ public class ChatResponseDTO {
     private UUID responseId;
 
     private String answer;
-
-    private List<SourceResponseDTO> sources;
 
     private LocalDateTime createdAt;
 

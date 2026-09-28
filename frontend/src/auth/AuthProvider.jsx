@@ -48,8 +48,9 @@ export default function AuthProvider({ children }) {
 
     if (!initialized) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-                Chargement...
+            <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-neutral-50 dark:bg-neutral-950 text-neutral-500 dark:text-neutral-400">
+                <div className="w-10 h-10 rounded-2xl bg-brand-600 animate-pulse" />
+                <p className="text-sm">Chargement...</p>
             </div>
         );
     }

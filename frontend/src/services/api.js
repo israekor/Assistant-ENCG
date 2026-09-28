@@ -3,7 +3,7 @@ import keycloak from '../auth/keycloak';
 import { getGuestId } from '../utils/guest';
 
 const api = axios.create({
-  baseURL: 'http://localhost/api',
+  baseURL: '/api',
 });
 
 api.interceptors.request.use(async (config) => {

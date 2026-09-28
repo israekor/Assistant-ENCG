@@ -19,7 +19,6 @@ public interface ChatMapper {
     @Mapping(target = "responseId", source = "response.idResponse")
     @Mapping(target = "answer", source = "response.content")
     @Mapping(target = "createdAt", source = "response.createdAt")
-    @Mapping(target = "sources", expression = "java(Collections.emptyList())")
     ChatResponseDTO toChatResponse(
             Conversation conversation,
             Message message,

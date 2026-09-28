@@ -1,27 +1,122 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Inter, sans-serif;
-    background-color: #0f172a;
+/* Enable class-based dark mode: <html class="dark"> is toggled by ThemeContext */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* ENCGT brand green scale, inspired by the school's identity (green / black / white) */
+  --color-brand-50: #f4f9ec;
+  --color-brand-100: #e7f2d4;
+  --color-brand-200: #cde6ab;
+  --color-brand-300: #aed879;
+  --color-brand-400: #8ec74d;
+  --color-brand-500: #6fae2e;
+  --color-brand-600: #578c24;
+  --color-brand-700: #43701e;
+  --color-brand-800: #345618;
+  --color-brand-900: #253e11;
+  --color-brand-950: #16260a;
 }
 
-/* Scrollbar */
+html {
+  font-family: var(--font-sans);
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth theme transition */
+* {
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* Scrollbar - light */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1e293b;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 999px;
+  background: #d4d4d4;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+  background: #a3a3a3;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.bubble.error {
+  color: #b00020;
+  font-style: italic;
+}
+
+.markdown-content p {
+  margin-bottom: 0.5rem;
+}
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+.markdown-content strong {
+  font-weight: 600;
+}
+.markdown-content code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
 }

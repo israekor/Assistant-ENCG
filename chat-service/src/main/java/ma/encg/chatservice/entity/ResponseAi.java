@@ -34,6 +34,4 @@ public class ResponseAi extends BaseEntity {
             orphanRemoval = true)
     private Feedback feedback;
 
-    @OneToMany(mappedBy = "responseAi", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ChunkResponse> chunkResponses;
 }

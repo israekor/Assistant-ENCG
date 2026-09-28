@@ -11,6 +11,14 @@ import ConversationItem from "../sidebar/ConversationItem";
 
 import useAuth from "../../auth/useAuth";
 import useChat from "../../hooks/useChat";
+import Logo from "../common/Logo";
+
+const navItemClass = ({ isActive }) =>
+    `w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+        isActive
+            ? "bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-400"
+            : "text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white"
+    }`;
 
 export default function Sidebar() {
 
@@ -33,13 +41,24 @@ export default function Sidebar() {
 
     return (
 
-        <aside className="w-72 bg-slate-900 border-r border-slate-800 flex flex-col">
+        <aside className="w-72 shrink-0 bg-white dark:bg-neutral-900 border-r border-neutral-200 dark:border-neutral-800 flex flex-col">
 
-            <div className="p-5">
+            <div className="h-16 shrink-0 flex items-center gap-3 px-5 border-b border-neutral-200 dark:border-neutral-800">
+
+                <Logo size="sm" />
+
+                <div className="min-w-0">
+                    <p className="font-bold text-sm leading-tight truncate">ENCGT Assistant</p>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate">École Nationale de Commerce et de Gestion</p>
+                </div>
+
+            </div>
+
+            <div className="p-4">
 
                 <button
                     onClick={handleNewConversation}
-                    className="w-full flex items-center gap-3 px-3 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition shadow-sm"
                 >
 
                     <Plus size={18} />
@@ -50,9 +69,9 @@ export default function Sidebar() {
 
             </div>
 
-            <div className="px-5 mb-3">
+            <div className="px-5 mb-2">
 
-                <p className="text-xs uppercase tracking-widest text-slate-500">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
 
                     Historique
 
@@ -60,13 +79,13 @@ export default function Sidebar() {
 
             </div>
 
-            <div className="flex-1 overflow-y-auto px-3">
+            <div className="flex-1 overflow-y-auto px-3 space-y-1">
 
                 {
 
                     conversations.length === 0 ?
 
-                        <p className="text-slate-500 text-sm px-3">
+                        <p className="text-neutral-400 dark:text-neutral-500 text-sm px-3 py-2">
 
                             Aucune conversation
 
@@ -87,57 +106,21 @@ export default function Sidebar() {
 
             </div>
 
-            <div className="border-t border-slate-800 p-3 space-y-1">
+            <div className="border-t border-neutral-200 dark:border-neutral-800 p-3 space-y-1">
 
-                <NavLink
-                    to="/history"
-                    className={({ isActive }) =>
-                        `w-full flex items-center gap-3 px-3 py-3 rounded-lg transition ${
-                            isActive
-                                ? "bg-emerald-600 text-white"
-                                : "hover:bg-slate-800"
-                        }`
-                    }
-                >
-
+                <NavLink to="/history" className={navItemClass}>
                     <History size={18} />
-
                     Historique
-
                 </NavLink>
 
-                <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                        `w-full flex items-center gap-3 px-3 py-3 rounded-lg transition ${
-                            isActive
-                                ? "bg-emerald-600 text-white"
-                                : "hover:bg-slate-800"
-                        }`
-                    }
-                >
-
+                <NavLink to="/profile" className={navItemClass}>
                     <User size={18} />
-
                     Profil
-
                 </NavLink>
 
-                <NavLink
-                    to="/settings"
-                    className={({ isActive }) =>
-                        `w-full flex items-center gap-3 px-3 py-3 rounded-lg transition ${
-                            isActive
-                                ? "bg-emerald-600 text-white"
-                                : "hover:bg-slate-800"
-                        }`
-                    }
-                >
-
+                <NavLink to="/settings" className={navItemClass}>
                     <Settings size={18} />
-
                     Paramètres
-
                 </NavLink>
 
                 {
@@ -146,7 +129,7 @@ export default function Sidebar() {
 
                     <button
                         onClick={auth.logout}
-                        className="w-full flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-red-500/20 text-red-400"
+                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors"
                     >
 
                         <LogOut size={18} />

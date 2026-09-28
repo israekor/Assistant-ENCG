@@ -1,6 +1,5 @@
 package ma.encg.chatservice.service;
 
-import ma.encg.chatservice.dto.external.CurrentUserDTO;
 import ma.encg.chatservice.dto.response.ConversationHistoryResponseDTO;
 import ma.encg.chatservice.entity.Conversation;
 

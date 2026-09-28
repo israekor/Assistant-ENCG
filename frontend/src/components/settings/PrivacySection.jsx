@@ -1,8 +1,8 @@
 import { ShieldAlert, Trash2 } from "lucide-react";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import ConfirmDialog from "../common/ConfirmDialog";
 import useChat from "../../hooks/useChat";
-import toast from "react-hot-toast";
 import SettingsSection from "./SettingsSection";
 
 export default function PrivacySection() {
@@ -20,13 +20,13 @@ export default function PrivacySection() {
 
           await deleteAllConversations();
 
-          toast.success("All conversations deleted.");
+          toast.success("Toutes les conversations ont été supprimées.");
 
           setOpen(false);
 
-      } catch (error) {
+      } catch {
 
-          toast.error("Failed to delete conversations.");
+          toast.error("Échec de la suppression des conversations.");
 
       } finally {
 
@@ -39,56 +39,48 @@ export default function PrivacySection() {
     return (
 
         <SettingsSection
-            icon={<ShieldAlert size={22} />}
-            title="Privacy"
-            description="Manage your conversation history and personal data."
+            icon={<ShieldAlert size={20} />}
+            title="Confidentialité"
+            description="Gérez votre historique de conversations et vos données personnelles."
         >
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
 
                 <div>
 
-                    <h3 className="font-semibold">
-                        Delete all conversations
+                    <h3 className="font-semibold text-sm">
+                        Supprimer toutes les conversations
                     </h3>
 
-                    <p className="text-sm text-slate-400 mt-1">
-                        Permanently remove all your conversations.
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                        Supprime définitivement toutes vos conversations.
                     </p>
 
                 </div>
 
                 <button
                     onClick={() => setOpen(true)}
-                    className="
-                        flex
-                        items-center
-                        gap-2
-                        px-4
-                        py-2
-                        rounded-lg
-                        bg-red-600
-                        hover:bg-red-700
-                        transition-colors
-                    "
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors shrink-0"
                 >
-                    <Trash2 size={18} />
+                    <Trash2 size={16} />
 
-                    Delete All
+                    Tout supprimer
 
                 </button>
-                <ConfirmDialog
-                    open={open}
-                    loading={loading}
-                    title="Delete all conversations"
-                    loadingText="Deleting..."
-                    message="This action will permanently delete all your conversations. This action cannot be undone."
-                    confirmText="Delete All"
-                    onCancel={() => setOpen(false)}
-                    onConfirm={handleDelete}
-                />
 
             </div>
+
+            <ConfirmDialog
+                open={open}
+                loading={loading}
+                title="Supprimer toutes les conversations"
+                loadingText="Suppression..."
+                message="Cette action supprimera définitivement toutes vos conversations. Cette action est irréversible."
+                confirmText="Tout supprimer"
+                cancelText="Annuler"
+                onCancel={() => setOpen(false)}
+                onConfirm={handleDelete}
+            />
 
         </SettingsSection>
 

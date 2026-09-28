@@ -1,14 +1,21 @@
-import { Cpu, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import SettingsSection from "./SettingsSection";
+
+const stack = [
+    { label: "Frontend", value: "React + Tailwind CSS" },
+    { label: "Backend", value: "Spring Boot" },
+    { label: "Service IA", value: "FastAPI" },
+    { label: "Modèle de langage", value: "Ollama" },
+];
 
 export default function AboutSection() {
 
     return (
 
         <SettingsSection
-            icon={<Info size={22} />}
-            title="About"
-            description="Application information."
+            icon={<Info size={20} />}
+            title="À propos"
+            description="Informations sur l'application."
         >
 
             <div className="space-y-4">
@@ -16,68 +23,41 @@ export default function AboutSection() {
                 <div>
 
                     <h3 className="font-semibold">
-                        ENCG Tanger AI Assistant
+                        ENCG Tanger — Assistant IA
                     </h3>
 
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-neutral-500 dark:text-neutral-400 text-sm">
                         Version 1.0.0
                     </p>
 
-                    <p className="text-slate-400 text-sm">
-                        https://encgt.uae.ac.ma/
-                    </p>
+                    <a
+                        href="https://encgt.uae.ac.ma/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-brand-600 dark:text-brand-400 text-sm hover:underline"
+                    >
+                        encgt.uae.ac.ma
+                    </a>
 
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-3">
+                <div className="grid sm:grid-cols-2 gap-3">
 
-                    <div className="bg-slate-900 rounded-lg p-4">
+                    {stack.map(({ label, value }) => (
 
-                        <p className="text-sm text-slate-400">
-                            Frontend
-                        </p>
+                        <div className="bg-neutral-50 dark:bg-neutral-800/60 rounded-xl p-4" key={label}>
 
-                        <p>
-                            React + Tailwind CSS
-                        </p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                                {label}
+                            </p>
 
-                    </div>
+                            <p className="text-sm font-medium mt-0.5">
+                                {value}
+                            </p>
 
-                    <div className="bg-slate-900 rounded-lg p-4">
+                        </div>
 
-                        <p className="text-sm text-slate-400">
-                            Backend
-                        </p>
-
-                        <p>
-                            Spring Boot
-                        </p>
-
-                    </div>
-
-                    <div className="bg-slate-900 rounded-lg p-4">
-
-                        <p className="text-sm text-slate-400">
-                            AI Service
-                        </p>
-
-                        <p>
-                            FastAPI
-                        </p>
-
-                    </div>
-
-                    <div className="bg-slate-900 rounded-lg p-4">
-
-                        <p className="text-sm text-slate-400">
-                            Language Model
-                        </p>
-
-                        <p>
-                            Ollama
-                        </p>
-
-                    </div>
+                    ))}
 
                 </div>
 
