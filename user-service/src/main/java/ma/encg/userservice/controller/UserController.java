@@ -41,10 +41,6 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> getCurrentUser(
             @AuthenticationPrincipal Jwt jwt
     ) {
-
-        System.out.println("======================");
-        System.out.println(jwt);
-        System.out.println("======================");
         User user = userService.getCurrentUser(jwt);
         return ResponseEntity.ok(
                 userMapper.toResponseDTO(user)
