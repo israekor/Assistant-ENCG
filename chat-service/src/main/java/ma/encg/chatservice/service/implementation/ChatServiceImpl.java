@@ -1,5 +1,6 @@
 package ma.encg.chatservice.service.implementation;
 
+import lombok.extern.slf4j.Slf4j;
 import ma.encg.chatservice.dto.external.StreamEventDTO;
 import ma.encg.chatservice.service.*;
 import org.springframework.http.codec.ServerSentEvent;
@@ -18,9 +19,11 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ChatServiceImpl implements ChatService {
@@ -62,9 +65,16 @@ public class ChatServiceImpl implements ChatService {
                         answer
                 );
 
-        conversationService.generateTitleIfNecessary(
-                conversation,
-                message.getContent());
+        String newTitle = null;
+        try {
+            newTitle = conversationService.generateTitleIfNecessary(
+                    conversation.getIdConversation(), message.getContent());
+        } catch (Exception e) {
+            log.warn("Titre non généré", e);
+        }
+        if (newTitle != null) {
+            conversation.setTitle(newTitle);
+        }
 
         return chatMapper.toChatResponse(
                 conversation,
@@ -150,14 +160,21 @@ public class ChatServiceImpl implements ChatService {
                                 ResponseAi response = responseService.saveResponse(
                                         message, fullAnswer.toString());
 
-                                conversationService.generateTitleIfNecessary(
-                                        conversation, message.getContent());
+                                String newTitle = null;
+                                try {
+                                    newTitle = conversationService.generateTitleIfNecessary(
+                                            conversation.getIdConversation(), message.getContent());
+                                } catch (Exception e) {
+                                    log.warn("Titre non généré", e);
+                                }
 
-                                Map<String, Object> data = Map.of(
-                                        "messageId", message.getIdMessage(),
-                                        "responseId", response.getIdResponse(),
-                                        "createdAt", response.getCreatedAt()
-                                );
+                                Map<String, Object> data = new HashMap<>();   // Map.of refuse les null
+                                data.put("messageId", message.getIdMessage());
+                                data.put("responseId", response.getIdResponse());
+                                data.put("createdAt", response.getCreatedAt());
+                                if (newTitle != null) {
+                                    data.put("conversationTitle", newTitle);
+                                }
 
                                 return ServerSentEvent.<StreamEventDTO>builder()
                                         .event("done")
@@ -171,6 +188,7 @@ public class ChatServiceImpl implements ChatService {
                     );
 
                     return Flux.concat(conversationEvent, tokenEvents, doneEvent)
+                            .doOnError(e -> log.error("Erreur pendant le streaming du chat", e))
                             .onErrorResume(error -> Flux.just(
                                     ServerSentEvent.<StreamEventDTO>builder()
                                             .event("error")

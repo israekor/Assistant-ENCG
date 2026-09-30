@@ -125,7 +125,7 @@ def persist_embeddings(
 @router.get("/search")
 def search(
     query: str,
-    candidate_k: int = 20,
+    candidate_k: int = 10,
     db: Session = Depends(get_db)
 ):
     results = retrieval_service.search(
@@ -211,8 +211,8 @@ def preview_embedding():
 
 class RetrievalRequest(BaseModel):
     query: str
-    candidate_k: int = 20
-    final_k: int = 5
+    candidate_k: int = 10
+    final_k: int = 3
 
 
 @router.post("/retrieve")
@@ -231,18 +231,3 @@ def retrieve(
         "query": request.query,
         "results": results
     }
-
-@router.post(
-    "/retrieve/debug",
-    response_model=DebugRetrievalResponse,
-)
-def retrieve_debug(
-    request: RetrievalRequest,
-    db: Session = Depends(get_db),
-):
-    return retrieval_service.search_debug(
-        db=db,
-        query=request.query,
-        candidate_k=request.candidate_k,
-        final_k=request.final_k,
-    )

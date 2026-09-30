@@ -1,14 +1,18 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Search } from "lucide-react";
 
 import MainLayout from "../layouts/MainLayout";
 import useChat from "../hooks/useChat";
+import useAuth from "../auth/useAuth";
 import HistoryItem from "../components/history/HistoryItem";
 
 
 export default function HistoryPage() {
 
-    const { conversations } = useChat();
+    const auth = useAuth();
+
+    const { conversations, loadHistory } = useChat();
+    const [allConversations, setAllConversations] = useState([]);
 
     const [search, setSearch] = useState("");
 
@@ -23,7 +27,7 @@ export default function HistoryPage() {
     //------------------ Filtrage ------------------------
     const filteredConversations = useMemo(() => {
 
-        return conversations.filter(conversation => {
+        return allConversations.filter(conversation => {
 
             const matchesSearch =
                 conversation.title
@@ -39,6 +43,31 @@ export default function HistoryPage() {
         });
 
     }, [conversations, search, filter]);
+
+    useEffect(() => {
+        if (!auth.authenticated) return;
+        loadHistory().then(setAllConversations).catch(console.error);
+    }, [auth.authenticated, conversations]);
+
+    if (!auth.authenticated) {
+        return (
+            <MainLayout>
+                <div className="h-full flex flex-col items-center justify-center text-center px-6">
+                    <h2 className="text-xl font-semibold">Historique complet</h2>
+                    <p className="text-neutral-500 mt-2 max-w-md">
+                        Connectez-vous pour retrouver toutes vos conversations
+                        sur tous vos appareils.
+                    </p>
+                    <button
+                        onClick={() => auth.login()}
+                        className="mt-4 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition shadow-sm"
+                    >
+                        Se connecter
+                    </button>
+                </div>
+            </MainLayout>
+        );
+    }
 
     return (
         <MainLayout showSidebar={false}>

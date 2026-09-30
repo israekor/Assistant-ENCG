@@ -240,31 +240,24 @@ public class ConversationServiceImpl
     }
 
     private String generateTemporaryTitle(String message) {
+        String title = message.trim().replaceAll("\\s+", " ");
 
-        String title = message.trim();
-
-        if (title.length() > 50) {
-            title = title.substring(0, 50) + "...";
+        if (title.length() <= 50) {
+            return title;
         }
 
-        return title;
+        int cut = title.lastIndexOf(' ', 50);
+        return title.substring(0, cut > 20 ? cut : 50) + "...";
     }
 
     @Override
-    public void generateTitleIfNecessary(Conversation conversation, String firstMessage) {
-
-        if (!"Nouvelle conversation".equals(conversation.getTitle())) {
-            return;
+    public String generateTitleIfNecessary(UUID conversationId, String firstMessage) {
+        if (firstMessage == null || firstMessage.isBlank()) {
+            return null;
         }
-
-        if (conversation.getMessages() == null ||
-                conversation.getMessages().isEmpty()) {
-            return;
-        }
-
-        conversation.setTitle(
-                generateTemporaryTitle(firstMessage)
-        );
+        String title = generateTemporaryTitle(firstMessage);
+        int updated = conversationRepository.updateTitleIfDefault(conversationId, title);
+        return updated > 0 ? title : null;
     }
 
 }

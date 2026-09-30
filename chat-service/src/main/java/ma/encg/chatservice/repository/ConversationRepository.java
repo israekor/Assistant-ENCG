@@ -70,4 +70,13 @@ public interface ConversationRepository extends JpaRepository<Conversation, UUID
 
     List<Conversation> findAllByUserId(UUID userId);
 
+    @Modifying
+    @Query("""
+        UPDATE Conversation c
+        SET c.title = :title
+        WHERE c.idConversation = :id
+          AND c.title = 'Nouvelle conversation'
+    """)
+    int updateTitleIfDefault(@Param("id") UUID id, @Param("title") String title);
+
 }

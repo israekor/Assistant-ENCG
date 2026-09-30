@@ -68,6 +68,33 @@ export function ChatProvider({ children }) {
         }
     };
 
+    const openConversationById = async (id) => {
+        setLoadingConversation(true);
+        try {
+            const [historyRes, convRes] = await Promise.all([
+                conversationService.getHistory(id),
+                conversationService.getConversation(id).catch(() => null),
+            ]);
+
+            const history = historyRes.data.map(message => ({
+                id: message.id,
+                role: message.role === "USER" ? "user" : "assistant",
+                content: message.content,
+                responseId: message.responseId,
+                feedback: message.feedback
+            }));
+
+            setCurrentConversation(
+                convRes?.data ?? { idConversation: id, title: "Nouvelle conversation" }
+            );
+            setMessages(history);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoadingConversation(false);
+        }
+    };
+
     //-------------- Nouvelle conversation -------------------
     const newConversation = () => {
         setCurrentConversation(null);
@@ -148,6 +175,24 @@ export function ChatProvider({ children }) {
                             responseId: data.responseId,
                             answer: accumulated
                         };
+
+                        // Mise à jour du titre (sidebar + en-tête)
+                        if (data.conversationTitle) {
+                            const id = resultData?.conversationId;
+
+                            setConversations(prev =>
+                                prev.map(c =>
+                                    c.idConversation === id
+                                        ? { ...c, title: data.conversationTitle }
+                                        : c
+                                )
+                            );
+                            setCurrentConversation(prev =>
+                                prev && prev.idConversation === id
+                                    ? { ...prev, title: data.conversationTitle }
+                                    : prev
+                            );
+                        }
                     },
 
                     onError: () => {
@@ -267,7 +312,9 @@ export function ChatProvider({ children }) {
                 isStreaming,
 
                 loadConversations,
+                loadHistory,
                 openConversation,
+                openConversationById,
                 newConversation,
                 addConversation,
                 sendMessage,

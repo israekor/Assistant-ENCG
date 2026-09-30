@@ -28,8 +28,8 @@ public class RagServiceImpl implements RagService {
                     ragClient.retrieve(
                             RagRequestDTO.builder()
                                     .query(content)
-                                    .candidateK(20)
-                                    .finalK(5)
+                                    .candidateK(10)
+                                    .finalK(3)
                                     .build()
                     );
 

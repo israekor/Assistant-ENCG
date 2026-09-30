@@ -30,31 +30,34 @@ export default function ChatPage() {
         streamingContent,
         isStreaming,
         openConversation,
+        openConversationById,
         sendMessage,
         sendFeedback
     } = useChat();
 
     const messagesEndRef = useRef(null);
+    const attemptedRef = useRef(null);
 
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages, loadingMessage, streamingContent]);
+        if (!routeConversationId) {
+            attemptedRef.current = null;
+            return;
+        }
+        if (currentConversation?.idConversation === routeConversationId) return;
+        if (isStreaming || attemptedRef.current === routeConversationId) return;
 
-    useEffect(() => {
-        if (loadingConversation) return;
-        if (!routeConversationId) return;
+        attemptedRef.current = routeConversationId;
 
         const conversation = conversations.find(
             c => c.idConversation === routeConversationId
         );
 
-        if (
-            conversation &&
-            currentConversation?.idConversation !== routeConversationId
-        ) {
+        if (conversation) {
             openConversation(conversation);
+        } else {
+            openConversationById(routeConversationId);
         }
-    }, [loadingConversation, routeConversationId, conversations, currentConversation, openConversation]);
+    }, [routeConversationId, conversations, currentConversation, isStreaming]);
 
     const handleSend = async (message) => {
         const isNewConversation = currentConversation == null;

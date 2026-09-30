@@ -14,25 +14,11 @@ INTENT_BOOST = 0.10
 DIPLOMA_BOOST = 0.15
 CATEGORY_BOOST = 0.10
 
-# Nombre minimal de candidats (vecteur + mots-clés confondus, dédupliqués)
-# en dessous duquel on considère que les filtres de métadonnées sont
-# probablement trop restrictifs (mauvaise détection ou question mal
-# couverte par les règles), et qu'il faut relâcher un cran de filtre.
 MIN_FALLBACK_CANDIDATES = 3
 
-# Taille du filet de sécurité "recherche ouverte" (sans aucun filtre),
-# volontairement plus petite que candidate_k pour limiter le coût
-# supplémentaire imposé au reranker (voir _retrieve_with_fallback).
-GLOBAL_SAFETY_NET_K = 10
+GLOBAL_SAFETY_NET_K = 5
 
-# Nombre maximal de candidats effectivement envoyés au reranker
-# (cross-encoder), après tri par score RRF + metadata boost. Le coût du
-# reranking croît environ linéairement avec ce nombre ; au-delà d'une
-# trentaine de candidats déjà bien classés par RRF, il est très rare
-# que le bon résultat soit plus loin. Ce plafond borne le coût du
-# reranking même quand le filet de sécurité (recherche ouverte) fait
-# grossir le nombre total de candidats uniques.
-MAX_RERANK_CANDIDATES = 30
+MAX_RERANK_CANDIDATES = 12
 
 
 class RetrievalService:
@@ -369,10 +355,6 @@ class RetrievalService:
             if len(distinct_ids) >= MIN_FALLBACK_CANDIDATES or is_last_level:
                 break
 
-        # Filet de sécurité : recherche ouverte systématique, en plus de
-        # la recherche filtrée ci-dessus (sauf si celle-ci portait déjà
-        # sur tout le corpus, auquel cas ce serait une requête identique
-        # et redondante).
         open_level = filter_levels[-1]
 
         global_vector_results = []
@@ -407,8 +389,8 @@ class RetrievalService:
         self,
         db: Session,
         query: str,
-        candidate_k: int = 20,
-        final_k: int = 5
+        candidate_k: int = 10,
+        final_k: int = 3
     ):
 
         # 1. Détection des métadonnées
@@ -524,10 +506,6 @@ class RetrievalService:
                 keyword_score
             )
 
-        # Vector ranking (recherche ouverte, filet de sécurité —
-        # voir _retrieve_with_fallback). On ne réécrit pas chunk_data
-        # si le chunk a déjà été vu via la recherche filtrée, pour ne
-        # pas perdre d'information déjà calculée.
         for rank, (
             chunk,
             source,
@@ -629,10 +607,6 @@ class RetrievalService:
             intent=intent
         )
 
-        # Plafonner le nombre de candidats avant le reranking (coûteux) :
-        # on garde les MAX_RERANK_CANDIDATES mieux classés par RRF+boost.
-        # _apply_metadata_boost trie déjà retrieved_chunks par final_score
-        # décroissant, donc cette troncature garde les meilleurs candidats.
         retrieved_chunks = retrieved_chunks[:MAX_RERANK_CANDIDATES]
 
         # Reranking
@@ -678,332 +652,3 @@ class RetrievalService:
             chunk["rank"] = rank
 
         return retrieved_chunks
-
-    def search_debug(
-        self,
-        db,
-        query: str,
-        candidate_k: int = 20,
-        final_k: int = 5,
-    ):
-        # 1. Détection des métadonnées
-        category = MetadataDetector.detect_category(query)
-        filiere = MetadataDetector.detect_filiere(query)
-        section = MetadataDetector.detect_section(query)
-        parcours = MetadataDetector.detect_parcours(query)
-        subsection = MetadataDetector.detect_subsection(query, parcours)
-        intent = MetadataDetector.detect_intent(query)
-
-        # 2. Embedding de la requête
-        query_embedding = self.embedding_service.embed_query(query)
-
-        # 3 & 4. Recherche vectorielle + mots-clés, avec repli progressif
-        keyword_query = self._build_keyword_query(
-            query=query,
-            section=section,
-            filiere=filiere,
-            subsection=subsection,
-        )
-
-        start = time.perf_counter()
-
-        (
-            vector_results,
-            keyword_results,
-            global_vector_results,
-            global_keyword_results,
-            filters_used,
-            fallback_level,
-        ) = self._retrieve_with_fallback(
-            db=db,
-            query_embedding=query_embedding,
-            keyword_query=keyword_query,
-            candidate_k=candidate_k,
-            category=category,
-            filiere=filiere,
-            section=section,
-            subsection=subsection,
-        )
-
-        retrieval_latency = (time.perf_counter() - start) * 1000
-
-        # Les deux latences historiques sont conservées dans la réponse
-        # (compatibilité), mais comme le fallback peut relancer plusieurs
-        # allers-retours en base, on ne peut plus les isoler l'une de
-        # l'autre : elles portent désormais la même mesure globale.
-        vector_latency = retrieval_latency
-        keyword_latency = retrieval_latency
-
-        vector_snapshot = self._snapshot(
-            [
-                {
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "vector_similarity": float(1 - distance),
-                    "content": chunk.content,
-                }
-                for chunk, source, category_, filiere_value, source_url, distance in (
-                    vector_results + global_vector_results
-                )
-            ],
-            candidate_k,
-        )
-
-        keyword_snapshot = self._snapshot(
-            [
-                {
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "keyword_score": float(keyword_score),
-                    "content": chunk.content,
-                }
-                for chunk, source, category_, filiere_value, source_url, keyword_score in (
-                    keyword_results + global_keyword_results
-                )
-            ],
-            candidate_k,
-        )
-
-        keyword_snapshot = self._snapshot(
-            [
-                {
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "keyword_score": float(keyword_score),
-                    "content": chunk.content,
-                }
-                for chunk, source, category_, filiere_value, source_url, keyword_score in keyword_results
-            ],
-            candidate_k,
-        )
-
-        # 5 & 6. Fusion RRF (identique à search())
-        start = time.perf_counter()
-
-        rrf_scores = {}
-        chunk_data = {}
-        RRF_K = 60
-
-        for rank, (chunk, source, category_, filiere_value, source_url, distance) in enumerate(
-            vector_results, start=1
-        ):
-            key = chunk.id
-            rrf_scores[key] = rrf_scores.get(key, 0) + 1 / (RRF_K + rank)
-            chunk_data[key] = {
-                "content": chunk.content,
-                "source": source,
-                "chunk_index": chunk.chunk_index,
-                "category": category_,
-                "filiere": filiere_value,
-                "section": chunk.section,
-                "subsection": chunk.subsection,
-                "source_url": source_url,
-                "vector_distance": float(distance),
-                "vector_similarity": float(1 - distance),
-            }
-
-        for rank, (chunk, source, category_, filiere_value, source_url, keyword_score) in enumerate(
-            keyword_results, start=1
-        ):
-            key = chunk.id
-            rrf_scores[key] = rrf_scores.get(key, 0) + 1 / (RRF_K + rank)
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category_,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url,
-                }
-            chunk_data[key]["keyword_score"] = float(keyword_score)
-
-        for rank, (chunk, source, category_, filiere_value, source_url, distance) in enumerate(
-            global_vector_results, start=1
-        ):
-            key = chunk.id
-            rrf_scores[key] = rrf_scores.get(key, 0) + 1 / (RRF_K + rank)
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category_,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url,
-                    "vector_distance": float(distance),
-                    "vector_similarity": float(1 - distance),
-                }
-
-        for rank, (chunk, source, category_, filiere_value, source_url, keyword_score) in enumerate(
-            global_keyword_results, start=1
-        ):
-            key = chunk.id
-            rrf_scores[key] = rrf_scores.get(key, 0) + 1 / (RRF_K + rank)
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category_,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url,
-                }
-            if "keyword_score" not in chunk_data[key]:
-                chunk_data[key]["keyword_score"] = float(keyword_score)
-
-        retrieved_chunks = []
-        for chunk_id, rrf_score in rrf_scores.items():
-            data = chunk_data[chunk_id]
-            retrieved_chunks.append({
-                "content": data["content"],
-                "source": data["source"],
-                "chunk_index": data["chunk_index"],
-                "category": data["category"],
-                "filiere": data["filiere"],
-                "section": data["section"],
-                "subsection": data["subsection"],
-                "source_url": data["source_url"],
-                "rrf_score": float(rrf_score),
-                "vector_similarity": data.get("vector_similarity"),
-                "keyword_score": data.get("keyword_score"),
-            })
-
-        rrf_latency = (time.perf_counter() - start) * 1000
-        rrf_snapshot = self._snapshot(retrieved_chunks, candidate_k)
-
-        # 7. Metadata boost
-        start = time.perf_counter()
-
-        retrieved_chunks = self._apply_metadata_boost(
-            results=retrieved_chunks,
-            query=query,
-            section=section,
-            filiere=filiere,
-            intent=intent,
-        )
-
-        metadata_latency = (time.perf_counter() - start) * 1000
-        metadata_snapshot = self._snapshot(retrieved_chunks, candidate_k)
-
-        # Même plafond qu'en production avant le reranking (voir search())
-        retrieved_chunks = retrieved_chunks[:MAX_RERANK_CANDIDATES]
-
-        # Reranking
-        candidate_count = len(retrieved_chunks)
-        start = time.perf_counter()
-
-        reranked_results = self.reranker_service.rerank(
-            query=query,
-            results=retrieved_chunks,
-            top_k=final_k,
-        )
-
-        reranker_latency = (time.perf_counter() - start) * 1000
-        reranker_snapshot = self._snapshot(reranked_results, final_k)
-
-        # 8. Expansion de contexte + fusion (comme dans search())
-        anchor_results = reranked_results[:final_k]
-
-        expanded_results = self._expand_context(
-            db=db,
-            results=anchor_results,
-            max_sections=2,
-            subsection=subsection,
-            intent=intent,
-        )
-
-        final_results = self._merge_expanded_context(
-            results=anchor_results,
-            expanded_results=expanded_results,
-        )
-
-        for rank, chunk in enumerate(final_results, start=1):
-            chunk["rank"] = rank
-
-        return {
-            "query": query,
-
-            "metadata_detection": {
-                "category": category,
-                "filiere": filiere,
-                "section": section,
-                "subsection": subsection,
-                "intent": intent,
-            },
-
-            "fallback": {
-                "level": fallback_level,
-                "filters_used": filters_used,
-                "global_safety_net_used": bool(global_vector_results or global_keyword_results),
-                "global_candidates_found": len(
-                    {c.id for c, *_ in global_vector_results}
-                    | {c.id for c, *_ in global_keyword_results}
-                ),
-            },
-
-            "vector": {
-                "latency_ms": vector_latency,
-                "results": vector_snapshot,
-            },
-
-            "keyword": {
-                "latency_ms": keyword_latency,
-                "results": keyword_snapshot,
-            },
-
-            "rrf": {
-                "latency_ms": rrf_latency,
-                "results": rrf_snapshot,
-            },
-
-            "metadata": {
-                "latency_ms": metadata_latency,
-                "results": metadata_snapshot,
-            },
-
-            "reranker": {
-                "latency_ms": reranker_latency,
-                "results": reranker_snapshot,
-                "candidate_count": candidate_count,
-            },
-
-            "final": final_results,
-        }
-
-
-    @staticmethod
-    def _snapshot(results, limit=20):
-        """
-        Copie uniquement les informations nécessaires
-        pour analyser le classement.
-        """
-        return [
-            {
-                "rank": index + 1,
-                "source": result.get("source"),
-                "chunk_index": result.get("chunk_index"),
-                "section": result.get("section"),
-                "subsection": result.get("subsection"),
-                "rrf_score": result.get("rrf_score"),
-                "vector_similarity": result.get("vector_similarity"),
-                "keyword_score": result.get("keyword_score"),
-                "metadata_boost": result.get("metadata_boost"),
-                "final_score": result.get("final_score"),
-                "reranker_score": result.get("reranker_score"),
-                "content": result.get("content"),
-            }
-            for index, result in enumerate(results[:limit])
-        ]

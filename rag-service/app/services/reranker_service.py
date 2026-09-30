@@ -5,12 +5,6 @@ from sentence_transformers import CrossEncoder
 from app.config import settings
 
 
-# Longueur maximale (en tokens) d'une paire (question, chunk) envoyée au
-# cross-encoder. Le temps de calcul d'un cross-encoder croît environ au
-# carré de la longueur de la séquence : tronquer les textes trop longs
-# (rares dans ce corpus, mais possibles pour de longs articles de
-# règlement) borne le pire cas sans perte pratique, puisque l'information
-# utile est presque toujours dans les premières phrases d'un chunk.
 RERANKER_MAX_LENGTH = 256
 
 
@@ -20,18 +14,6 @@ class RerankerService:
         self,
         model_name: str | None = None
     ):
-        # Sur certains environnements conteneurisés (Docker Desktop /
-        # WSL2 notamment), PyTorch peut sous-détecter le nombre de cœurs
-        # CPU réellement disponibles et n'utiliser qu'un seul thread,
-        # ce qui multiplie fortement le temps d'inférence. On force
-        # explicitement l'utilisation de tous les cœurs visibles.
-        #
-        # ATTENTION : si le conteneur Docker a une limite CPU explicite
-        # (ex. "cpus: 1" dans docker-compose.yml, ou un --cpus au
-        # lancement), os.cpu_count() peut renvoyer le nombre de cœurs
-        # de la machine hôte plutôt que celui réellement alloué au
-        # conteneur. Dans ce cas, augmenter les threads ici n'aidera pas
-        # : c'est la limite Docker elle-même qu'il faut lever.
         torch.set_num_threads(os.cpu_count() or 4)
 
         model_name = model_name or settings.reranker_model

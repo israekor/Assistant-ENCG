@@ -28,7 +28,7 @@ public interface ConversationService {
 
     void deleteConversation(UUID conversationId);
 
-    void generateTitleIfNecessary(Conversation conversation, String firstMessage);
+    String generateTitleIfNecessary(UUID conversationId, String firstMessage);
 
     void deleteAllCurrentUserConversations();
 
