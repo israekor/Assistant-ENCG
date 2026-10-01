@@ -3,11 +3,17 @@ package ma.encg.chatservice.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 @Configuration
 @EnableWebSecurity
@@ -31,6 +37,7 @@ public class SecurityConfig {
                                 "/api-docs/**",
                                 "/swagger-ui.html"
                         ).permitAll()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/chat/**").permitAll()
                         .requestMatchers("/responses/**").permitAll()
                         // Conversations utilisables par un invité (identifié par X-Guest-Id)
@@ -50,11 +57,21 @@ public class SecurityConfig {
                         // POST /conversations/link-guest
                         .requestMatchers("/conversations/**").authenticated()
                 )
-                .oauth2ResourceServer(oauth2 ->
-                        oauth2.jwt(Customizer.withDefaults())
-
-                );
+                .oauth2ResourceServer(o -> o.jwt(jwt -> jwt.jwtAuthenticationConverter(keycloakConverter())));
 
         return http.build();
+    }
+    private JwtAuthenticationConverter keycloakConverter() {
+        JwtAuthenticationConverter converter = new JwtAuthenticationConverter();
+        converter.setJwtGrantedAuthoritiesConverter(jwt -> {
+            Object realmAccess = jwt.getClaim("realm_access");
+            if (realmAccess instanceof Map<?, ?> map && map.get("roles") instanceof Collection<?> roles) {
+                return roles.stream()
+                        .<GrantedAuthority>map(r -> new SimpleGrantedAuthority("ROLE_" + r.toString().toUpperCase()))
+                        .toList();
+            }
+            return List.of();
+        });
+        return converter;
     }
 }

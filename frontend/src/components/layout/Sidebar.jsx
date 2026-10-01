@@ -1,17 +1,12 @@
-import {
-    History,
-    User,
-    Settings,
-    LogOut,
-    Plus
-} from "lucide-react";
-
+import { History, User, Settings, LogOut, Plus, Shield } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import ConversationItem from "../sidebar/ConversationItem";
 
 import useAuth from "../../auth/useAuth";
+import isAdminRole from "../../auth/isAdminRole";
 import useChat from "../../hooks/useChat";
 import Logo from "../common/Logo";
+
 
 const navItemClass = ({ isActive }) =>
     `w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
@@ -122,6 +117,13 @@ export default function Sidebar() {
                     <Settings size={18} />
                     Paramètres
                 </NavLink>
+
+                {isAdminRole() && (
+                    <NavLink to="/admin" className={navItemClass}>
+                        <Shield size={18} />
+                        Administration
+                    </NavLink>
+                )}
 
                 {
 

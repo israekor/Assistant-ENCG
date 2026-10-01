@@ -1,5 +1,6 @@
 package ma.encg.chatservice.service;
 
+import ma.encg.chatservice.dto.external.RagContext;
 import ma.encg.chatservice.entity.Message;
 import ma.encg.chatservice.entity.ResponseAi;
 
@@ -15,5 +16,7 @@ public interface ResponseService {
     ResponseAi getResponse(UUID responseId);
 
     ResponseAi getResponseByMessage(Message message);
+
+    ResponseAi saveResponse(Message message, String answer, RagContext rag);
 
 }

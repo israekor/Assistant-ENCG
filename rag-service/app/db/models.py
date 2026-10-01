@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, Integer, String, Text
-from sqlalchemy.dialects.postgresql import UUID, TSVECTOR
+from sqlalchemy.dialects.postgresql import ARRAY, UUID, TSVECTOR
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 from pgvector.sqlalchemy import Vector
@@ -115,3 +115,25 @@ class RagChunk(Base):
     document: Mapped["RagDocument"] = relationship(
         back_populates="chunks"
     )
+
+
+class RagFiliere(Base):
+    __tablename__ = "rag_filieres"
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True),
+        primary_key=True,
+        default=uuid.uuid4
+    )
+
+    # Nom du fichier sans extension, ex. "03_finance"
+    file_stem: Mapped[str] = mapped_column(
+        String(200), nullable=False, unique=True)
+
+    name: Mapped[str] = mapped_column(String(200), nullable=False)
+
+    aliases: Mapped[list[str]] = mapped_column(
+        ARRAY(String), nullable=False, default=list)
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, nullable=False)

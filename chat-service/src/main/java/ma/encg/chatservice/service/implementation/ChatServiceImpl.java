@@ -1,6 +1,7 @@
 package ma.encg.chatservice.service.implementation;
 
 import lombok.extern.slf4j.Slf4j;
+import ma.encg.chatservice.dto.external.RagContext;
 import ma.encg.chatservice.dto.external.StreamEventDTO;
 import ma.encg.chatservice.service.*;
 import org.springframework.http.codec.ServerSentEvent;
@@ -50,8 +51,8 @@ public class ChatServiceImpl implements ChatService {
                         conversation
                 );
 
-        String context =
-                RagService.retrieveContext(message.getContent());
+        RagContext rag = RagService.retrieve(message.getContent());
+        String context = rag.getText();
 
         String answer =
                 LLMService.generateAnswer(
@@ -60,10 +61,7 @@ public class ChatServiceImpl implements ChatService {
                 );
 
         ResponseAi response =
-                responseService.saveResponse(
-                        message,
-                        answer
-                );
+                responseService.saveResponse(message, answer, rag);
 
         String newTitle = null;
         try {
@@ -121,15 +119,12 @@ public class ChatServiceImpl implements ChatService {
 
             return messageMono.flatMapMany(message -> {
 
-                Mono<String> contextMono = blocking(() ->
-                                RagService.retrieveContext(message.getContent()),
-                        requestAttributes
-                );
+                Mono<RagContext> contextMono = blocking(() ->
+                        RagService.retrieve(message.getContent()), requestAttributes);
 
                 return contextMono.flatMapMany(context -> {
 
-                    Flux<String> aiStream = LLMService.streamAnswer(
-                            message.getContent(), context);
+                    Flux<String> aiStream = LLMService.streamAnswer(message.getContent(), context.getText());
 
                     StringBuilder fullAnswer = new StringBuilder();
 
@@ -157,8 +152,7 @@ public class ChatServiceImpl implements ChatService {
                                     .build());
 
                     Mono<ServerSentEvent<StreamEventDTO>> doneEvent = blocking(() -> {
-                                ResponseAi response = responseService.saveResponse(
-                                        message, fullAnswer.toString());
+                                ResponseAi response = responseService.saveResponse(message, fullAnswer.toString(), context);
 
                                 String newTitle = null;
                                 try {

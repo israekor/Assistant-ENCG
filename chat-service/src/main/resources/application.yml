@@ -38,7 +38,8 @@ services:
   ai:
     url: ${SERVICES_AI_URL}
   rag:
-    url: ${RAG_SERVICE_URL}
+    url: ${SERVICE_RAG_URL}
+    internal-key: ${RAG_INTERNAL_KEY}
 
 springdoc:
   api-docs:
@@ -61,5 +62,9 @@ server:
 
   servlet:
     context-path: /api
+
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 30MB
 
   forward-headers-strategy: framework

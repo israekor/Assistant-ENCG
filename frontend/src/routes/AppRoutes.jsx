@@ -5,6 +5,7 @@ import ProfilePage from "../pages/ProfilePage";
 import HistoryPage from "../pages/HistoryPage";
 import SettingsPage from "../pages/SettingsPage";
 import RegisterPage from "../pages/RegisterPage";
+import AdminPage from "../pages/AdminPage";
 
 export default function AppRoutes() {
 
@@ -19,6 +20,8 @@ export default function AppRoutes() {
             <Route path="/register" element={<RegisterPage />} />
 
             <Route path="/chat/:conversationId" element={<ChatPage />} />
+
+            <Route path="/admin" element={<AdminPage />} />
 
             <Route path="/profile" element={<ProfilePage />} />
 

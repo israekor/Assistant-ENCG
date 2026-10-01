@@ -2,6 +2,7 @@ package ma.encg.chatservice.service.implementation;
 
 
 import lombok.RequiredArgsConstructor;
+import ma.encg.chatservice.dto.external.RagContext;
 import ma.encg.chatservice.entity.Message;
 import ma.encg.chatservice.entity.ResponseAi;
 import ma.encg.chatservice.exception.ResponseNotFoundException;
@@ -60,5 +61,21 @@ public class ResponseServiceImpl
                         new ResponseNotFoundException(
                                 "Réponse introuvable."
                         ));
+    }
+
+    @Override
+    public ResponseAi saveResponse(Message message, String answer, RagContext rag) {
+
+        ResponseAi response = ResponseAi.builder()
+                .content(answer)
+                .message(message)
+                .ragTopScore(rag != null ? rag.getTopRerankerScore() : null)
+                .ragTopSimilarity(rag != null ? rag.getTopVectorSimilarity() : null)
+                .ragChunks(rag != null ? rag.getChunkCount() : null)
+                .ragTopSource(rag != null ? rag.getTopSource() : null)
+                .ragMs(rag != null ? rag.getRetrievalMs() : null)
+                .build();
+
+        return responseRepository.save(response);
     }
 }

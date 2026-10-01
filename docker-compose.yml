@@ -125,6 +125,7 @@ services:
       SERVICES_USER_URL: http://user-service:8081/api
       SERVICES_AI_URL: http://ai-service:8000/ai
       SERVICES_RAG_URL: http://rag-service:8000
+      RAG_INTERNAL_KEY: ${RAG_INTERNAL_KEY}
 
     ports:
       - '8080:8080'
@@ -179,6 +180,17 @@ services:
       context: ./rag-service
       dockerfile: Dockerfile
     container_name: rag-service
+
+    environment:
+      POSTGRES_RAG_HOST: postgres-rag
+      POSTGRES_RAG_PORT: 5432
+      POSTGRES_RAG_DB: ${POSTGRES_RAG_DB}
+      POSTGRES_RAG_USER: ${POSTGRES_RAG_USER}
+      POSTGRES_RAG_PASSWORD: ${POSTGRES_RAG_PASSWORD}
+      EMBEDDING_MODEL: intfloat/multilingual-e5-base
+      RERANKING_MODEL: BAAI/bge-reranker-v2-m3
+      RAG_INTERNAL_KEY: ${RAG_INTERNAL_KEY}
+
     ports:
       - '8001:8000'
     volumes:

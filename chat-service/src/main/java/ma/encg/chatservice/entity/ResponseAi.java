@@ -24,6 +24,21 @@ public class ResponseAi extends BaseEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
+    @Column(name = "rag_top_score")
+    private Double ragTopScore;
+
+    @Column(name = "rag_top_similarity")
+    private Double ragTopSimilarity;
+
+    @Column(name = "rag_chunks")
+    private Integer ragChunks;
+
+    @Column(name = "rag_top_source", length = 500)
+    private String ragTopSource;
+
+    @Column(name = "rag_ms")
+    private Integer ragMs;
+
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_message", nullable = false, unique = true)
     private Message message;
