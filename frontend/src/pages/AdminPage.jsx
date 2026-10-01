@@ -112,7 +112,7 @@ export default function AdminPage() {
                                 <div className="flex items-end gap-1.5 h-28">
                                     {stats.perDay.map((d) => (
                                         <div key={d.day} title={`${d.day} : ${d.count}`}
-                                             className="flex-1 bg-brand-500 rounded-t min-h-[2px]"
+                                             className="flex-1 bg-brand-500 rounded-t min-h-0.5"
                                              style={{ height: `${(Number(d.count) / maxDay) * 100}%` }} />
                                     ))}
                                 </div>
