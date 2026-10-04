@@ -286,7 +286,7 @@ services:
       - keycloak
 
     ports:
-      - '80:80'
+      - '8088:80'
 
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro

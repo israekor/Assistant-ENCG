@@ -32,14 +32,26 @@ spring:
           issuer-uri: http://localhost/auth/realms/encg-assistant
           jwk-set-uri: http://keycloak:8080/auth/realms/encg-assistant/protocol/openid-connect/certs
 
+  multipart:
+    max-file-size: 10MB
+    max-request-size: 30MB
+
 services:
   user:
     url: ${SERVICES_USER_URL}
   ai:
     url: ${SERVICES_AI_URL}
   rag:
-    url: ${SERVICE_RAG_URL}
+    url: ${SERVICES_RAG_URL}
     internal-key: ${RAG_INTERNAL_KEY}
+
+rag:
+  fallback:
+    min-score: 0.2
+
+admin:
+  rag:
+    low-score-threshold: 0.5
 
 springdoc:
   api-docs:
@@ -62,9 +74,5 @@ server:
 
   servlet:
     context-path: /api
-
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 30MB
 
   forward-headers-strategy: framework

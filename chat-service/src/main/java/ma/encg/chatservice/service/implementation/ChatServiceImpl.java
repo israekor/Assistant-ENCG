@@ -19,6 +19,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
+import org.springframework.beans.factory.annotation.Value;
+import java.util.regex.Pattern;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,6 +37,16 @@ public class ChatServiceImpl implements ChatService {
     private final RagService RagService;
     private final ResponseService responseService;
     private final ChatMapper chatMapper;
+
+    @Value("${rag.fallback.min-score:0.15}")
+    private double fallbackMinScore;
+
+    @Value("${rag.fallback.message:Je n'ai pas trouvé cette information dans les documents de l'ENCG Tanger. Je vous invite à contacter directement l'administration de l'école ou à consulter le site officiel : https://encgt.uae.ac.ma}")
+    private String fallbackMessage;
+
+    private static final Pattern SMALL_TALK = Pattern.compile(
+            "^\\s*(bonjour|bonsoir|salut|salam|coucou|hello|hi|merci|shukran|ok|d'accord|au revoir)\\b.*",
+            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 
     @Override
     @Transactional
@@ -55,10 +67,9 @@ public class ChatServiceImpl implements ChatService {
         String context = rag.getText();
 
         String answer =
-                LLMService.generateAnswer(
-                        message.getContent(),
-                        context
-                );
+                shouldFallback(message.getContent(), rag)
+        ? fallbackMessage
+        : LLMService.generateAnswer(message.getContent(), context);
 
         ResponseAi response =
                 responseService.saveResponse(message, answer, rag);
@@ -124,7 +135,9 @@ public class ChatServiceImpl implements ChatService {
 
                 return contextMono.flatMapMany(context -> {
 
-                    Flux<String> aiStream = LLMService.streamAnswer(message.getContent(), context.getText());
+                    Flux<String> aiStream = shouldFallback(message.getContent(), context)
+                        ? Flux.just(fallbackMessage)
+                        : LLMService.streamAnswer(message.getContent(), context.getText());
 
                     StringBuilder fullAnswer = new StringBuilder();
 
@@ -196,5 +209,14 @@ public class ChatServiceImpl implements ChatService {
                 });
             });
         });
+    }
+
+    private boolean shouldFallback(String question, RagContext rag) {
+        if (fallbackMinScore <= 0 || rag.getTopRerankerScore() == null) return false;
+        String q = question.trim();
+        if (q.split("\\s+").length <= 4 && SMALL_TALK.matcher(q).matches()) return false; // « bonjour », « merci »...
+        boolean low = rag.getTopRerankerScore() < fallbackMinScore;
+        if (low) log.info("Repli : score={} < seuil={}", rag.getTopRerankerScore(), fallbackMinScore);
+        return low;
     }
 }
