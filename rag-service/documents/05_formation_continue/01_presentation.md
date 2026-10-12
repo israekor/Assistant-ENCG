@@ -9,7 +9,7 @@ L'École Nationale de Commerce et de Gestion de Tanger propose deux types de dip
 
 Ces deux diplômes sont accrédités par l'**Université Abdelmalek Essaâdi** et dispensés par l'ENCG de Tanger.
 
-Ces formations s'adaptent aux rythmes à la fois des étudiants et des cadres, en adoptant :
+Ces formations s'adaptent aux rythmes à la fois des étudiants et des cadres :
 
-- des cours à **temps partiel** pour la formule cadre ;
-- des cours à **temps plein** pour la formule dédiée aux étudiants.
+- le **DCA** est dispensé à **temps partiel** (cours du week-end), pour les cadres comme pour les étudiants ;
+- le **DCESS** est proposé en deux formules : **temps partiel** pour les cadres et **temps plein** pour les étudiants.

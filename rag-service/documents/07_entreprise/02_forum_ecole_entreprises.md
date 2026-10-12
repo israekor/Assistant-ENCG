@@ -23,4 +23,4 @@ Pour les entreprises, le FR2E constitue une occasion de :
 
 ### Éditions précédentes
 
-Le FR2E est organisé chaque année (éditions passées : 2022, 2023, 2024, 2025). Les affiches, programmes et galeries photos des éditions précédentes sont archivés sur le site de l'ENCG Tanger, à la page dédiée au [Forum Écoles-Entreprises](https://encgt.uae.ac.ma/forum-ecole-entreprises/). Pour connaître la date et le programme de la prochaine édition, il est recommandé de consulter directement cette page, les informations d'édition n'étant valables que pour l'année en cours.
+Le FR2E est organisé chaque année. Les affiches, programmes et galeries photos des éditions précédentes sont archivés sur le site de l'ENCG Tanger, à la page dédiée au [Forum Écoles-Entreprises](https://encgt.uae.ac.ma/forum-ecole-entreprises/). Pour connaître la date et le programme de la prochaine édition, il est recommandé de consulter directement cette page, les informations d'édition n'étant valables que pour l'année en cours.

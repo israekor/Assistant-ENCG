@@ -10,7 +10,7 @@ Il repose sur les principes d'équité, de mérite, de transparence, de responsa
 
 Le règlement est établi conformément aux textes législatifs et réglementaires relatifs à l'enseignement supérieur marocain (loi sur l'organisation de l'enseignement supérieur, Cahiers des Normes Pédagogiques Nationales des ENCG, règlements de l'Université Abdelmalek Essaadi, etc.). En cas de contradiction avec un texte de portée supérieure, ce dernier prévaut.
 
-> Pour la liste complète des références légales (lois, décrets, dahirs), consulter le [règlement officiel complet (PDF)](https://encgt.uae.ac.ma/wp-content/uploads/2026/08/Reglement-des-Etudes-et-des-evaluations-2026-2027.pdf).
+> Pour la liste complète des références légales (lois, décrets, dahirs), consulter le règlement officiel complet, disponible sur le site de l'ENCG Tanger ([encgt.uae.ac.ma](https://encgt.uae.ac.ma/)).
 
 ## Champ d'application (Article 2)
 

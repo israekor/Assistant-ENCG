@@ -16,7 +16,7 @@ Pour devenir partenaire : [Contactez l'ENCG Tanger](https://encgt.uae.ac.ma/cont
 
 Le réseau de partenaires de l'ENCG Tanger couvre des entreprises, institutions et universités marocaines et internationales, parmi lesquelles :
 
-**Entreprises et groupes industriels**
+#### Entreprises et groupes industriels
 - APM Terminals
 - Sitel Group
 - Kia
@@ -28,7 +28,7 @@ Le réseau de partenaires de l'ENCG Tanger couvre des entreprises, institutions 
 - Metragaz
 - SJL
 
-**Institutions financières et professionnelles**
+#### Institutions financières et professionnelles
 - Bourse de Casablanca
 - Association Marocaine des Consolideurs Financiers (AMCF)
 - Fractal Markets / DirectFN
@@ -37,19 +37,19 @@ Le réseau de partenaires de l'ENCG Tanger couvre des entreprises, institutions 
 - Association des Femmes Chefs d'Entreprises du Maroc (AFEM)
 - INJAZ Al-Maghrib
 
-**Organismes publics et internationaux**
+#### Organismes publics et internationaux
 - Ministère de l'Aménagement du Territoire National, de l'Urbanisme, de l'Habitat et de la Politique de la Ville
 - Deutsch-Marokkanische Gesellschaft Marokko (DMG)
 - Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)
 - Korea International Cooperation Agency (KOICA)
 - National Democratic Institute (NDI)
 
-**Établissements de formation et centres linguistiques**
+#### Établissements de formation et centres linguistiques
 - The British Language Centre
 - British Workshop
 - Cognitus
 
-**Universités et institutions académiques partenaires**
+#### Universités et institutions académiques partenaires
 - University of Amsterdam (Pays-Bas)
 - Université du Québec à Chicoutimi -- UQAC (Canada)
 - Universidad de Cádiz -- UCA (Espagne)

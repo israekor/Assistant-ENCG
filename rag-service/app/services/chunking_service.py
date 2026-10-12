@@ -11,8 +11,8 @@ class ChunkingService:
 
     def __init__(
         self,
-        chunk_size: int = 1000,
-        chunk_overlap: int = 200
+        chunk_size: int = 1500,
+        chunk_overlap: int = 100
     ):
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
@@ -173,6 +173,10 @@ class ChunkingService:
             ) or stripped_line.startswith(
                 "https://"
             ):
+                continue
+
+            # Ignorer les séparateurs markdown (---, ***, ___)
+            if re.fullmatch(r"[-*_]{3,}", stripped_line):
                 continue
 
             heading = self.get_heading(line)

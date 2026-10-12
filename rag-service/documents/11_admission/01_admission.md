@@ -2,101 +2,209 @@
 
 ## Voies d'accès à l'ENCG Tanger
 
-L'ENCG Tanger, comme l'ensemble des Écoles Nationales de Commerce et de Gestion (réseau ENCG) au Maroc, recrute ses étudiants via **trois concours nationaux distincts**, selon le profil et le niveau d'études du candidat. L'organisation matérielle de ces concours (dates, école organisatrice, modalités précises) tourne chaque année entre les différentes ENCG du réseau et peut donc changer -- mais le **principe et le public visé de chaque concours restent stables**.
+L'ENCG Tanger, comme l'ensemble des Écoles Nationales de Commerce et de Gestion (ENCG), recrute ses étudiants par **trois concours nationaux** (TAFEM, CNAEM, TAFSEM) selon le profil du candidat. L'admission en **Master** est distincte, sur dossier (voir « Admission en Master »).
 
-| Concours | Public visé | Niveau d'entrée | Portail national |
-|---|---|---|---|
-| **TAFEM** | Titulaires du Baccalauréat | 1ère année du Cycle des Années Préparatoires (CAP-ENCG) | [tafem.ma](https://www.tafem.ma/) |
-| **CNAEM** | Élèves des classes préparatoires (CPGE), options ECS/ECT | Cycle ENCG, généralement en 3ème année (S5) | portail national tournant (organisé par l'ENCG présidente de l'année) |
-| **TAFSEM** (concours passerelle) | Titulaires d'un Bac+2 (DEUG/DUT/BTS) ou d'un Bac+4 (Licence en économie/gestion ou équivalent) | S5 (passerelle Bac+2) ou S7 (passerelle Bac+4) du Cycle ENCG | portail national tournant |
+| Concours                | Public visé                                              | Niveau d'entrée                                                                 |
+| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **TAFEM**               | Titulaires du Baccalauréat                               | 1ère année du CAP-ENCG (cycle préparatoire, semestre S1)                        |
+| **CNAEM**               | Élèves des classes préparatoires (CPGE), options ECS/ECT | Cycle ENCG, 3ème année (semestre S5)                                            |
+| **TAFSEM** (passerelle) | Bac+2 (DEUG/DUT/BTS) ou Bac+4 (Licence économie/gestion) | 3ème année (semestre S5) pour un Bac+2 ; 4ème année (semestre S7) pour un Bac+4 |
 
-> Pour l'inscription administrative une fois admis à l'ENCG Tanger (CNAEM ou TAFSEM), la pré-inscription en ligne s'effectue via le portail de l'Université Abdelmalek Essaâdi : [pre-inscription.uae.ac.ma/encg/regule](https://pre-inscription.uae.ac.ma/encg/regule/mar_regule_auth_encg.php)
+## Correspondance des niveaux et des semestres
+
+Deux numérotations existent. Elles désignent les mêmes semestres :
+
+- **S1 à S10** : numérotation depuis le baccalauréat (utilisée pour les concours) ;
+- **Semestre 1 à 6 du cycle ENCG** : numérotation utilisée dans les fiches des filières et dans le règlement des études.
+
+| Année après le bac | Cycle                                 | Semestres (S1 à S10) | Dans le cycle ENCG |
+| ------------------ | ------------------------------------- | -------------------- | ------------------ |
+| 1ère année         | CAP-ENCG, 1ère année                  | S1 et S2             | -                  |
+| 2ème année         | CAP-ENCG, 2ème année                  | S3 et S4             | -                  |
+| 3ème année         | Cycle ENCG, 1ère année (tronc commun) | S5 et S6             | Semestres 1 et 2   |
+| 4ème année         | Cycle ENCG, 2ème année                | S7 et S8             | Semestres 3 et 4   |
+| 5ème année         | Cycle ENCG, 3ème année                | S9 et S10            | Semestres 5 et 6   |
+
+Ainsi « entrer en S5 » signifie intégrer la 3ème année (Semestre 1 du cycle ENCG), et « entrer en S7 » signifie intégrer la 4ème année (Semestre 3 du cycle ENCG).
 
 ## TAFEM -- Test d'Admissibilité à la Formation En Management
 
-Le TAFEM est le concours d'admission en **1ère année** du réseau des ENCG, organisé pour les titulaires du Baccalauréat.
+### Résumé du concours TAFEM
 
-### Déroulement général
+Le **TAFEM** (Test d'Admissibilité à la Formation En Management) est le concours national d'admission en **1ère année du CAP-ENCG** (le **Cycle des deux Années Préparatoires aux ENCG**) dans le réseau des Écoles Nationales de Commerce et de Gestion (ENCG). Il s'adresse aux titulaires du **Baccalauréat**.
 
-1. **Pré-candidature en ligne** sur la plateforme nationale [tafem.ma](https://www.tafem.ma/), gérée par le Ministère de l'Enseignement Supérieur.
-2. **Présélection** effectuée sur la base des notes obtenues au Baccalauréat.
-3. Les candidats présélectionnés reçoivent une **convocation** pour l'épreuve écrite TAFEM.
-4. **Épreuve écrite TAFEM** : un test sous forme de QCM, destiné à évaluer les aptitudes des candidats par rapport aux caractéristiques de la formation dispensée dans les ENCG.
-5. Affectation des candidats admis vers les différentes ENCG du réseau, selon leurs préférences et les places disponibles.
+- **Candidature** : en ligne sur la plateforme nationale **Cursussup** ([cursussup.gov.ma](https://www.cursussup.gov.ma/)) ; site d'information : [tafem.ma](https://www.tafem.ma/).
+- **Présélection** sur dossier, d'après les notes du baccalauréat.
+- **Épreuve** : un QCM écrit pour les candidats présélectionnés.
+- **Affectation** vers les ENCG du réseau selon les préférences et les places disponibles.
 
-> Les dates précises (ouverture des candidatures, épreuve, résultats) sont republiées chaque année sur [tafem.ma](https://www.tafem.ma/) et sur le site de l'ENCG Tanger. Il convient de s'y référer pour connaître le calendrier de l'année en cours.
+Le calendrier et le nombre de places changent chaque année et ne sont pas détaillés ici.
+
+### Conditions d'éligibilité
+
+Le TAFEM est ouvert aux candidats qui, généralement :
+
+- sont en 2ème année du cycle du Baccalauréat (année de terminale) durant l'année scolaire en cours ;
+- ou sont déjà titulaires d'un Baccalauréat validé au titre de la session précédente.
+
+### Spécialités de baccalauréat acceptées
+
+- **Filières économiques** : Sciences Économiques, Sciences de Gestion Comptable ;
+- **Filières mathématiques** : Sciences Mathématiques A et B ;
+- **Filières scientifiques** : Sciences Physiques, Sciences de la Vie et de la Terre, Sciences Agronomiques ;
+- **Filières professionnelles** : Commerce, Comptabilité, Logistique, Gestion et Administration.
+
+### Déroulement : présélection et épreuve écrite
+
+1. **Pré-candidature en ligne** sur la plateforme Cursussup, avec classement des établissements par ordre de préférence.
+2. **Présélection** sur la base d'une moyenne calculée à partir de la note de l'Examen National (généralement 75 %) et de la note de l'Examen Régional (généralement 25 %).
+3. **Convocation** des candidats ayant atteint le seuil requis.
+4. **Épreuve écrite** : un **QCM** (questionnaire à choix multiples) qui évalue les aptitudes des candidats par rapport à la formation dispensée dans les ENCG.
+5. **Affectation** des candidats admis vers les ENCG du réseau.
+
+## TAFEM -- Répartition géographique des candidatures
+
+Pour la 1ère année, les candidatures sont réparties en groupes d'ENCG selon le **lieu d'obtention du baccalauréat**. Les ENCG de **Tanger, Oujda, Fès, El Hajeb et Al Hoceima** forment un même groupe, qui regroupe les candidats ayant obtenu leur bac dans :
+
+- **Tanger-Tétouan-Al Hoceima** : Tanger-Assilah, Tétouan, Fahs-Anjra, M'diq-Fnideq, Al Hoceima, Ouezzane, Chefchaouen, Larache ;
+- **Oriental** : Oujda-Angad, Berkane, Taourirt, Driouch, Jerada, Figuig, Nador, Guercif ;
+- **Fès-Meknès** : Fès, Moulay Yaacoub, Sefrou, Boulemane, Taounate, Meknès, El Hajeb, Ifrane, Taza ;
+- **Drâa-Tafilalet** : Errachidia et Midelt.
+
+Les candidats ayant obtenu leur bac dans d'autres régions relèvent d'autres groupes d'ENCG, qui ne font pas partie du groupe de l'ENCG Tanger : le groupe Kénitra, Casablanca, Settat, El Jadida, et le groupe Marrakech, Béni Mellal, Agadir, Dakhla.
+
+Les élèves titulaires du baccalauréat des deux lycées militaires royaux (Kénitra et Ifrane) doivent choisir un des groupes d'ENCG dont les rattachements incluent la province de résidence de leurs parents.
+
+Cette répartition peut être modifiée : vérifier le dispositif de l'année en cours sur [tafem.ma](https://www.tafem.ma/).
+
+## TAFEM -- Calendrier, places et mises à jour annuelles
+
+Le calendrier du TAFEM (ouverture et clôture des candidatures, liste de présélection, date de l'épreuve, résultats, inscriptions) ainsi que le nombre de places offertes par chaque ENCG **sont publiés chaque année** par le Ministère de l'Enseignement Supérieur. Ils ne sont pas détaillés dans ce document.
+
+Pour les informations de l'année en cours, consulter [tafem.ma](https://www.tafem.ma/), la plateforme [cursussup.gov.ma](https://www.cursussup.gov.ma/) ou le site de l'ENCG Tanger.
 
 ## CNAEM -- Concours National d'Accès aux Écoles de Management
 
-Le CNAEM permet aux élèves des classes préparatoires économiques et commerciales marocaines d'intégrer directement le Cycle ENCG (sans repasser par le CAP-ENCG).
+### Public concerné et accès
 
-### Public concerné
+Le **CNAEM** permet aux élèves des classes préparatoires économiques et commerciales marocaines d'intégrer directement le Cycle ENCG (en 3ème année, semestre S5), sans passer par le CAP-ENCG. Il concerne :
 
-- élèves des classes préparatoires aux grandes écoles (CPGE), dans l'une des deux options :
-  - **ECS** (Économie et Commerce, option Scientifique) ;
-  - **ECT** (Économie et Commerce, option Technologique) ;
+- les élèves des classes préparatoires aux grandes écoles (CPGE), options **ECS** (Économie et Commerce, option Scientifique) ou **ECT** (option Technologique) ;
 - ayant effectué régulièrement leur 1ère et 2ème année de CPGE ;
 - généralement âgés de moins de 25 ans à une date de référence fixée chaque année ;
-- nombre de participations au concours limité (habituellement 3 tentatives maximum, de façon successive) ; toute absence à une épreuve entraîne l'élimination.
+- avec un nombre de participations limité (habituellement 3 tentatives maximum) ; toute absence à une épreuve entraîne l'élimination.
 
-### Déroulement général
+### Déroulement du CNAEM
 
 Le CNAEM comporte deux phases :
 
 1. **Épreuves écrites** (économie, gestion, mathématiques, langues étrangères, culture générale), à l'issue desquelles une **admissibilité** est prononcée ;
 2. **Épreuves orales**, à l'issue desquelles l'**admission** est prononcée.
 
-L'inscription au concours se fait en ligne sur le portail national du CNAEM de l'année en cours (l'école organisatrice change chaque année selon un principe de rotation au sein du réseau ENCG). Des frais d'inscription au concours sont généralement exigés.
+L'inscription se fait en ligne sur le portail national du CNAEM de l'année en cours (l'école organisatrice change chaque année). Des frais d'inscription sont généralement exigés.
 
-### Une fois admis à l'ENCG Tanger
+### Inscription administrative après admission (CNAEM)
 
-Les candidats affectés à l'ENCG Tanger doivent effectuer leur inscription administrative dans les délais communiqués, avec un dossier comportant généralement :
+Les candidats affectés à l'ENCG Tanger effectuent leur inscription administrative dans les délais communiqués. La pré-inscription en ligne se fait sur le portail de l'Université Abdelmalek Essaâdi : [pre-inscription.uae.ac.ma/encg/regule](https://pre-inscription.uae.ac.ma/encg/regule/mar_regule_auth_encg.php). Le dossier comporte généralement : le Baccalauréat (original et copie), les attestations d'admissibilité et d'admission CNAEM, les relevés de notes des deux années de classes préparatoires, une copie de la CNIE, des photos d'identité et le reçu de paiement de l'assurance étudiante.
 
-- la pré-inscription en ligne sur le portail Apogée de l'UAE : [pre-inscription.uae.ac.ma/encg/regule](https://pre-inscription.uae.ac.ma/encg/regule/mar_regule_auth_encg.php) ;
-- l'original du Baccalauréat + copie ;
-- l'original de l'attestation d'admissibilité CNAEM + copie ;
-- l'original de l'attestation d'admission CNAEM + copie ;
-- les relevés de notes des deux années de classes préparatoires ;
-- une copie de la Carte Nationale d'Identité (CNIE) ;
-- des photos d'identité récentes ;
-- le reçu de paiement des frais d'assurance étudiante.
+Ces pièces et délais sont donnés à titre indicatif et peuvent varier : consulter les avis d'inscription publiés sur le site de l'ENCG Tanger.
 
-> **Ces pièces et délais sont donnés à titre indicatif et peuvent varier d'une année à l'autre.** Pour le détail exact de l'année en cours, consulter les avis d'inscription publiés sur le site de l'ENCG Tanger au moment des résultats du concours.
-
-## TAFSEM -- Concours Passerelle (accès direct en 3ème ou 4ème année)
-
-Le concours passerelle (TAFSEM) permet à des candidats titulaires d'un diplôme de niveau Bac+2 ou Bac+4 d'intégrer directement une année avancée du Cycle ENCG, sans repasser par les premières années.
+## TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année)
 
 ### Deux niveaux d'accès
 
-**Passerelle S5** (accès à la 3ème année du Cycle ENCG) :
-- ouverte aux titulaires d'un **Bac+2 en économie ou gestion** : DEUG, DUT, BTS, ou diplôme reconnu équivalent ;
-- condition de mention au Baccalauréat généralement requise (souvent "Assez Bien" ou supérieure, moyenne ≥ 12/20 selon les années) ;
-- en cas de diplôme équivalent (non DEUG/DUT/BTS), un document justifiant l'équivalence doit être fourni.
+Le concours passerelle **TAFSEM** permet à des titulaires d'un diplôme Bac+2 ou Bac+4 d'intégrer directement une année avancée du Cycle ENCG.
 
-**Passerelle S7** (accès à la 4ème année du Cycle ENCG) :
+**Passerelle S5** (accès à la 3ème année, 1ère année du cycle ENCG) :
+
+- ouverte aux titulaires d'un **Bac+2 en économie ou gestion** : DEUG, DUT, BTS, ou diplôme reconnu équivalent ;
+- condition de mention au Baccalauréat généralement requise (souvent « Assez Bien » ou plus, moyenne ≥ 12/20 selon les années) ;
+- pour un diplôme équivalent (hors DEUG/DUT/BTS), un document justifiant l'équivalence est à fournir.
+
+**Passerelle S7** (accès à la 4ème année, 2ème année du cycle ENCG) :
+
 - ouverte aux titulaires d'une **Licence en économie ou en gestion**, ou d'un diplôme reconnu équivalent.
 
-### Déroulement général
+### Déroulement et pièces demandées
 
 - Candidature en ligne sur la plateforme nationale du concours (organisée par l'école présidente de l'année).
-- La sélection se fait généralement **uniquement sur étude du dossier** (notes, mentions, régularité du parcours) -- un test écrit n'est pas toujours prévu, selon les années.
-- Toute fausse déclaration dans le dossier entraîne le rejet de la candidature.
+- La sélection se fait généralement **sur étude du dossier** (notes, mentions, régularité du parcours) ; un test écrit n'est pas toujours prévu selon les années.
+- Toute fausse déclaration entraîne le rejet de la candidature.
 
-### Pièces généralement demandées
+Pièces généralement demandées : demande manuscrite adressée au Directeur de l'établissement ; copie du diplôme du Baccalauréat et relevé de notes ; copie du diplôme Bac+2 (DEUG/DUT/BTS) ou Bac+4 (Licence), selon le niveau visé.
 
-- demande manuscrite adressée au Directeur de l'établissement ;
-- photocopie du diplôme du Baccalauréat et relevé de notes ;
-- photocopie du diplôme Bac+2 (DEUG/DUT/BTS) ou du diplôme Bac+4 (Licence), selon le niveau visé.
+## Admission en Master
 
-> Le calendrier (ouverture, clôture des candidatures, résultats, inscriptions) est republié chaque année. Consulter les avis annuels du réseau ENCG ou de l'ENCG Tanger pour les dates exactes.
+L'ENCG Tanger propose trois Masters : **MPMDC**, **MRHEP** et **IMTD**. L'accès se fait pour les titulaires d'une Licence en économie et gestion ou d'un diplôme équivalent, selon une sélection sur étude de dossier propre à chaque Master. Les conditions détaillées de chaque Master, ainsi que les deux modalités de candidature (temps normal et temps aménagé), sont présentées dans la rubrique **Masters**.
+
+## Admission en formation continue : DCA et DCESS
+
+L'ENCG Tanger propose des formations continues permettant aux candidats
+de poursuivre leur parcours académique et de développer leurs compétences
+professionnelles. Les conditions d'accès dépendent du diplôme détenu
+et de la formation visée.
+
+### 1. Diplôme du Cycle d'Approfondissement (DCA)
+
+#### Conditions d'accès
+
+La candidature au DCA est ouverte aux titulaires d'un diplôme de niveau
+Bac+2 ou d'un diplôme équivalent.
+
+#### Procédure de sélection
+
+La sélection des candidats comprend :
+
+- L'examen du dossier de candidature ;
+- Un entretien de sélection.
+
+#### Dossier de candidature
+
+Le dossier de candidature comprend les pièces suivantes :
+
+1. Une copie certifiée conforme à l'original du diplôme Bac+2 ou équivalent ;
+2. Une copie certifiée conforme à l'original du baccalauréat ;
+3. Une photocopie légalisée de la carte d'identité nationale (CIN) ;
+4. Deux photos d'identité récentes au format 25 × 32 mm.
+
+### 2. Diplôme du Cycle des Études Supérieures Spécialisées (DCESS)
+
+#### Conditions d'accès
+
+La candidature au DCESS est ouverte aux titulaires d'un diplôme de niveau
+Bac+3 ou Bac+4, notamment une Licence ou un diplôme équivalent.
+
+#### Procédure de sélection
+
+La sélection des candidats comprend :
+
+- L'examen du dossier de candidature ;
+- Un entretien de sélection.
+
+#### Dossier de candidature
+
+Le dossier de candidature comprend les pièces suivantes :
+
+1. Une copie certifiée conforme à l'original du diplôme Bac+3 ou Bac+4
+   (Licence ou équivalent) ;
+2. Une copie certifiée conforme à l'original du baccalauréat ;
+3. Une photocopie légalisée de la carte d'identité nationale (CIN) ;
+4. Deux photos d'identité récentes au format 25 × 32 mm.
+
+### 3. Informations importantes
+
+Les conditions d'admission, les dates de candidature, les frais éventuels
+et les modalités pratiques peuvent varier selon la formation et la campagne
+de recrutement.
+
+Les candidats sont invités à consulter les annonces officielles de l'ENCG
+Tanger pour vérifier les conditions applicables à la session concernée.
 
 ## Où trouver les informations à jour
 
-Comme les dates, l'école organisatrice et certaines modalités changent chaque année, les informations précises pour l'année en cours doivent être vérifiées directement sur :
+Les dates, l'école organisatrice, les places et certaines modalités changent chaque année. Les informations de l'année en cours sont à vérifier sur :
 
-- le site de l'ENCG Tanger (rubrique Actualités / Admission) : [encgt.uae.ac.ma](https://encgt.uae.ac.ma/)
-- le portail national TAFEM : [tafem.ma](https://www.tafem.ma/)
-- le portail de pré-inscription CNAEM/passerelles de l'UAE : [pre-inscription.uae.ac.ma/encg/regule](https://pre-inscription.uae.ac.ma/encg/regule/mar_regule_auth_encg.php)
-
-> Ce document décrit la structure générale et stable des voies d'admission au réseau ENCG. **Les dates, frais et pièces exactes varient chaque année** : se référer aux avis officiels publiés au moment de la candidature.
+- le site de l'ENCG Tanger (Actualités / Admission) : [encgt.uae.ac.ma](https://encgt.uae.ac.ma/) ;
+- le portail du concours TAFEM : [tafem.ma](https://www.tafem.ma/) ;
+- la plateforme nationale de candidature Cursussup : [cursussup.gov.ma](https://www.cursussup.gov.ma/) ;
+- le portail de pré-inscription de l'UAE : [pre-inscription.uae.ac.ma/encg/regule](https://pre-inscription.uae.ac.ma/encg/regule/mar_regule_auth_encg.php).

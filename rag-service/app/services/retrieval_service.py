@@ -12,13 +12,24 @@ SECTION_BOOST = 0.15
 FILIERE_BOOST = 0.15
 INTENT_BOOST = 0.10
 DIPLOMA_BOOST = 0.15
-CATEGORY_BOOST = 0.10
+CATEGORY_BOOST = 0.25
 
 MIN_FALLBACK_CANDIDATES = 3
 
 GLOBAL_SAFETY_NET_K = 5
 
-MAX_RERANK_CANDIDATES = 12
+MAX_RERANK_CANDIDATES = 15
+
+RRF_K = 60
+
+# Les boosts de métadonnées (SECTION_BOOST, CATEGORY_BOOST, ...) sont des
+# "points" de confiance relatifs. Avant le reranker, ils sont convertis à
+# l'échelle des scores RRF (environ 0.016 par rang) avec ce poids : ils
+# servent à départager des candidats proches, pas à écraser la recherche.
+# Exemple : sans ce poids, CATEGORY_BOOST (0.25) valait 15 fois un rang
+# RRF et éliminait du lot envoyé au reranker les chunks non étiquetés,
+# y compris ceux du filet de sécurité global.
+PRE_RERANK_BOOST_WEIGHT = 0.01
 
 
 class RetrievalService:
@@ -38,11 +49,17 @@ class RetrievalService:
         section: str | None,
         filiere: str | None,
         intent: str | None,
+        category: str | None = None,
     ) -> list[dict]:
 
         for result in results:
 
             boost = 0.0
+
+            # Category boost : favorise les chunks de la catégorie
+            # détectée dans la question (ex. Admission, Masters).
+            if category and result.get("category") == category:
+                boost += CATEGORY_BOOST
 
             result_section = result.get("section")
             result_filiere = result.get("filiere")
@@ -90,7 +107,10 @@ class RetrievalService:
                     boost += DIPLOMA_BOOST
 
             result["metadata_boost"] = boost
-            result["final_score"] = result["rrf_score"] + boost
+            result["final_score"] = (
+                result["rrf_score"]
+                + boost * PRE_RERANK_BOOST_WEIGHT
+            )
 
         results.sort(
             key=lambda x: x["final_score"],
@@ -385,16 +405,68 @@ class RetrievalService:
             fallback_level,
         )
 
+    @staticmethod
+    def _accumulate_rrf(
+        rows: list,
+        kind: str,
+        rrf_scores: dict,
+        chunk_data: dict,
+    ) -> None:
+        """
+        Ajoute au score RRF les points d'une liste classée.
+
+        kind = "vector"  : chaque ligne finit par la distance cosinus
+        kind = "keyword" : chaque ligne finit par le score lexical
+
+        Un chunk présent dans plusieurs listes (recherche filtrée ET
+        filet de sécurité, vecteur ET mots-clés) cumule les points.
+        """
+
+        for rank, row in enumerate(rows, start=1):
+
+            (
+                chunk,
+                source,
+                chunk_category,
+                filiere_value,
+                source_url,
+                raw_score,
+            ) = row
+
+            key = chunk.id
+
+            rrf_scores[key] = (
+                rrf_scores.get(key, 0.0) + 1.0 / (RRF_K + rank)
+            )
+
+            data = chunk_data.setdefault(key, {
+                "content": chunk.content,
+                "source": source,
+                "chunk_index": chunk.chunk_index,
+                "category": chunk_category,
+                "filiere": filiere_value,
+                "section": chunk.section,
+                "subsection": chunk.subsection,
+                "source_url": source_url,
+            })
+
+            if kind == "vector":
+                data.setdefault("vector_distance", float(raw_score))
+                data.setdefault("vector_similarity", float(1 - raw_score))
+            else:
+                data.setdefault("keyword_score", float(raw_score))
+
     def search(
         self,
         db: Session,
         query: str,
-        candidate_k: int = 10,
-        final_k: int = 3
+        candidate_k: int = 15,
+        final_k: int = 5
     ):
 
         # 1. Détection des métadonnées
         category = MetadataDetector.detect_category(query)
+        detected_category = category
         filiere = MetadataDetector.detect_filiere(query)
         section = MetadataDetector.detect_section(query)
         parcours = MetadataDetector.detect_parcours(query)
@@ -436,139 +508,17 @@ class RetrievalService:
             subsection=subsection,
         )
 
-        # 5. Fusion RRF
-        rrf_scores = {}
+        # 5. Fusion RRF : recherche filtrée + filet de sécurité global
+        rrf_scores: dict = {}
+        chunk_data: dict = {}
 
-        chunk_data = {}
-
-        RRF_K = 60
-
-        # Vector ranking
-        for rank, (
-            chunk,
-            source,
-            category,
-            filiere_value,
-            source_url,
-            distance
-        ) in enumerate(vector_results, start=1):
-
-            key = chunk.id
-
-            rrf_scores[key] = (
-                rrf_scores.get(key, 0)
-                + 1 / (RRF_K + rank)
-            )
-
-            chunk_data[key] = {
-                "content": chunk.content,
-                "source": source,
-                "chunk_index": chunk.chunk_index,
-                "category": category,
-                "filiere": filiere_value,
-                "section": chunk.section,
-                "subsection": chunk.subsection,
-                "source_url": source_url,
-                "vector_distance": float(distance),
-                "vector_similarity": float(1 - distance)
-            }
-
-        # Keyword ranking
-        for rank, (
-            chunk,
-            source,
-            category,
-            filiere_value,
-            source_url,
-            keyword_score
-        ) in enumerate(keyword_results, start=1):
-
-            key = chunk.id
-
-            rrf_scores[key] = (
-                rrf_scores.get(key, 0)
-                + 1 / (RRF_K + rank)
-            )
-
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url
-                }
-
-            chunk_data[key]["keyword_score"] = float(
-                keyword_score
-            )
-
-        for rank, (
-            chunk,
-            source,
-            category,
-            filiere_value,
-            source_url,
-            distance
-        ) in enumerate(global_vector_results, start=1):
-
-            key = chunk.id
-
-            rrf_scores[key] = (
-                rrf_scores.get(key, 0)
-                + 1 / (RRF_K + rank)
-            )
-
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url,
-                    "vector_distance": float(distance),
-                    "vector_similarity": float(1 - distance)
-                }
-
-        # Keyword ranking (recherche ouverte, filet de sécurité)
-        for rank, (
-            chunk,
-            source,
-            category,
-            filiere_value,
-            source_url,
-            keyword_score
-        ) in enumerate(global_keyword_results, start=1):
-
-            key = chunk.id
-
-            rrf_scores[key] = (
-                rrf_scores.get(key, 0)
-                + 1 / (RRF_K + rank)
-            )
-
-            if key not in chunk_data:
-                chunk_data[key] = {
-                    "content": chunk.content,
-                    "source": source,
-                    "chunk_index": chunk.chunk_index,
-                    "category": category,
-                    "filiere": filiere_value,
-                    "section": chunk.section,
-                    "subsection": chunk.subsection,
-                    "source_url": source_url
-                }
-
-            if "keyword_score" not in chunk_data[key]:
-                chunk_data[key]["keyword_score"] = float(
-                    keyword_score
-                )
+        for rows, kind in (
+            (vector_results, "vector"),
+            (keyword_results, "keyword"),
+            (global_vector_results, "vector"),
+            (global_keyword_results, "keyword"),
+        ):
+            self._accumulate_rrf(rows, kind, rrf_scores, chunk_data)
 
         # 6. Préparer tous les résultats avec leur score RRF
         retrieved_chunks = []
@@ -589,13 +539,8 @@ class RetrievalService:
 
                 "rrf_score": float(rrf_score),
 
-                "vector_similarity": data.get(
-                    "vector_similarity"
-                ),
-
-                "keyword_score": data.get(
-                    "keyword_score"
-                )
+                "vector_similarity": data.get("vector_similarity"),
+                "keyword_score": data.get("keyword_score"),
             })
 
         # 7. Appliquer le metadata boost
@@ -604,10 +549,19 @@ class RetrievalService:
             query=query,
             section=section,
             filiere=filiere,
-            intent=intent
+            intent=intent,
+            category=detected_category,
         )
 
         retrieved_chunks = retrieved_chunks[:MAX_RERANK_CANDIDATES]
+
+        print(
+            f"[RETRIEVAL] category={detected_category} "
+            f"filiere={filiere} section={section} "
+            f"subsection={subsection} intent={intent} "
+            f"filters_used={filters_used} "
+            f"fallback_level={fallback_level}"
+        )
 
         # Reranking
         candidate_count = len(retrieved_chunks)

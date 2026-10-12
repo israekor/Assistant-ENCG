@@ -14,11 +14,9 @@ Le DCA s'étend sur 2 semestres, incluant un stage professionnel d'une durée de
 - **Durée** : une année universitaire
 - **Coût** : 25 000 Dhs (paiement en trois tranches)
 
-### Dates à retenir -- Formation DCA (Week-end)
+### Calendrier
 
-- **Date limite de soumission des dossiers de candidature** : 17 octobre 2026
-- **Entretien de sélection** : 24 octobre 2026
-- **Début des cours** : 07 novembre 2026
+Le calendrier de candidature (date limite de dépôt des dossiers, entretien de sélection, début des cours) est fixé chaque année et publié sur le site officiel de l'ENCG Tanger. Il peut être modifié par l'administration.
 
 ### Candidater
 
@@ -65,13 +63,9 @@ Le diplôme ouvre la porte à une variété d'opportunités professionnelles dan
 - **Analyste financier** : spécialisation dans l'analyse financière pour conseiller sur les investissements et la santé financière de l'entreprise ;
 - **Chef de projet logistique** : gestion de la chaîne d'approvisionnement, de la logistique et de la production dans divers secteurs industriels.
 
-### Contact
+### Contact et candidature
 
-- **Responsable pédagogique** : Pr. SEGDALI Maria
-- **Tél** : 06 61 13 99 37
-- **Email** : m.segdali1@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/5xhVs9NT5ikpZXa79)
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCA-GED.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCA](https://encgt.uae.ac.ma/dca/).
 
 ---
 
@@ -108,13 +102,9 @@ Le DCA GCL prépare les participants aux métiers suivants (liste non exhaustive
 - Technico-commercial dans les compagnies maritimes et dans les ports ;
 - Technico-commercial dans les compagnies du transport aérien et dans les aéroports.
 
-### Contact
+### Contact et candidature
 
-- **Responsable pédagogique** : Pr. EL KHALKHALI Imad
-- **Tél** : 06 63 81 27 98
-- **Email** : ielkhalkhali@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/BqzZySpULq2aUheF9)
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCA-GCL-2.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCA](https://encgt.uae.ac.ma/dca/).
 
 ---
 
@@ -139,13 +129,9 @@ Lien : [DCA Comptabilité, Finance et Gestion](https://encgt.uae.ac.ma/dca/)
 - Collaborateur en cabinet d'expertise comptable ;
 - Chargé du reporting financier, etc.
 
-### Contact
+### Contact et candidature
 
-- **Responsable pédagogique** : Pr. NASSIMI Abdelhakim
-- **Tél** : 06 61 88 14 59
-- **Email** : anassimi@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/jxP9vz5u8szNmDUN8)
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCA-CFG.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCA](https://encgt.uae.ac.ma/dca/).
 
 ---
 
@@ -159,8 +145,7 @@ La formation DCA MLT a pour objectif de former des responsables diplômés issus
 
 Le programme s'inscrit dans une démarche visant à satisfaire les exigences croissantes du secteur professionnel, tant en termes de qualification que de polyvalence des compétences. Dans un contexte de compétitivité accrue, la logistique et le transport s'imposent désormais comme des leviers stratégiques majeurs dans la gestion et le développement des entreprises.
 
-**Compétences développées -- savoir-faire :**
-
+#### Compétences développées -- savoir-faire
 - optimiser la gestion globale d'une chaîne logistique, en intégrant l'ensemble de ses maillons ;
 - optimiser l'utilisation des ressources ;
 - améliorer la gestion des flux physiques et informationnels ;
@@ -170,8 +155,7 @@ Le programme s'inscrit dans une démarche visant à satisfaire les exigences cro
 - concevoir, planifier et mettre en œuvre des projets logistiques et transport ;
 - adapter les processus logistiques à un environnement en constante évolution (digitalisation, logistique verte…).
 
-**Compétences développées -- savoir-être :**
-
+#### Compétences développées -- savoir-être
 - développer des compétences en leadership pour diriger et motiver efficacement des équipes ;
 - faire preuve de réactivité et d'adaptabilité face aux imprévus et aux situations d'urgence ;
 - prendre des décisions réfléchies et responsables ;
@@ -193,10 +177,6 @@ La formation Management Logistique et Transport offre des perspectives de carri�
 - responsable d'exploitation de terminal portuaire ;
 - responsable système d'information logistique…
 
-### Contact
+### Contact et candidature
 
-- **Responsable pédagogique** : Pr. ZEROUAL Laila
-- **Tél** : 06 51 56 73 25
-- **Email** : l.zeroual@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/szUSqiiAMUbHzxjM6)
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCA-MLT-2.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCA](https://encgt.uae.ac.ma/dca/).

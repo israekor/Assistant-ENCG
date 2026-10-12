@@ -81,13 +81,9 @@ L'école dispose d'un réseau de relations avec des entreprises qui contribue no
 - au développement de collaborations ;
 - à la recherche appliquée.
 
-## Directeur de l'ENCG Tanger
+## Direction et responsables
 
-Le directeur de l'École Nationale de Commerce et de Gestion de Tanger est :
-
-**Pr. Maghni Ahmed**
-
-Fonction : Directeur de l'École Nationale de Commerce et de Gestion de Tanger.
+La composition de la direction, des départements et des responsables pédagogiques évolue avec le temps. Pour la connaître, consulter la page officielle [Organisation et gouvernance](https://encgt.uae.ac.ma/organisation-et-gouvernance-2/).
 
 ## Positionnement de l'école
 

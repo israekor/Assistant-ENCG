@@ -26,8 +26,7 @@ Les accords bilatéraux Erasmus+ signés directement par l'ENCG Tanger ouvrent d
 
 Les accords bilatéraux Erasmus+ de l'UAE permettent également aux étudiants et au personnel de bénéficier de bourses de mobilité vers des établissements partenaires européens.
 
-**Démarches à suivre :**
-
+#### Démarches à suivre
 1. consulter la page web de l'université ([www.uae.ma](https://www.uae.ma)) et l'offre de bourses Erasmus+ ;
 2. choisir l'université européenne et consulter sa page web ;
 3. rechercher l'offre de formation la plus proche de la formation suivie à l'UAE ;

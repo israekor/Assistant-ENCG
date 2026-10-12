@@ -16,6 +16,7 @@ class MetadataService:
         "09_reglement": "Règlement",
         "10_partenariats_academiques": "Partenariats académiques",
         "11_admission": "Admission",
+        "12_glossaire": "Glossaire",
     }
 
     FILIERE_NAMES = {

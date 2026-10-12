@@ -1,5 +1,13 @@
 # ENCG Tanger -- Masters
 
+## Liste des masters proposés
+
+L'ENCG Tanger propose trois Masters :
+
+1. **MPMDC** : Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité ;
+2. **MRHEP** : Master Management des Ressources Humaines et Expertise Professionnelle ;
+3. **IMTD** : Master Ingénierie Managériale et Transformation Digitale.
+
 ## Présentation
 
 Appartenant au réseau national des ENCG, l'ENCG Tanger est reconnue pour l'exigence de ses formations, la qualité de son encadrement académique, son ouverture internationale et ses liens étroits avec le monde socio-économique.
@@ -21,8 +29,6 @@ L'admission est sélective et s'effectue selon les conditions et les critères p
 
 ## Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)
 
-Lien : [Master MPMDC](https://encgt.uae.ac.ma/master-management-portuaire-multimodale-digitalisation-cybersecurite-mpmdc/)
-
 ### Présentation
 
 Le Master MPMDC forme des managers capables de piloter les activités portuaires et maritimes, d'optimiser les chaînes logistiques multimodales et d'accompagner la transformation numérique et la sécurisation des organisations.
@@ -41,7 +47,9 @@ Cette combinaison distinctive entre management portuaire, logistique et technolo
 
 ### Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)
 
-**Semestre 1 :**
+Le cursus du master MPMDC comprend 4 semestres, soit 120 crédits dont 30 pour le projet de fin d'études (PFE). Le semestre 4 est consacré au PFE.
+
+#### Semestre 1
 - Activités et exploitation portuaire et maritime (I) ;
 - Douane et opérations de transit ;
 - Recherche opérationnelle appliquée ;
@@ -50,7 +58,7 @@ Cette combinaison distinctive entre management portuaire, logistique et technolo
 - Anglais ;
 - Développement personnel.
 
-**Semestre 2 :**
+#### Semestre 2
 - Cybersécurité ;
 - Incoterms, assurances et transport international ;
 - Leadership et conduite du changement ;
@@ -59,7 +67,7 @@ Cette combinaison distinctive entre management portuaire, logistique et technolo
 - Méthodologies de recherche scientifique en sciences de gestion ;
 - Activités et exploitation portuaire et maritime (II).
 
-**Semestre 3 :**
+#### Semestre 3
 - Modélisation statistique ;
 - Organisation d'une chaîne logistique multimodale ;
 - Cryptographie & Blockchain ;
@@ -68,7 +76,7 @@ Cette combinaison distinctive entre management portuaire, logistique et technolo
 - Marketing des services portuaires ;
 - Audit des organisations portuaires.
 
-**Semestre 4 :**
+#### Semestre 4
 - Projet de fin d'études réalisé en milieu professionnel et soutenu devant un jury.
 
 ### Débouchés professionnels
@@ -83,10 +91,7 @@ La sélection s'effectue exclusivement sur étude du dossier, sans épreuve écr
 
 ### Contact
 
-- **Coordonnateur Pédagogique** : Pr. BELAMHITOU Mahmoud
-- **Tél** : 0669807641
-- **Email** : [m.belamhitou@uae.ac.ma](mailto:m.belamhitou@uae.ac.ma)
-- **Fiche signalétique du master** : [cliquez ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/Fiche-Master-MPMDC-2026-2027-1-2-1.pdf)
+Les coordonnées du coordonnateur pédagogique et la fiche signalétique de ce master sont disponibles sur la page officielle du master : [Master MPMDC](https://encgt.uae.ac.ma/master-management-portuaire-multimodale-digitalisation-cybersecurite-mpmdc/).
 
 ---
 
@@ -109,7 +114,9 @@ Sa singularité réside dans son approche duale : il associe la haute rigueur ac
 
 ### Cursus (4 semestres)
 
-**Semestre 1 :**
+Le cursus du master MRHEP comprend 4 semestres. Le semestre 4 est consacré au projet professionnel de fin d'études (PFE) et à la soutenance devant un jury.
+
+#### Semestre 1
 - Management des ressources humaines ;
 - Gestion des connaissances ;
 - Droit du travail et conformité sociale ;
@@ -118,7 +125,7 @@ Sa singularité réside dans son approche duale : il associe la haute rigueur ac
 - Soft skills ;
 - Communication professionnelle & business english.
 
-**Semestre 2 :**
+#### Semestre 2
 - Marketing stratégique des RH ;
 - Développement du leadership et coaching ;
 - Ingénierie de la formation et apprentissage continu ;
@@ -127,7 +134,7 @@ Sa singularité réside dans son approche duale : il associe la haute rigueur ac
 - Méthodologie de recherche ;
 - Techniques de communication & culture d'entreprise.
 
-**Semestre 3 :**
+#### Semestre 3
 - Audit social & contrôle RH ;
 - Gestion prévisionnelle des emplois et des compétences ;
 - Innovation managériale et conduite du changement ;
@@ -136,7 +143,7 @@ Sa singularité réside dans son approche duale : il associe la haute rigueur ac
 - Expertise professionnelle et conseil en organisation ;
 - Recrutement stratégique et marque employeur.
 
-**Semestre 4 :**
+#### Semestre 4
 - Projet professionnel de fin d'études (PFE) : mise en application et validation des compétences sur un projet réel d'entreprise ;
 - Encadrement et accompagnement supérieur en contexte d'intervention en entreprise ;
 - Soutenance devant un jury.
@@ -160,10 +167,7 @@ L'accès à la formation est ouvert aux candidats répondant aux critères suiva
 
 ### Contact
 
-- **Coordonnateur Pédagogique** : Pr. FERHANE Driss
-- **Tél** : 06 62 63 96 10
-- **Email** : [fdriss@uae.ac.ma](mailto:fdriss@uae.ac.ma)
-- **Fiche signalétique du master** : [cliquez ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/Fiche-technique-de-presentation-du-Master-MRHEP-1-2-2.pdf)
+Les coordonnées du coordonnateur pédagogique et la fiche signalétique de ce master sont disponibles sur la page officielle de l'ENCG Tanger : [encgt.uae.ac.ma](https://encgt.uae.ac.ma/).
 
 ---
 
@@ -175,7 +179,9 @@ Le Master IMTD propose une formation Bac+5 cohérente et progressive qui forme d
 
 ### Cursus (4 semestres)
 
-**Semestre 1 : Fondations managériales et digitales**
+Le cursus du master IMTD comprend 4 semestres. Le semestre 4 est consacré à la professionnalisation : projet de fin d'études (PFE) en milieu professionnel et soutenance devant un jury.
+
+#### Semestre 1 : Fondations managériales et digitales
 - Management des organisations ;
 - Comptabilité financière ;
 - Gestion des ressources humaines ;
@@ -184,7 +190,7 @@ Le Master IMTD propose une formation Bac+5 cohérente et progressive qui forme d
 - Anglais des affaires ;
 - Management de projet.
 
-**Semestre 2 : Approche fonctionnelle, data et entrepreneuriat**
+#### Semestre 2 : Approche fonctionnelle, data et entrepreneuriat
 - Gestion de la chaîne logistique ;
 - Éthique et responsabilité sociétale des entreprises ;
 - Finance de marché et FinTech ;
@@ -193,7 +199,7 @@ Le Master IMTD propose une formation Bac+5 cohérente et progressive qui forme d
 - Culture entrepreneuriale et techniques de communication ;
 - Méthodologie de recherche.
 
-**Semestre 3 : Pilotage stratégique et ingénierie décisionnelle**
+#### Semestre 3 : Pilotage stratégique et ingénierie décisionnelle
 - Contrôle de gestion et pilotage de la performance ;
 - Ingénierie des processus et amélioration continue ;
 - Ingénierie financière ;
@@ -202,7 +208,7 @@ Le Master IMTD propose une formation Bac+5 cohérente et progressive qui forme d
 - Recherche opérationnelle & Intelligence artificielle ;
 - Systèmes d'information et technologies digitales.
 
-**Semestre 4 : Professionnalisation**
+#### Semestre 4 : Professionnalisation
 - Projet de fin d'études (PFE) en milieu professionnel ;
 - Mise en application des compétences sur une problématique réelle d'organisation ;
 - Soutenance devant un jury.
@@ -226,7 +232,4 @@ La sélection s'effectue exclusivement sur étude du dossier, sans épreuve écr
 
 ### Contact
 
-- **Coordonnateur Pédagogique** : Pr. MCHICH Rachid
-- **Tél** : 06 63 03 62 38
-- **Email** : [rmchich@uae.ac.ma](mailto:rmchich@uae.ac.ma)
-- **Fiche signalétique du master** : [cliquez ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/Fiche_Master_IMTD_2026-2027-Mchich-1-3-1.pdf)
+Les coordonnées du coordonnateur pédagogique et la fiche signalétique de ce master sont disponibles sur la page officielle de l'ENCG Tanger : [encgt.uae.ac.ma](https://encgt.uae.ac.ma/).

@@ -4,7 +4,7 @@
 
 L'ENCG Tanger accorde une importance grandissante à la coopération internationale, afin d'offrir à sa communauté académique (enseignants, administratifs et étudiants) une expérience professionnelle et multiculturelle unique.
 
-Plusieurs conventions ont été ratifiées avec des établissements universitaires européens (France, Espagne, Pays-Bas, Croatie...) et, prochainement, américains, offrant diverses possibilités de mobilité internationale : mobilité diplômante, mobilité simple Erasmus+, double cursus, etc.
+Plusieurs conventions ont été ratifiées avec des établissements universitaires européens (France, Espagne, Pays-Bas, Croatie...) offrant diverses possibilités de mobilité internationale : mobilité diplômante, mobilité simple Erasmus+, double cursus, etc.
 
 ## Convention de Double Diplomation avec Brest Business School (BBS -- France)
 

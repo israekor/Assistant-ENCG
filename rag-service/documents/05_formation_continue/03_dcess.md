@@ -20,19 +20,9 @@ Le DCESS s'étend sur 3 semestres, incluant un semestre de stage, soit 3 mois au
   - Formule cadre : 40 000 Dhs
   - (mode de paiement : en trois tranches)
 
-### Dates à retenir -- Formule Étudiants
+### Calendrier
 
-- **Date limite de soumission des dossiers de candidature** : 30 octobre 2026
-- **Entretien de sélection** : 07 novembre 2026
-- **Début des cours** : 16 novembre 2026
-
-### Dates à retenir -- Formule Cadres
-
-- **Date limite de soumission des dossiers de candidature** : 14 novembre 2026
-- **Entretien de sélection** : 21 novembre 2026
-- **Début des cours** : 28 novembre 2026
-
-> **N.B.** : Ce calendrier est fixé selon l'état actuel. Il peut être modifié à tout moment selon les décisions provenant de l'administration de l'école.
+Le calendrier de candidature (date limite de dépôt des dossiers, entretien de sélection, début des cours) est fixé chaque année et publié sur le site officiel de l'ENCG Tanger. Il peut être modifié par l'administration.
 
 ### Candidater
 
@@ -75,21 +65,9 @@ Le DCESS en Finance, Audit et Contrôle de Gestion prépare les participants aux
 - responsable de budgets ;
 - responsable du reporting, etc.
 
-### Contact
+### Contact et candidature
 
-**Formule Étudiants :**
-- **Responsable pédagogique** : Pr. ETTAHRI Younes
-- **Tél** : 06 63 30 50 90
-- **Email** : yettahri@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/Hp4PkK7zvwgqg5iX9)
-
-**Formule Cadres :**
-- **Responsable pédagogique** : Pr. SALAHDDINE My Abdelouhab
-- **Tél** : 06 60 91 01 02
-- **Email** : salahddine@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/EGPCJKcqfoH19pjz8)
-
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCESS-FACG-4.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCESS](https://encgt.uae.ac.ma/dcess/).
 
 ---
 
@@ -134,21 +112,9 @@ Le cycle de formation DCESS IMTD prépare les participants aux métiers suivants
 - trésorier d'entreprise ;
 - contrôleur de gestion, etc.
 
-### Contact
+### Contact et candidature
 
-**Formule Cadres :**
-- **Responsable pédagogique** : Pr. NECHAD Abdelhamid
-- **Tél** : 06 62 79 58 83
-- **Email** : anechad@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/PsqhHQFUbkNKbdHM7)
-
-**Formule Étudiants :**
-- **Responsable pédagogique** : Pr. HSINA Hajar
-- **Tél** : 06 59 12 40 43
-- **Email** : h.hsina@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/Q7ZTckhd2pByqaXn6)
-
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCESS-IMTD.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCESS](https://encgt.uae.ac.ma/dcess/).
 
 ---
 
@@ -180,21 +146,9 @@ Le DCESS « Logistique et Achats-ERP » prépare les participants aux métiers s
 - responsable qualité ;
 - responsable hygiène et sécurité.
 
-### Contact
+### Contact et candidature
 
-**Formule Étudiants :**
-- **Responsable pédagogique** : Pr. KAISS Sarra
-- **Tél** : 06 67 10 45 67
-- **Email** : s.kaiss@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/cdewAs1XH7JQD9Go6)
-
-**Formule Cadres :**
-- **Responsable pédagogique** : Pr. CHETOUANI Sarah
-- **Tél** : 06 62 52 02 13
-- **Email** : schetouani@uae.ac.ma
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/JkimJVKZiQC4hff4A)
-
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCESS-LGA-ERP.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCESS](https://encgt.uae.ac.ma/dcess/).
 
 ---
 
@@ -204,14 +158,12 @@ Lien : [DCESS Marketing et Commerce International](https://encgt.uae.ac.ma/dcess
 
 ### Objectifs de la formation
 
-**Objectif général :**
-
+#### Objectif général
 La formation portant sur le Diplôme du Cycle des Études Supérieures Spécialisées en Marketing et Commerce International (DCESS MCI) a pour vocation de préparer et de perfectionner des cadres spécialistes du marketing et de la vente dans une perspective nationale et internationale.
 
 Elle permettra aux participants d'intégrer les technologies de l'information et de la communication dans la préparation des dossiers et la prise des décisions commerciales orientées vers les marchés nationaux et étrangers.
 
-**Objectifs spécifiques :**
-
+#### Objectifs spécifiques
 Le DCESS MCI s'articule autour de trois axes :
 
 - les différents aspects du marketing ;
@@ -222,11 +174,6 @@ Le DCESS MCI s'articule autour de trois axes :
 
 Cette formation prépare les participants aux métiers suivants : directeur marketing, directeur commercial, responsable marketing export, responsable logistique, consultant en marketing et commerce international, chargé d'études, directeur des ventes, chef de marché, acheteur en centrale d'achat, directeur de magasin, etc.
 
-### Contact
+### Contact et candidature
 
-**Formule Cadres :**
-- **Responsable pédagogique** : Pr. BENBBA Brahim
-- **Tél** : 06 78 26 01 55
-- **Email** : [b.benbba@uae.ac.ma](mailto:b.benbba@uae.ac.ma)
-- **Lien de pré-candidature** : [Cliquer ici](https://forms.gle/CEsxwGiPDs2imWyF7)
-- **Dépliant** : [Cliquer ici](https://encgt.uae.ac.ma/wp-content/uploads/2026/09/DCESS-MCI-2.pdf)
+Les coordonnées du responsable pédagogique, le lien de pré-candidature et le dépliant de la formation sont publiés chaque année sur la page officielle : [DCESS](https://encgt.uae.ac.ma/dcess/).

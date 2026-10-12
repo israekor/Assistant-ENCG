@@ -4,83 +4,40 @@
 
 ### Laboratoires de recherche
 
-#### LR : Gouvernance des Organisations et des Territoires
+L'ENCG Tanger compte quatre laboratoires de recherche :
 
-- **Responsable** : M. Youssef ALAMI
-- **Membres** : ABAKOUY Mostafa, ALAMI Youssef, BOUJETTOU Hassane, CHERRAT Loubna, DAANOUNE Rachid, EL HOBZ Kamilia, EL QOUR Tahar, ETTAHRI Younes, GHAILAN Sanaa, HOUSNI Hamid, LAKHOUIL Abdellah, MCHICH Rachid, NASSIMI Abdelhakim, RAHMOUNI Ahmed Fath Allah, SALAHDDINE My Abdelouhab.
-
-#### LR : Gouvernance et Performance des Organisations
-
-- **Responsable** : M. A. MAGHNI
-- **Membres** : MAGHNI Ahmed, CHRAIBI Abdeslam, BOUNGAB Souad, BOUZEKRAOUI Hind, KAISS Sara, SEGDALI Maria, ABOUZAID Badr, AJDOUR Siham, BENNANI Zakaria, CHETOUANI Sara, LOUKIL Said, NECHAD Abdelhamid, RHALMA Mohamed, KORAICH Al Mahdi, MOGHAR Adil, MSSASSI Said, MAKKAOUI Mohamed, BENHMED Nora.
-
-#### LR : Management, Économie, Système d'Information et Droit
-
-- **Responsable** : M. JEDLANE Nabil
-- **Membres** : AFRANI Abdelhadi, ALMERIOUH Youssef, BAKKALI Hanae, BAKOUR Chafik, BALHADJ Said, BOUKAICH Khalid, CHAFIK Khalid, EL KHARRAZ Abdillah, EL KHARRAZ Ouail, EL NABHANI Maha, ELMOUDDEN Abdelmounim, FERHANE Driss, GHANIM Mohammed, HOUDAIGUI Nora, JEDLANE Nabil, LYAZAMI Nahid, M'BARKI Mohammed Amine, MGHIZOU Hasnae, MOUJAHID Hicham, OUARIAGLY Elmostafa, ZBAKH Abdelali.
-
-#### LR : Marketing, Logistique et Management
-
-- **Responsable** : M. BENBBA Brahim
-- **Membres** : AAJLY Abdellah, AMINE Abderrahman, BELAMHITOU Mahmoud, BELHSEN Noureddine, BENBBA Ibrahim, EL KHALKHALI Imad, ELANDALOUSSI Zineb, LOUMRHARI Rhizlane, MARSO Saida, MOUALLIM Isam, NOUREDDINE Amine, REKLAOUI Asmaa, TAHROUCH Mohamed, TANOUTI Mouna, ZEROUAL Laila.
+- Gouvernance des Organisations et des Territoires ;
+- Gouvernance et Performance des Organisations ;
+- Management, Économie, Système d'Information et Droit ;
+- Marketing, Logistique et Management.
 
 ### Équipes de recherche
 
-#### Rattachées au LR : Gouvernance des Organisations et des Territoires
+Chaque laboratoire regroupe des équipes de recherche.
 
-**ER : Sciences de l'Entreprise et Politiques du Territoire**
-- Responsable : M. ABAKOUY Mostafa
-- Membres : ABAKOUY Mostafa, BOUJETTOU Hassnae, EL QOUR Tahar, HOUSNI Hamid, MCHICH Rachid
+#### Laboratoire Gouvernance des Organisations et des Territoires
 
-**ER : Audit, Contrôle de Gestion et Performance des Organisations**
-- Responsable : M. DAANOUNE Rachid
-- Membres : DAANOUNE Rachid, ETTAHRI Younes, NASSIMI Abdelhakim, RAHMOUNI Ahmed Fath Allah, GHAILAN Sanaa
+- Sciences de l'Entreprise et Politiques du Territoire ;
+- Audit, Contrôle de Gestion et Performance des Organisations ;
+- Finance et Gouvernance des Organisations.
 
-**ER : Finance et Gouvernance des Organisations**
-- Responsable : M. SALAHDDINE Abdelouahab
-- Membres : AMZIANE Houdaifa, ALAMI Youssef, CHERRAT Loubna, EL HOBZ Jamila, LAKHOUIL Abdellah, SALAHDDINE My Abdelouahab
+#### Laboratoire Gouvernance et Performance des Organisations
 
-#### Rattachées au LR : Gouvernance et Performance des Organisations
+- Innovation et Performance ;
+- Audit, Finance et Management de Projet ;
+- Gouvernance, Organisation et Sociétés.
 
-**ER : Innovation et Performance**
-- Responsable : Mme BENHMED Nora
-- Membres : ABOUZAID Badr, AJDOUR Siham, BENHMED Nora, BENNANI Zakaria, CHETOUANI Sarah, LOUKIL Said
+#### Laboratoire Management, Économie, Système d'Information et Droit
 
-**ER : Audit, Finance et Management de Projet**
-- Responsable : Mme BOUNGAB Souad
-- Membres : MAGHNI Ahmed, CHRAIBI Abdessalam, BOUNGAB Souad, BOUZEKRAOUI Hind, KAISS Sara
+- Économie et Management des Risques ;
+- Management et Systèmes d'Information ;
+- Études Interdisciplinaires en Intelligence Juridique et Affaires.
 
-**ER : Gouvernance, Organisation et Sociétés**
-- Responsable : M. MAKKAOUI Mohammed
-- Membres : NECHAD Abdelhamid, RHALMA Mohammed, MAKKAOUI Mohamed, BELKHEIRI Omar, MSSASSI Said
+#### Laboratoire Marketing, Logistique et Management
 
-#### Rattachées au LR : Management, Économie, Système d'Information et Droit
-
-**ER : Économie et Management des Risques**
-- Responsable : M. BAKOUR Chafik
-- Membres : BAKOUR Chafik, JEDLANE Nabil, GHANIM Mohammed, ELMOUDDEN Abdelmounim, HOUDAIGUI Nora
-
-**ER : Management et Systèmes d'Information**
-- Responsable : M. Khalid CHAFIK
-- Membres : CHAFIK Khalid, BALHADJ Said, EL KHARRAZ Abdillah, EL KHARRAZ Ouail, ZBAKH Abdelali, M'BARKI Mohammed Amine, ALMERIOUH Youssef, FERHANE Driss, MGHIZOU Hasnae
-
-**ER : Études Interdisciplinaires en Intelligence Juridique et Affaires**
-- Responsable : M. BOUKAICH Khalid
-- Membres : BOUKAICH Khalid, AFRANI Abdelhadi, LYAZAMI Nahid, OUARIAGLY Elmostafa, MOUJAHID Hicham, BAKKALI Hanae, EL NABHANI Maha
-
-#### Rattachées au LR : Marketing, Logistique et Management
-
-**ER : Marketing, Supply Chain et Management**
-- Responsable : M. BELHSEN Noureddine
-- Membres : AMINE Abderrahman, AAJLY Abdellah, BELHSEN Noureddine, BENBBA Ibrahim, TAHROUCH Mohamed
-
-**ER : Logistique, Marketing et Finance**
-- Responsable : M. MOUALLIM Issam
-- Membres : BELAMHITOU Mahmoud, MOUALLIM Issam, REKLAOUI Asmaa, LOUMRHARI Rhizlane, ZEROUAL Laila
-
-**ER : Marketing et Transition Digitale**
-- Responsable : M. EL KHALKHALI Imad
-- Membres : MARSO Saida, EL KHALKHALI Imad, NOUREDDINE Amine, ELANDALOUSSI Zineb, TANOUTI Mouna
+- Marketing, Supply Chain et Management ;
+- Logistique, Marketing et Finance ;
+- Marketing et Transition Digitale.
 
 ## Axes de recherche
 
@@ -98,3 +55,5 @@ En partant des objectifs de la formation et des cursus relatifs aux diplômes d'
 - Management public
 - Management des systèmes logistiques
 - Diplomatie économique
+
+Pour la composition des laboratoires et des équipes (responsables et membres), consulter la page officielle de la recherche sur [encgt.uae.ac.ma](https://encgt.uae.ac.ma/).

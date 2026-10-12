@@ -145,6 +145,36 @@ class MetadataDetector:
         return None
 
     @staticmethod
+    def detect_formation_scope(query: str) -> str | None:
+        q = query.lower()
+
+        if re.search(
+            r"\bformation(?:s)?\s+continue(?:s)?\b",
+            q
+        ):
+            return "CONTINUING_FORMATION"
+
+        if re.search(
+            r"\bformation(?:s)?\s+initiale(?:s)?\b",
+            q
+        ):
+            return "INITIAL_FORMATION"
+
+        if re.search(
+            r"\bmaster(?:s)?\b",
+            q
+        ):
+            return "MASTERS"
+
+        if re.search(
+            r"\bformation(?:s)?\b",
+            q
+        ):
+            return "FORMATIONS"
+
+        return None
+
+    @staticmethod
     def detect_parcours(query: str) -> str | None:
         """
         Détecte le parcours ENCG explicitement mentionné
@@ -182,10 +212,39 @@ class MetadataDetector:
         ):
             return "Formation"
 
+        # Masters : testé AVANT Admission, pour que
+        # "conditions d'admission au master MRHEP" reste dans Masters.
         if (
             "master" in query_lower
             or "masters" in query_lower
         ):
             return "Masters"
+
+        # Admission : concours d'accès et voies d'entrée à l'ENCG.
+        if re.search(
+            r"\b(?:tafem|tafsem|cnaem|concours|passerelles?|"
+            r"admissions?|candidatures?|candidater|"
+            r"pr[ée]s[ée]lection)\b",
+            query_lower
+        ):
+            return "Admission"
+
+        # "comment accéder / intégrer / entrer à l'ENCG ..."
+        if re.search(
+            r"\b(?:acc[ée]der|acc[èe]s|int[ée]grer|entrer)\b"
+            r".*\bencg",
+            query_lower
+        ):
+            return "Admission"
+
+        # Questions de définition ("c'est quoi le CAP-ENCG ?") :
+        # on cherche d'abord dans le glossaire des sigles.
+        if re.search(
+            r"(?:\bc['’]est quoi\b|\bqu['’]est[- ]ce (?:que|qu['’])|"
+            r"\bque signifie\b|\bsignification\b|\bveut dire\b|"
+            r"\bd[ée]finition\b|\bsigle\b)",
+            query_lower
+        ):
+            return "Glossaire"
 
         return None
