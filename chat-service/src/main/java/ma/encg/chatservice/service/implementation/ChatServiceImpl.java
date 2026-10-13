@@ -41,7 +41,7 @@ public class ChatServiceImpl implements ChatService {
     @Value("${rag.fallback.min-score:0.15}")
     private double fallbackMinScore;
 
-    @Value("${rag.fallback.message:Je n'ai pas trouvé cette information dans les documents de l'ENCG Tanger. Je vous invite à contacter directement l'administration de l'école ou à consulter le site officiel : https://encgt.uae.ac.ma}")
+    @Value("${rag.fallback.message:Je n'ai pas trouvé cette information dans les documents de l'ENCG Tanger. Je vous invite à contacter directement l'administration de l'école via l'email encgtanger@encgt.ma ou à consulter le site officiel : https://encgt.uae.ac.ma}")
     private String fallbackMessage;
 
     private static final Pattern SMALL_TALK = Pattern.compile(
