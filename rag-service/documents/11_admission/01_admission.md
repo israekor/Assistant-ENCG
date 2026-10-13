@@ -42,10 +42,7 @@ Le calendrier et le nombre de places changent chaque année et ne sont pas déta
 
 ### Conditions d'éligibilité
 
-Le TAFEM est ouvert aux candidats qui, généralement :
-
-- sont en 2ème année du cycle du Baccalauréat (année de terminale) durant l'année scolaire en cours ;
-- ou sont déjà titulaires d'un Baccalauréat validé au titre de la session précédente.
+Pour être éligible à la candidature, il faut être titulaire d'un baccalauréat (marocain ou équivalent étranger) sans avoir redoublé la dernière année du lycée. Les branches acceptées sont : Sciences Mathématiques (A et B), Sciences Expérimentales (SVT et PC), Sciences de l'Économie et de Gestion (TGC).
 
 ### Spécialités de baccalauréat acceptées
 
@@ -59,7 +56,11 @@ Le TAFEM est ouvert aux candidats qui, généralement :
 1. **Pré-candidature en ligne** sur la plateforme Cursussup, avec classement des établissements par ordre de préférence.
 2. **Présélection** sur la base d'une moyenne calculée à partir de la note de l'Examen National (généralement 75 %) et de la note de l'Examen Régional (généralement 25 %).
 3. **Convocation** des candidats ayant atteint le seuil requis.
-4. **Épreuve écrite** : un **QCM** (questionnaire à choix multiples) qui évalue les aptitudes des candidats par rapport à la formation dispensée dans les ENCG.
+4. **Épreuve écrite** : Le jour du concours, les candidats doivent répondre à un total de 100 questions réparties sur quatre axes d'évaluation distincts :
+   Test de Mémorisation : Le candidat lit deux textes pendant 15 minutes, puis doit répondre de mémoire à 20 questions s'y rapportant.
+   Test de Logique : Évaluation des capacités d'analyse à travers 20 questions de mathématiques et de raisonnement (durée : 70 minutes).
+   Test de Culture Générale : 30 questions couvrant l'actualité mondiale, l'économie et divers sujets généraux (durée : 20 minutes).
+   Test de Langue Française : 30 questions axées sur la grammaire, la conjugaison, l'orthographe et la richesse du vocabulaire (durée : 20 minutes).
 5. **Affectation** des candidats admis vers les ENCG du réseau.
 
 ## TAFEM -- Répartition géographique des candidatures
