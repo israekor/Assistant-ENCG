@@ -1,5 +1,6 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
+import WelcomePage from "../pages/WelcomePage";
 import ChatPage from "../pages/ChatPage";
 import ProfilePage from "../pages/ProfilePage";
 import HistoryPage from "../pages/HistoryPage";
@@ -13,7 +14,7 @@ export default function AppRoutes() {
 
         <Routes>
 
-            <Route path="/" element={<Navigate to="/chat" replace />} />
+            <Route path="/" element={<WelcomePage />} />
 
             <Route path="/chat" element={<ChatPage />} />
 

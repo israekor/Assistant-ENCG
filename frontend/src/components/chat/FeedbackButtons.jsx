@@ -49,7 +49,7 @@ export default function FeedbackButtons({ responseId }) {
 
     return (
 
-        <div className="flex items-center gap-1 mt-2.5 -ml-1.5">
+        <div className="flex items-center gap-1">
 
             <button
                 onClick={() => send("LIKE")}

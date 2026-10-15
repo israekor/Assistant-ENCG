@@ -235,6 +235,21 @@ export function ChatProvider({ children }) {
         }
     };
 
+    //-------------------- Modifier un message et le renvoyer -------------------
+    // On retire le message modifié ainsi que toutes les réponses qui le suivent,
+    // puis on renvoie le nouveau texte comme un message normal.
+    const editMessage = async (messageId, newContent) => {
+        const trimmed = newContent.trim();
+        if (!trimmed || isStreaming) return null;
+
+        const index = messages.findIndex(m => m.id === messageId);
+        if (index === -1) return null;
+
+        setMessages(messages.slice(0, index));
+
+        return sendMessage(trimmed);
+    };
+
     //-------------------- Envoyer un feedback -------------------
     const sendFeedback = async (responseId, feedbackType) => {
         await feedbackService.addFeedback(responseId, {

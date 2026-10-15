@@ -32,6 +32,7 @@ export default function ChatPage() {
         openConversation,
         openConversationById,
         sendMessage,
+        editMessage,
         sendFeedback
     } = useChat();
 
@@ -72,6 +73,11 @@ export default function ChatPage() {
             console.error(error);
         }
     };
+
+    // Fait défiler vers le dernier message (nouveau message ou réponse en cours)
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, [messages.length, streamingContent]);
 
     const showWelcome = messages.length === 0 && !routeConversationId && !isStreaming;
 
@@ -115,11 +121,14 @@ export default function ChatPage() {
                             {messages.map(message => (
                                 <ChatMessage
                                     key={message.id}
+                                    id={message.id}
                                     role={message.role}
                                     content={message.content}
                                     responseId={message.responseId}
                                     feedback={message.feedback}
                                     onFeedback={sendFeedback}
+                                    onEdit={editMessage}
+                                    canEdit={!isStreaming && !loadingMessage}
                                 />
                             ))}
 
