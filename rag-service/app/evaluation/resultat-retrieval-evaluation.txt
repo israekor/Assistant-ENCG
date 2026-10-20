@@ -1,0 +1,617 @@
+======================================================================
+q01: Quels sont les débouchés de la filière Contrôle, Audit et Conseil ?
+======================================================================
+[RETRIEVAL] category=None filiere=Contrôle, Audit et Conseil section=Débouchés subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Contrôle, Audit et Conseil', 'section': None, 'subsection': None} fallback_level=1
+[RERANKER] candidates=12 time=23.279s
+Relevant criteria :
+  - {'source': '03_filieres/02_controle_audit_conseil.md', 'section': 'Débouchés'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/02_controle_audit_conseil.md | Débouchés | None | rrf=0.0656 vec=0.8911 kw=0.0606
+  #2 03_filieres/02_controle_audit_conseil.md | Objectifs | None | rrf=0.0645 vec=0.8670 kw=0.0591
+  #3 03_filieres/02_controle_audit_conseil.md | Présentation | None | rrf=0.0628 vec=0.8522 kw=0.0434
+  #4 05_formation_continue/03_dcess.md | DCESS Finance, Audit et Contrôle de Gestion | Débouchés | rrf=0.0310 vec=0.8547 kw=0.0413
+  #5 03_filieres/02_controle_audit_conseil.md | PROGRAMME | Semestre 4 | rrf=0.0301 vec=0.8380 kw=0.0391
+
+======================================================================
+q02: Quels sont les objectifs de la filière Finance ?
+======================================================================
+[RETRIEVAL] category=None filiere=Finance section=Objectifs subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Finance', 'section': None, 'subsection': None} fallback_level=1
+[RERANKER] candidates=14 time=18.727s
+Relevant criteria :
+  - {'source': '03_filieres/03_finance.md', 'section': 'Objectifs'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/03_finance.md | Objectifs | None | rrf=0.0656 vec=0.9114 kw=0.0657
+  #2 03_filieres/03_finance.md | Présentation | None | rrf=0.0479 vec=0.8674 kw=0.0304
+  #3 03_filieres/03_finance.md | Débouchés | None | rrf=0.0311 vec=0.8388 kw=0.0395
+  #4 03_filieres/03_finance.md | PROGRAMME | Semestre 5 | rrf=0.0308 vec=0.8455 kw=0.0287
+  #5 03_filieres/05_marketing_action_commerciale.md | Objectifs | None | rrf=0.0320 vec=0.8622 kw=0.0483
+
+======================================================================
+q03: Quelles sont les matières de Finance au semestre 5 ?
+======================================================================
+[RETRIEVAL] category=None filiere=Finance section=PROGRAMME subsection=Semestre 5 intent=LIST filters_used={'category': None, 'filiere': 'Finance', 'section': 'PROGRAMME', 'subsection': None} fallback_level=1
+[RERANKER] candidates=13 time=15.408s
+Relevant criteria :
+  - {'source': '03_filieres/03_finance.md', 'section': 'PROGRAMME', 'subsection': 'Semestre 5'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/03_finance.md | PROGRAMME | Semestre 5 | rrf=0.0489 vec=0.8774 kw=0.0366
+  #2 03_filieres/02_controle_audit_conseil.md | PROGRAMME | Semestre 5 | rrf=0.0154 vec=0.8604 kw=  -   
+  #3 03_filieres/03_finance.md | PROGRAMME | None | rrf=0.0477 vec=0.8497 kw=0.0480
+  #4 03_filieres/06_commerce_international.md | PROGRAMME | Semestre 5 | rrf=0.0156 vec=0.8605 kw=  -   
+  #5 03_filieres/02_controle_audit_conseil.md | PROGRAMME | None | rrf=0.0156 vec=  -    kw=0.0379
+
+======================================================================
+q04: Quelles sont les matières de Finance en S5 ?
+======================================================================
+[RETRIEVAL] category=None filiere=Finance section=PROGRAMME subsection=Semestre 5 intent=LIST filters_used={'category': None, 'filiere': 'Finance', 'section': 'PROGRAMME', 'subsection': None} fallback_level=1
+[RERANKER] candidates=14 time=16.714s
+Relevant criteria :
+  - {'source': '03_filieres/03_finance.md', 'section': 'PROGRAMME', 'subsection': 'Semestre 5'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/03_finance.md | PROGRAMME | Semestre 5 | rrf=0.0489 vec=0.8589 kw=0.0366
+  #2 03_filieres/03_finance.md | PROGRAMME | None | rrf=0.0643 vec=0.8438 kw=0.0480
+  #3 03_filieres/03_finance.md | PROGRAMME | Semestre 1 | rrf=0.0305 vec=0.8406 kw=0.0329
+  #4 03_filieres/03_finance.md | PROGRAMME | Semestre 3 | rrf=0.0315 vec=0.8431 kw=0.0355
+  #5 03_filieres/03_finance.md | PROGRAMME | Semestre 2 | rrf=0.0305 vec=0.8391 kw=0.0355
+
+======================================================================
+q05: Quelles sont les matières de la filière Finance ?
+======================================================================
+[RETRIEVAL] category=None filiere=Finance section=PROGRAMME subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Finance', 'section': 'PROGRAMME', 'subsection': None} fallback_level=0
+[RERANKER] candidates=10 time=11.025s
+Relevant criteria :
+  - {'source': '03_filieres/03_finance.md', 'section': 'PROGRAMME'}
+First relevant rank : 2
+Recall@1 : 0
+Recall@3 : 1
+Recall@5 : 1
+RR : 0.500
+
+Top 5:
+  #1 03_filieres/03_finance.md | Objectifs | None | rrf=0.0325 vec=0.8897 kw=0.0421
+✓ #2 03_filieres/03_finance.md | PROGRAMME | Semestre 1 | rrf=0.0472 vec=0.8683 kw=0.0304
+  #3 03_filieres/03_finance.md | Présentation | None | rrf=0.0161 vec=0.8873 kw=  -   
+✓ #4 03_filieres/03_finance.md | PROGRAMME | Semestre 2 | rrf=0.0310 vec=0.8548 kw=0.0329
+✓ #5 03_filieres/03_finance.md | PROGRAMME | Semestre 5 | rrf=0.0633 vec=0.8628 kw=0.0341
+
+======================================================================
+q06: Quels sont les débouchés de la filière Marketing ?
+======================================================================
+[RETRIEVAL] category=None filiere=Marketing et Action Commerciale section=Débouchés subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Marketing et Action Commerciale', 'section': None, 'subsection': None} fallback_level=1
+[RERANKER] candidates=15 time=14.181s
+Relevant criteria :
+  - {'source': '03_filieres/05_marketing_action_commerciale.md', 'section': 'Débouchés'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/05_marketing_action_commerciale.md | Débouchés | None | rrf=0.0656 vec=0.8967 kw=0.0609
+  #2 05_formation_continue/03_dcess.md | DCESS Marketing et Commerce International (MCI) | Débouchés | rrf=0.0159 vec=0.8644 kw=  -   
+  #3 03_filieres/06_commerce_international.md | Débouchés | None | rrf=0.0161 vec=0.8683 kw=  -   
+  #4 03_filieres/05_marketing_action_commerciale.md | Objectifs | None | rrf=0.0472 vec=0.8341 kw=0.0549
+  #5 02_formation/01_formation_initiale.md | Filières du cycle ENCG | Parcours Commerce | rrf=0.0161 vec=  -    kw=0.0574
+
+======================================================================
+q07: Quels sont les objectifs de la filière Commerce International ?
+======================================================================
+[RETRIEVAL] category=None filiere=Commerce International section=Objectifs subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Commerce International', 'section': None, 'subsection': None} fallback_level=1
+[RERANKER] candidates=15 time=19.691s
+Relevant criteria :
+  - {'source': '03_filieres/06_commerce_international.md', 'section': 'Objectifs'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/06_commerce_international.md | Objectifs | None | rrf=0.0651 vec=0.8911 kw=0.0527
+  #2 03_filieres/06_commerce_international.md | Présentation | None | rrf=0.0479 vec=0.8637 kw=0.0398
+  #3 05_formation_continue/03_dcess.md | DCESS Marketing et Commerce International (MCI) | Objectifs de la formation | rrf=0.0154 vec=  -    kw=0.0518
+  #4 03_filieres/05_marketing_action_commerciale.md | Objectifs | None | rrf=0.0156 vec=0.8500 kw=  -   
+  #5 02_formation/01_formation_initiale.md | Filières du cycle ENCG | Parcours Commerce | rrf=0.0164 vec=  -    kw=0.0605
+
+======================================================================
+q08: Quels sont les objectifs de la filière Achats et Supply Chain Management ?
+======================================================================
+[RETRIEVAL] category=None filiere=Achats et Supply Chain Management section=Objectifs subsection=None intent=LIST filters_used={'category': None, 'filiere': 'Achats et Supply Chain Management', 'section': None, 'subsection': None} fallback_level=1
+[RERANKER] candidates=10 time=13.788s
+Relevant criteria :
+  - {'source': '03_filieres/01_achats_supply_chain_management.md', 'section': 'Objectifs'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 03_filieres/01_achats_supply_chain_management.md | Objectifs | None | rrf=0.0656 vec=0.9087 kw=0.0702
+  #2 03_filieres/01_achats_supply_chain_management.md | Présentation | None | rrf=0.0640 vec=0.8978 kw=0.0475
+  #3 03_filieres/01_achats_supply_chain_management.md | Débouchés | None | rrf=0.0470 vec=0.8682 kw=0.0591
+  #4 03_filieres/01_achats_supply_chain_management.md | PROGRAMME | Semestre 1 | rrf=0.0469 vec=0.8837 kw=0.0437
+  #5 03_filieres/01_achats_supply_chain_management.md | PROGRAMME | Semestre 6 | rrf=0.0294 vec=0.8717 kw=0.0380
+
+======================================================================
+q09: Combien de semestres comprend le cycle des ENCG ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=34.743s
+Relevant criteria :
+  - {'source': '09_reglement/01_presentation_architecture_cursus.md', 'section': 'Architecture du cursus (Article 3)'}
+  - {'source': '02_formation/01_formation_initiale.md', 'section': 'Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)'}
+  - {'source': '09_reglement/01_presentation_architecture_cursus.md', 'section': 'Organisation des semestres et système de crédits (Article 4)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/01_presentation_architecture_cursus.md | Architecture du cursus (Article 3) | None | rrf=0.0311 vec=0.8901 kw=0.0496
+  #2 12_glossaire/01_glossaire.md | Sigles : l'école et les diplômes | None | rrf=0.0295 vec=0.8706 kw=0.0519
+  #3 03_filieres/02_controle_audit_conseil.md | PROGRAMME | None | rrf=0.0301 vec=0.8917 kw=0.0425
+✓ #4 09_reglement/01_presentation_architecture_cursus.md | Organisation des semestres et système de crédits (Article 4) | None | rrf=0.0286 vec=0.8717 kw=0.0455
+  #5 03_filieres/03_finance.md | PROGRAMME | None | rrf=0.0294 vec=0.8898 kw=0.0425
+
+======================================================================
+q10: Combien de semestres comprend le cursus complet menant au diplôme de l'ENCG ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DIPLOMAS filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=37.559s
+Relevant criteria :
+  - {'source': '09_reglement/01_presentation_architecture_cursus.md', 'section': 'Architecture du cursus (Article 3)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/01_presentation_architecture_cursus.md | Architecture du cursus (Article 3) | None | rrf=0.0325 vec=0.8985 kw=0.0462
+  #2 12_glossaire/01_glossaire.md | Sigles : l'école et les diplômes | None | rrf=0.0312 vec=0.8779 kw=0.0398
+  #3 12_glossaire/01_glossaire.md | Sigles relatifs au cursus de l'ENCG Tanger | None | rrf=0.0323 vec=0.8798 kw=0.0513
+  #4 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | None | rrf=0.0300 vec=0.8729 kw=0.0445
+  #5 03_filieres/04_management_ressources_humaines.md | PROGRAMME | None | rrf=0.0152 vec=0.8761 kw=  -   
+
+======================================================================
+q11: Combien de semestres durent les deux années préparatoires aux ENCG ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=36.597s
+Relevant criteria :
+  - {'source': '09_reglement/01_presentation_architecture_cursus.md', 'section': 'Architecture du cursus (Article 3)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/01_presentation_architecture_cursus.md | Architecture du cursus (Article 3) | None | rrf=0.0313 vec=0.8732 kw=0.0511
+  #2 12_glossaire/01_glossaire.md | Sigles : l'école et les diplômes | None | rrf=0.0318 vec=0.8524 kw=0.0575
+  #3 12_glossaire/01_glossaire.md | Sigles relatifs au cursus de l'ENCG Tanger | None | rrf=0.0290 vec=0.8489 kw=0.0453
+  #4 09_reglement/01_presentation_architecture_cursus.md | Organisation des semestres et système de crédits (Article 4) | None | rrf=0.0291 vec=0.8476 kw=0.0512
+  #5 02_formation/01_formation_initiale.md | Cycle des Écoles Nationales de Commerce et de Gestion (CENCG) | None | rrf=0.0307 vec=0.8832 kw=0.0440
+
+======================================================================
+q12: Combien de semestres dure le cycle ENCG après les deux années préparatoires ?
+======================================================================
+[RETRIEVAL] category=Formation filiere=None section=None subsection=None intent=DURATION filters_used={'category': 'Formation', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=17.324s
+Relevant criteria :
+  - {'source': '02_formation/01_formation_initiale.md', 'section': 'Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)'}
+  - {'source': '09_reglement/01_presentation_architecture_cursus.md', 'section': 'Architecture du cursus (Article 3)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 02_formation/01_formation_initiale.md | Cycle des Écoles Nationales de Commerce et de Gestion (CENCG) | None | rrf=0.0492 vec=0.8952 kw=0.0499
+✓ #2 09_reglement/01_presentation_architecture_cursus.md | Architecture du cursus (Article 3) | None | rrf=0.0320 vec=0.8876 kw=0.0567
+  #3 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | None | rrf=0.0313 vec=0.8545 kw=0.0375
+✓ #4 02_formation/01_formation_initiale.md | Cycle des Écoles Nationales de Commerce et de Gestion (CENCG) | Stage d'initiation | rrf=0.0313 vec=0.8687 kw=0.0310
+  #5 02_formation/00_catalogue_formations.md | 2. Formation initiale | None | rrf=0.0312 vec=0.8659 kw=0.0367
+
+======================================================================
+q13: Quelle est la durée du stage d'initiation du cycle ENCG ?
+======================================================================
+[RETRIEVAL] category=Formation filiere=None section=None subsection=None intent=DURATION filters_used={'category': 'Formation', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=21.861s
+Relevant criteria :
+  - {'source': '02_formation/01_formation_initiale.md', 'section': "Diplôme de l'ENCG (DENCG)", 'subsection': "Stage d'initiation"}
+  - {'source': '09_reglement/06_stages_pfe.md', 'section': "Stages et Projet de Fin d'Études (Article 11)", 'subsection': "Stage d'initiation"}
+First relevant rank : 2
+Recall@1 : 0
+Recall@3 : 1
+Recall@5 : 1
+RR : 0.500
+
+Top 5:
+  #1 02_formation/01_formation_initiale.md | Cycle des Écoles Nationales de Commerce et de Gestion (CENCG) | Stage d'initiation | rrf=0.0656 vec=0.9060 kw=0.0654
+✓ #2 09_reglement/06_stages_pfe.md | Stages et Projet de Fin d'Études (Article 11) | Stage d'initiation | rrf=0.0323 vec=0.9014 kw=0.0619
+  #3 09_reglement/01_presentation_architecture_cursus.md | Architecture du cursus (Article 3) | None | rrf=0.0313 vec=0.8767 kw=0.0402
+  #4 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | None | rrf=0.0318 vec=0.8536 kw=0.0295
+  #5 09_reglement/06_stages_pfe.md | Stages et Projet de Fin d'Études (Article 11) | Stage d'approfondissement | rrf=0.0315 vec=0.8744 kw=0.0448
+
+======================================================================
+q14: Combien de temps dure le stage d'approfondissement ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=29.232s
+Relevant criteria :
+  - {'source': '09_reglement/06_stages_pfe.md', 'section': "Stages et Projet de Fin d'Études (Article 11)", 'subsection': "Stage d'approfondissement"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/06_stages_pfe.md | Stages et Projet de Fin d'Études (Article 11) | Stage d'approfondissement | rrf=0.0325 vec=0.8799 kw=0.0447
+  #2 05_formation_continue/02_dca.md | Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3 | None | rrf=0.0325 vec=0.8550 kw=0.0517
+  #3 03_filieres/02_controle_audit_conseil.md | PROGRAMME | Semestre 4 | rrf=0.0296 vec=0.8226 kw=0.0274
+  #4 03_filieres/04_management_ressources_humaines.md | PROGRAMME | Semestre 4 | rrf=0.0288 vec=0.8304 kw=0.0243
+  #5 03_filieres/03_finance.md | PROGRAMME | Semestre 4 | rrf=0.0285 vec=0.8281 kw=0.0243
+
+======================================================================
+q15: À quel semestre le PFE est-il réalisé et quelle est sa durée ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=26.827s
+Relevant criteria :
+  - {'source': '09_reglement/06_stages_pfe.md', 'section': "Stages et Projet de Fin d'Études (Article 11)", 'subsection': "Projet de Fin d'Études (PFE)"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/06_stages_pfe.md | Stages et Projet de Fin d'Études (Article 11) | Projet de Fin d'Études (PFE) | rrf=0.0328 vec=0.8797 kw=0.0452
+  #2 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0297 vec=0.8344 kw=0.0288
+  #3 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0306 vec=0.8378 kw=0.0329
+  #4 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Cursus (4 semestres) | rrf=0.0300 vec=0.8543 kw=0.0228
+  #5 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Cursus (4 semestres) | rrf=0.0299 vec=0.8401 kw=0.0246
+
+======================================================================
+q16: Quelles sont les conditions de validation du Cycle ENCG ?
+======================================================================
+[RETRIEVAL] category=Formation filiere=None section=None subsection=None intent=LIST filters_used={'category': 'Formation', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=21.557s
+Relevant criteria :
+  - {'source': '09_reglement/07_validation_cycles_diplomation.md', 'section': 'Validation des Cycles et Diplomation (Article 12)', 'subsection': 'Validation du Cycle ENCG (CENCG)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/07_validation_cycles_diplomation.md | Validation des Cycles et Diplomation (Article 12) | Validation du Cycle ENCG (CENCG) | rrf=0.0325 vec=0.9136 kw=0.0681
+  #2 09_reglement/07_validation_cycles_diplomation.md | Validation des Cycles et Diplomation (Article 12) | Validation du Cycle des Années Préparatoires (CAP-ENCG) | rrf=0.0325 vec=0.8976 kw=0.0688
+  #3 09_reglement/05_validation_modules_compensation.md | Validation des Modules, Compensation Annuelle et Progression Pédagogique (Article 10) | Validation de la1ère et de la 2ème année du Cycle ENCG | rrf=0.0315 vec=0.8851 kw=0.0604
+  #4 02_formation/01_formation_initiale.md | Cycle des Écoles Nationales de Commerce et de Gestion (CENCG) | Stage d'initiation | rrf=0.0323 vec=0.8737 kw=0.0372
+  #5 09_reglement/07_validation_cycles_diplomation.md | Validation des Cycles et Diplomation (Article 12) | Délibérations de cycle | rrf=0.0308 vec=0.8779 kw=0.0554
+
+======================================================================
+q17: À partir de quelle note un étudiant peut-il accéder à la session de rattrapage ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=None filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=38.535s
+Relevant criteria :
+  - {'source': '09_reglement/04_session_rattrapage.md', 'section': 'Session de Rattrapage (Article 9)', 'subsection': "Conditions d'accès"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/04_session_rattrapage.md | Session de Rattrapage (Article 9) | Conditions d'accès | rrf=0.0328 vec=0.9054 kw=0.0413
+  #2 09_reglement/04_session_rattrapage.md | Session de Rattrapage (Article 9) | None | rrf=0.0308 vec=0.8754 kw=0.0256
+  #3 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Règle des 3 absences non justifiées | rrf=0.0313 vec=0.8530 kw=0.0355
+  #4 09_reglement/04_session_rattrapage.md | Session de Rattrapage (Article 9) | Calcul de la note de rattrapage | rrf=0.0323 vec=0.8876 kw=0.0372
+  #5 09_reglement/04_session_rattrapage.md | Session de Rattrapage (Article 9) | Absences au rattrapage | rrf=0.0308 vec=0.8660 kw=0.0268
+
+======================================================================
+q18: Comment est calculée la note finale d'un module en session normale ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=PROGRAM filters_used={'category': None, 'filiere': None, 'section': None, 'subsection':None} fallback_level=0
+[RERANKER] candidates=15 time=34.568s
+Relevant criteria :
+  - {'source': '09_reglement/03_evaluation_controle_continu_examen.md', 'section': 'Contrôle Continu et Examen Final (Article 8)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/03_evaluation_controle_continu_examen.md | Contrôle Continu et Examen Final (Article 8) | Pondération de la note finale (session normale) | rrf=0.0328 vec=0.8933 kw=0.0658
+  #2 09_reglement/04_session_rattrapage.md | Session de Rattrapage (Article 9) | Calcul de la note de rattrapage | rrf=0.0323 vec=0.8668 kw=0.0603
+  #3 09_reglement/05_validation_modules_compensation.md | Validation des Modules, Compensation Annuelle et Progression Pédagogique (Article 10) | None | rrf=0.0299 vec=0.8286 kw=0.0301
+✓ #4 09_reglement/03_evaluation_controle_continu_examen.md | Contrôle Continu et Examen Final (Article 8) | Règles sur les absences et notes zéro (0/20) | rrf=0.0295 vec=0.8118 kw=0.0400
+  #5 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Règle des 3 absences non justifiées | rrf=0.0313 vec=0.8345 kw=0.0400
+
+======================================================================
+q19: Dans quel délai faut-il fournir un justificatif après une absence ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=None filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=34.341s
+Relevant criteria :
+  - {'source': '09_reglement/08_assiduite_absences.md', 'section': 'Absences, Justificatifs et Conséquences Pédagogiques (Article 14)', 'subsection': 'Délai et procédure de justification'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Délai et procédure de justification | rrf=0.0328 vec=0.8941 kw=0.0325
+  #2 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Justificatifs recevables (selon le motif) | rrf=0.0320 vec=0.8590 kw=0.0291
+  #3 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | None | rrf=0.0320 vec=0.8637 kw=0.0274
+  #4 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Règle des 3 absences non justifiées | rrf=0.0312 vec=0.8456 kw=0.0260
+  #5 09_reglement/08_assiduite_absences.md | Absences, Justificatifs et Conséquences Pédagogiques (Article 14) | Conséquences des absences aux évaluations | rrf=0.0308 vec=0.8390 kw=0.0191
+
+======================================================================
+q20: Est-il interdit d'utiliser un téléphone pendant une évaluation ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=None filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=33.493s
+Relevant criteria :
+  - {'source': '09_reglement/10_integrite_academique_fraude.md', 'section': 'Intégrité Académique, Fraude et Plagiat (Article 16)', 'subsection': "Manquements à l'intégrité académique (liste non limitative)"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 09_reglement/10_integrite_academique_fraude.md | Intégrité Académique, Fraude et Plagiat (Article 16) | Manquements à l'intégrité académique (liste non limitative) | rrf=0.0328 vec=0.8486 kw=0.0383
+✓ #2 09_reglement/10_integrite_academique_fraude.md | Intégrité Académique, Fraude et Plagiat (Article 16) | Manquements à l'intégrité académique (liste non limitative) | rrf=0.0315 vec=0.8296 kw=0.0203
+  #3 09_reglement/03_evaluation_controle_continu_examen.md | Principes Généraux de l'Évaluation (Article 7) | None | rrf=0.0308 vec=0.8293 kw=0.0151
+  #4 09_reglement/11_discipline_generale.md | Discipline Générale et Comportement au Sein de l'Établissement (Article 17) | Comportements interdits (liste non limitative) | rrf=0.0161 vec=0.8322 kw=  -   
+  #5 09_reglement/03_evaluation_controle_continu_examen.md | Contrôle Continu et Examen Final (Article 8) | Règles sur les absences et notes zéro (0/20) | rrf=0.0277 vec=0.8047 kw=0.0144
+
+======================================================================
+q21: Combien de semestres comprend le Master Management Portuaire, Multimodal, Digitalisation et Cybersécurité ?
+======================================================================
+[RETRIEVAL] category=Masters filiere=None section=None subsection=None intent=DURATION filters_used={'category': 'Masters', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=18.957s
+Relevant criteria :
+  - {'source': '04_masters/01_masters.md', 'section': 'Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)', 'subsection': 'Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0640 vec=0.8992 kw=0.0586
+✓ #2 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0645 vec=0.9057 kw=0.0535
+✓ #3 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0645 vec=0.9099 kw=0.0531
+✓ #4 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0630 vec=0.8999 kw=0.0514
+✓ #5 04_masters/01_masters.md | Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC) | Cursus (4 semestres, 120 crédits, dont 30 pour le PFE) | rrf=0.0459 vec=0.8980 kw=0.0490
+
+======================================================================
+q22: Quel est le niveau de diplôme requis pour accéder au Master MRHEP ?
+======================================================================
+[RETRIEVAL] category=Masters filiere=None section=None subsection=None intent=DIPLOMAS filters_used={'category': 'Masters', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=21.119s
+Relevant criteria :
+  - {'source': '04_masters/01_masters.md', 'section': 'Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP)', 'subsection': "Conditions d'éligibilité et profils acceptés"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Conditions d'éligibilité et profils acceptés | rrf=0.0656 vec=0.8980 kw=0.0369
+  #2 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Cursus (4 semestres) | rrf=0.0479 vec=0.8863 kw=0.0217
+  #3 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Présentation | rrf=0.0481 vec=0.8936 kw=0.0217
+  #4 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Cursus (4 semestres) | rrf=0.0299 vec=0.8720 kw=0.0174
+  #5 04_masters/01_masters.md | Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP) | Cursus (4 semestres) | rrf=0.0451 vec=0.8736 kw=0.0174
+
+======================================================================
+q23: Combien de semestres comprend le Master Ingénierie Managériale et Transformation Digitale ?
+======================================================================
+[RETRIEVAL] category=Masters filiere=None section=None subsection=None intent=DURATION filters_used={'category': 'Masters', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=15.335s
+Relevant criteria :
+  - {'source': '04_masters/01_masters.md', 'section': 'Master Ingénierie Managériale et Transformation Digitale (IMTD)', 'subsection': 'Cursus (4 semestres)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 04_masters/01_masters.md | Master Ingénierie Managériale et Transformation Digitale (IMTD) | Cursus (4 semestres) | rrf=0.0650 vec=0.9039 kw=0.0583
+✓ #2 04_masters/01_masters.md | Master Ingénierie Managériale et Transformation Digitale (IMTD) | Cursus (4 semestres) | rrf=0.0650 vec=0.9075 kw=0.0540
+✓ #3 04_masters/01_masters.md | Master Ingénierie Managériale et Transformation Digitale (IMTD) | Cursus (4 semestres) | rrf=0.0618 vec=0.8914 kw=0.0475
+✓ #4 04_masters/01_masters.md | Master Ingénierie Managériale et Transformation Digitale (IMTD) | Cursus (4 semestres) | rrf=0.0635 vec=0.9035 kw=0.0535
+✓ #5 04_masters/01_masters.md | Master Ingénierie Managériale et Transformation Digitale (IMTD) | Cursus (4 semestres) | rrf=0.0623 vec=0.8953 kw=0.0475
+
+======================================================================
+q24: Combien de semestres dure le DCA ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=36.420s
+Relevant criteria :
+  - {'source': '05_formation_continue/02_dca.md', 'section': "Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 05_formation_continue/02_dca.md | Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3 | None | rrf=0.0328 vec=0.8413 kw=0.0511
+  #2 12_glossaire/01_glossaire.md | Sigles : l'école et les diplômes | None | rrf=0.0159 vec=  -    kw=0.0342
+  #3 12_glossaire/01_glossaire.md | Sigles relatifs au cursus de l'ENCG Tanger | None | rrf=0.0156 vec=  -    kw=0.0342
+✓ #4 05_formation_continue/02_dca.md | Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3 | Informations pratiques | rrf=0.0308 vec=0.8355 kw=0.0304
+  #5 05_formation_continue/02_dca.md | DCA Gestion d'Entreprise et Digitalisation | Objectifs de la formation | rrf=0.0156 vec=0.8262 kw=  -   
+
+======================================================================
+q25: Combien de semestres dure le DCESS ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=36.961s
+Relevant criteria :
+  - {'source': '05_formation_continue/03_dcess.md', 'section': 'Diplôme du Cycle des Études Supérieures Spécialisées (DCESS) -- BAC+5'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 05_formation_continue/03_dcess.md | Diplôme du Cycle des Études Supérieures Spécialisées (DCESS) -- BAC+5 | None | rrf=0.0328 vec=0.8561 kw=0.0397
+  #2 12_glossaire/01_glossaire.md | Sigles : l'école et les diplômes | None | rrf=0.0156 vec=  -    kw=0.0342
+✓ #3 05_formation_continue/03_dcess.md | Diplôme du Cycle des Études Supérieures Spécialisées (DCESS) -- BAC+5 | Informations pratiques | rrf=0.0304 vec=0.8529 kw=0.0304
+  #4 12_glossaire/01_glossaire.md | Sigles relatifs au cursus de l'ENCG Tanger | None | rrf=0.0159 vec=  -    kw=0.0342
+  #5 05_formation_continue/01_presentation.md | Présentation | None | rrf=0.0154 vec=0.8283 kw=  -   
+
+======================================================================
+q26: Quelle est la durée maximale d'une mobilité Erasmus+ pour un étudiant ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DURATION filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=38.691s
+Relevant criteria :
+  - {'source': '10_partenariats_academiques/02_erasmus_plus.md', 'section': 'Erasmus+'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 10_partenariats_academiques/02_erasmus_plus.md | Erasmus+ | None | rrf=0.0328 vec=0.8889 kw=0.0528
+  #2 10_partenariats_academiques/02_erasmus_plus.md | Trois voies d'accès aux opportunités Erasmus+ | 1. Accords bilatéraux signés par l'ENCG Tanger | rrf=0.0320 vec=0.8583 kw=0.0355
+  #3 10_partenariats_academiques/02_erasmus_plus.md | Trois voies d'accès aux opportunités Erasmus+ | 2. Accords bilatéraux signés par l'Université Abdelmalek Essaâdi (UAE) | rrf=0.0306 vec=0.8610 kw=0.0250
+  #4 10_partenariats_academiques/02_erasmus_plus.md | Trois voies d'accès aux opportunités Erasmus+ | 3. Bureau National Erasmus+ (NEO-Maroc) | rrf=0.0315 vec=0.8556 kw=0.0354
+  #5 10_partenariats_academiques/02_erasmus_plus.md | Trois voies d'accès aux opportunités Erasmus+ | 2. Accords bilatéraux signés par l'Université Abdelmalek Essaâdi (UAE) | rrf=0.0308 vec=0.8460 kw=0.0329
+
+======================================================================
+q27: Combien de diplômes un étudiant peut-il obtenir dans le cadre de la double diplomation avec l'ISCID-CO / ULCO ?
+======================================================================
+[RETRIEVAL] category=None filiere=None section=None subsection=None intent=DIPLOMAS filters_used={'category': None, 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=36.473s
+Relevant criteria :
+  - {'source': '10_partenariats_academiques/01_double_diplomation.md', 'section': "Convention de Double Diplomation avec l'ISCID-CO Dunkerque / ULCO (France)"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 10_partenariats_academiques/01_double_diplomation.md | Convention de Double Diplomation avec l'ISCID-CO Dunkerque / ULCO (France) | None | rrf=0.0328 vec=0.8814 kw=0.0518
+  #2 10_partenariats_academiques/01_double_diplomation.md | Convention de Double Diplomation avec ESC Pau (France) | None | rrf=0.0320 vec=0.8280 kw=0.0316
+  #3 10_partenariats_academiques/01_double_diplomation.md | Convention de Double Diplomation avec Brest Business School (BBS -- France) | None | rrf=0.0306 vec=0.8216 kw=0.0286
+  #4 09_reglement/07_validation_cycles_diplomation.md | Validation des Cycles et Diplomation (Article 12) | Validation du Cycle ENCG (CENCG) | rrf=0.0282 vec=0.8195 kw=0.0117
+  #5 05_formation_continue/02_dca.md | Diplôme du Cycle d'Approfondissement (DCA) -- BAC+3 | None | rrf=0.0289 vec=0.8077 kw=0.0207
+
+======================================================================
+q28: Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?
+======================================================================
+[RETRIEVAL] category=Admission filiere=None section=None subsection=None intent=None filters_used={'category': 'Admission', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=43.105s
+Relevant criteria :
+  - {'source': '11_admission/01_admission.md', 'section': "Voies d'accès à l'ENCG Tanger"}
+  - {'source': '11_admission/01_admission.md', 'section': "TAFEM -- Test d'Admissibilité à la Formation En Management"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 11_admission/01_admission.md | TAFEM -- Test d'Admissibilité à la Formation En Management | Résumé du concours TAFEM | rrf=0.0645 vec=0.8632 kw=0.0464
+✓ #2 11_admission/01_admission.md | Voies d'accès à l'ENCG Tanger | None | rrf=0.0474 vec=0.8563 kw=0.0451
+  #3 11_admission/01_admission.md | TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année) | Deux niveaux d'accès | rrf=0.0466 vec=0.8572 kw=0.0414
+  #4 12_glossaire/01_glossaire.md | Sigles : concours et admission | None | rrf=0.0328 vec=0.8729 kw=0.0481
+  #5 11_admission/01_admission.md | CNAEM -- Concours National d'Accès aux Écoles de Management | Public concerné et accès | rrf=0.0479 vec=0.8645 kw=0.0365
+
+======================================================================
+q29: Quel concours permet aux élèves des classes préparatoires d'intégrer directement le Cycle ENCG ?
+======================================================================
+[RETRIEVAL] category=Formation filiere=None section=None subsection=None intent=None filters_used={'category': 'Formation', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=25.609s
+Relevant criteria :
+  - {'source': '11_admission/01_admission.md', 'section': "CNAEM -- Concours National d'Accès aux Écoles de Management"}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 11_admission/01_admission.md | CNAEM -- Concours National d'Accès aux Écoles de Management | Public concerné et accès | rrf=0.0328 vec=0.8870 kw=0.0608
+  #2 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | None | rrf=0.0318 vec=0.8530 kw=0.0299
+  #3 12_glossaire/01_glossaire.md | Sigles : concours et admission | None | rrf=0.0320 vec=0.8615 kw=0.0479
+  #4 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | Cycle des deux années préparatoires (CAP-ENCG) | rrf=0.0308 vec=0.8485 kw=0.0213
+  #5 02_formation/00_catalogue_formations.md | 2. Formation initiale | None | rrf=0.0479 vec=0.8607 kw=0.0230
+
+======================================================================
+q30: À quels niveaux d'études le concours TAFSEM permet-il d'accéder au Cycle ENCG ?
+======================================================================
+[RETRIEVAL] category=Formation filiere=None section=None subsection=None intent=None filters_used={'category': 'Formation', 'filiere': None, 'section': None, 'subsection': None} fallback_level=0
+[RERANKER] candidates=15 time=28.961s
+Relevant criteria :
+  - {'source': '11_admission/01_admission.md', 'section': 'TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année)'}
+First relevant rank : 1
+Recall@1 : 1
+Recall@3 : 1
+Recall@5 : 1
+RR : 1.000
+
+Top 5:
+✓ #1 11_admission/01_admission.md | TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année) | Deux niveaux d'accès | rrf=0.0328 vec=0.8929 kw=0.0454
+  #2 02_formation/01_formation_initiale.md | Diplôme de l'ENCG (DENCG) | None | rrf=0.0489 vec=0.8857 kw=0.0299
+  #3 12_glossaire/01_glossaire.md | Sigles : concours et admission | None | rrf=0.0310 vec=0.8823 kw=0.0327
+  #4 02_formation/01_formation_initiale.md | Présentation | None | rrf=0.0306 vec=0.8544 kw=0.0122
+  #5 02_formation/00_catalogue_formations.md | 2. Formation initiale | None | rrf=0.0312 vec=0.8452 kw=0.0169
+
+======================================================================
+RETRIEVAL BASELINE
+======================================================================
+Questions : 30
+Recall@1 : 0.933
+Recall@3 : 1.000
+Recall@5 : 1.000
+MRR      : 0.967
+
+Failures:
+----------------------------------------------------------------------
+Aucune question sans résultat pertinent dans le Top 5.

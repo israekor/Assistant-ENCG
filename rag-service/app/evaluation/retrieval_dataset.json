@@ -108,7 +108,7 @@
         "section": "Architecture du cursus (Article 3)"
       },
       {
-        "source": "02_formation/02_formation_initiale.md",
+        "source": "02_formation/01_formation_initiale.md",
         "section": "Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)"
       },
       {
@@ -148,7 +148,7 @@
     "question": "Combien de semestres dure le cycle ENCG après les deux années préparatoires ?",
     "relevant": [
       {
-        "source": "02_formation/02_formation_initiale.md",
+        "source": "02_formation/01_formation_initiale.md",
         "section": "Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)"
       },
       {
@@ -164,7 +164,7 @@
     "question": "Quelle est la durée du stage d'initiation du cycle ENCG ?",
     "relevant": [
       {
-        "source": "02_formation/02_formation_initiale.md",
+        "source": "02_formation/01_formation_initiale.md",
         "section": "Diplôme de l'ENCG (DENCG)",
         "subsection": "Stage d'initiation"
       },
@@ -272,7 +272,7 @@
     "question": "Combien de semestres comprend le Master Management Portuaire, Multimodal, Digitalisation et Cybersécurité ?",
     "relevant": [
       {
-        "source": "04_masters/04_masters.md",
+        "source": "04_masters/01_masters.md",
         "section": "Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)",
         "subsection": "Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)"
       }
@@ -285,7 +285,7 @@
     "question": "Quel est le niveau de diplôme requis pour accéder au Master MRHEP ?",
     "relevant": [
       {
-        "source": "04_masters/04_masters.md",
+        "source": "04_masters/01_masters.md",
         "section": "Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP)",
         "subsection": "Conditions d'éligibilité et profils acceptés"
       }
@@ -298,7 +298,7 @@
     "question": "Combien de semestres comprend le Master Ingénierie Managériale et Transformation Digitale ?",
     "relevant": [
       {
-        "source": "04_masters/04_masters.md",
+        "source": "04_masters/01_masters.md",
         "section": "Master Ingénierie Managériale et Transformation Digitale (IMTD)",
         "subsection": "Cursus (4 semestres)"
       }
@@ -388,7 +388,7 @@
     "relevant": [
       {
         "source": "11_admission/01_admission.md",
-        "section": "TAFSEM -- Concours Passerelle (accès direct en 3ème ou 4ème année)"
+        "section": "TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année)"
       }
     ]
   }

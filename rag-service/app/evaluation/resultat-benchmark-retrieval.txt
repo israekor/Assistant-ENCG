@@ -1,0 +1,928 @@
+==========================================================================================
+ENCG RAG RETRIEVAL BENCHMARK
+==========================================================================================
+API         : http://rag-service:8000/rag/retrieve
+candidateK  : 20
+finalK      : 5
+Questions   : 20
+
+Test de connexion au RAG service...
+
+[1/20] Quels sont les débouchés de la filière Contrôle, Audit et Conseil ?
+
+==========================================================================================
+b01 | filiere | Quels sont les débouchés de la filière Contrôle, Audit et Conseil ?
+------------------------------------------------------------------------------------------
+Latency: 15.822s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/02_controle_audit_conseil.md
+     section=Débouchés
+     subsection=None
+     reranker_score=0.998378
+     rrf=0.06557377049180328
+     vector=0.8910850416320576
+     keyword=0.06055147
+  #2  03_filieres/02_controle_audit_conseil.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.974132
+     rrf=0.06451612903225806
+     vector=0.8669553040942022
+     keyword=0.059149858
+  #3  03_filieres/02_controle_audit_conseil.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.911885
+     rrf=0.06275564713064713
+     vector=0.8521892604602326
+     keyword=0.043423362
+  #4  05_formation_continue/03_dcess.md
+     section=DCESS Finance, Audit et Contrôle de Gestion
+     subsection=Débouchés
+     reranker_score=0.909295
+     rrf=0.031009615384615385
+     vector=0.8546821225447363
+     keyword=0.041252196
+  #5  03_filieres/02_controle_audit_conseil.md
+     section=PROGRAMME
+     subsection=Semestre 4
+     reranker_score=0.810825
+     rrf=0.030090497737556562
+     vector=0.8379517986831965
+     keyword=0.03908103
+
+[2/20] Quels sont les objectifs de la filière Finance ?
+
+==========================================================================================
+b02 | filiere | Quels sont les objectifs de la filière Finance ?
+------------------------------------------------------------------------------------------
+Latency: 20.761s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/03_finance.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.999934
+     rrf=0.06557377049180328
+     vector=0.9114277468409905
+     keyword=0.06566681
+  #2  03_filieres/03_finance.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.384656
+     rrf=0.04788306451612903
+     vector=0.8674321433136509
+     keyword=0.030396353
+  #3  03_filieres/03_finance.md
+     section=Débouchés
+     subsection=None
+     reranker_score=0.090868
+     rrf=0.031054405392392875
+     vector=0.8387824200858143
+     keyword=0.039515264
+  #4  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=Semestre 5
+     reranker_score=0.063454
+     rrf=0.03076923076923077
+     vector=0.8454512357711792
+     keyword=0.028707668
+  #5  03_filieres/05_marketing_action_commerciale.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.057980
+     rrf=0.03200204813108039
+     vector=0.8621772527694702
+     keyword=0.04829643
+
+[3/20] Quelles sont les matières de Finance au semestre 5 ?
+
+==========================================================================================
+b03 | programme | Quelles sont les matières de Finance au semestre 5 ?
+------------------------------------------------------------------------------------------
+Latency: 14.955s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=Semestre 5
+     reranker_score=0.978955
+     rrf=0.048915917503966164
+     vector=0.8773617221497478
+     keyword=0.036588203
+  #2  03_filieres/02_controle_audit_conseil.md
+     section=PROGRAMME
+     subsection=Semestre 5
+     reranker_score=0.640026
+     rrf=0.015384615384615385
+     vector=0.8603618311450683
+     keyword=None
+  #3  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=None
+     reranker_score=0.550649
+     rrf=0.047712258380229994
+     vector=0.8497130453928655
+     keyword=0.04804031
+  #4  03_filieres/06_commerce_international.md
+     section=PROGRAMME
+     subsection=Semestre 5
+     reranker_score=0.306746
+     rrf=0.015625
+     vector=0.86046590084244
+     keyword=None
+  #5  03_filieres/02_controle_audit_conseil.md
+     section=PROGRAMME
+     subsection=None
+     reranker_score=0.148807
+     rrf=0.015625
+     vector=None
+     keyword=0.037908196
+
+[4/20] Quelles sont les matières de la filière Finance ?
+
+==========================================================================================
+b04 | programme | Quelles sont les matières de la filière Finance ?
+------------------------------------------------------------------------------------------
+Latency: 10.921s | First relevant rank: 2 | MRR: 0.500
+Recall@1=0.000 | Recall@3=1.000 | Recall@5=1.000
+
+  #1  03_filieres/03_finance.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.958888
+     rrf=0.03252247488101534
+     vector=0.8897141945702861
+     keyword=0.04205719
+✓ #2  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=Semestre 1
+     reranker_score=0.706009
+     rrf=0.04719183163029505
+     vector=0.8683273196220398
+     keyword=0.030396355
+  #3  03_filieres/03_finance.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.719833
+     rrf=0.016129032258064516
+     vector=0.8873493339821502
+     keyword=None
+✓ #4  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=Semestre 2
+     reranker_score=0.595494
+     rrf=0.031009615384615385
+     vector=0.8548173904418945
+     keyword=0.032929383
+✓ #5  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=Semestre 5
+     reranker_score=0.592891
+     rrf=0.06325967938871165
+     vector=0.8628111481666565
+     keyword=0.034055177
+
+[5/20] Quels sont les débouchés de la filière Marketing ?
+
+==========================================================================================
+b05 | filiere | Quels sont les débouchés de la filière Marketing ?
+------------------------------------------------------------------------------------------
+Latency: 15.727s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/05_marketing_action_commerciale.md
+     section=Débouchés
+     subsection=None
+     reranker_score=0.988383
+     rrf=0.06557377049180328
+     vector=0.8967208327817436
+     keyword=0.060895167
+  #2  05_formation_continue/03_dcess.md
+     section=DCESS Marketing et Commerce International (MCI)
+     subsection=Débouchés
+     reranker_score=0.598248
+     rrf=0.015873015873015872
+     vector=0.8643793544543189
+     keyword=None
+  #3  03_filieres/06_commerce_international.md
+     section=Débouchés
+     subsection=None
+     reranker_score=0.362470
+     rrf=0.016129032258064516
+     vector=0.8682945111902238
+     keyword=None
+  #4  03_filieres/05_marketing_action_commerciale.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.355665
+     rrf=0.04715356328259554
+     vector=0.8341456750544518
+     keyword=0.054928146
+  #5  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Commerce
+     reranker_score=0.269617
+     rrf=0.016129032258064516
+     vector=None
+     keyword=0.057415336
+
+[6/20] Quels sont les objectifs de la filière Commerce International ?
+
+==========================================================================================
+b06 | filiere | Quels sont les objectifs de la filière Commerce International ?
+------------------------------------------------------------------------------------------
+Latency: 18.434s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/06_commerce_international.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.999407
+     rrf=0.06505334374186833
+     vector=0.8910666769107193
+     keyword=0.05269748
+  #2  03_filieres/06_commerce_international.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.814076
+     rrf=0.04788306451612903
+     vector=0.8637466593090702
+     keyword=0.03975449
+  #3  05_formation_continue/03_dcess.md
+     section=DCESS Marketing et Commerce International (MCI)
+     subsection=Objectifs de la formation
+     reranker_score=0.612818
+     rrf=0.015384615384615385
+     vector=None
+     keyword=0.051786378
+  #4  03_filieres/05_marketing_action_commerciale.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.506343
+     rrf=0.015625
+     vector=0.8499955028298213
+     keyword=None
+  #5  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Commerce
+     reranker_score=0.465526
+     rrf=0.01639344262295082
+     vector=None
+     keyword=0.06051126
+
+[7/20] Quels sont les objectifs de la filière Achats et Supply Chain Management ?
+
+==========================================================================================
+b07 | filiere | Quels sont les objectifs de la filière Achats et Supply Chain Management ?
+------------------------------------------------------------------------------------------
+Latency: 12.589s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  03_filieres/01_achats_supply_chain_management.md
+     section=Objectifs
+     subsection=None
+     reranker_score=0.999495
+     rrf=0.06557377049180328
+     vector=0.908708344851936
+     keyword=0.07017336
+  #2  03_filieres/01_achats_supply_chain_management.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.902638
+     rrf=0.06400409626216078
+     vector=0.8978113532066345
+     keyword=0.047494303
+  #3  03_filieres/01_achats_supply_chain_management.md
+     section=Débouchés
+     subsection=None
+     reranker_score=0.695408
+     rrf=0.04696394686907021
+     vector=0.8681985139846802
+     keyword=0.059078693
+  #4  03_filieres/01_achats_supply_chain_management.md
+     section=PROGRAMME
+     subsection=Semestre 1
+     reranker_score=0.535646
+     rrf=0.046897546897546896
+     vector=0.8837245370067522
+     keyword=0.04369476
+  #5  03_filieres/01_achats_supply_chain_management.md
+     section=PROGRAMME
+     subsection=Semestre 6
+     reranker_score=0.440454
+     rrf=0.029418126757516764
+     vector=0.8717015981674194
+     keyword=0.037995443
+
+[8/20] Quelles sont les filières de l'ENCG Tanger ?
+
+==========================================================================================
+b08 | filiere | Quelles sont les filières de l'ENCG Tanger ?
+------------------------------------------------------------------------------------------
+Latency: 26.781s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=None
+     reranker_score=0.962351
+     rrf=0.04918032786885246
+     vector=0.8686827499459551
+     keyword=0.06304429
+  #2  01_presentation/01_presentation_encgt.md
+     section=Identité de l'établissement
+     subsection=None
+     reranker_score=0.988699
+     rrf=0.016129032258064516
+     vector=0.8886167473425436
+     keyword=None
+  #3  09_reglement/01_presentation_architecture_cursus.md
+     section=Architecture du cursus (Article 3)
+     subsection=None
+     reranker_score=0.968155
+     rrf=0.031754032258064516
+     vector=0.8825821490438925
+     keyword=0.05797823
+  #4  01_presentation/01_presentation_encgt.md
+     section=Histoire
+     subsection=None
+     reranker_score=0.965008
+     rrf=0.01639344262295082
+     vector=0.8926405374622041
+     keyword=None
+  #5  12_glossaire/01_glossaire.md
+     section=Sigles : l'école et les diplômes
+     subsection=None
+     reranker_score=0.870775
+     rrf=0.015873015873015872
+     vector=None
+     keyword=0.057043035
+
+[9/20] Quels sont les parcours proposés par l'ENCG ?
+
+==========================================================================================
+b09 | filiere | Quels sont les parcours proposés par l'ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 25.340s | First relevant rank: 1 | MRR: 1.000
+Recall@1=0.500 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Gestion
+     reranker_score=0.945687
+     rrf=0.047891458495966696
+     vector=0.8516439883921169
+     keyword=0.036909856
+✓ #2  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Commerce
+     reranker_score=0.751920
+     rrf=0.048915917503966164
+     vector=0.8433501217752637
+     keyword=0.05090183
+  #3  09_reglement/01_presentation_architecture_cursus.md
+     section=Architecture du cursus (Article 3)
+     subsection=None
+     reranker_score=0.808554
+     rrf=0.01639344262295082
+     vector=0.8581452623345994
+     keyword=None
+  #4  12_glossaire/01_glossaire.md
+     section=Sigles : l'école et les diplômes
+     subsection=None
+     reranker_score=0.786002
+     rrf=0.016129032258064516
+     vector=0.8541854110845694
+     keyword=None
+  #5  02_formation/01_formation_initiale.md
+     section=Diplôme de l'ENCG (DENCG)
+     subsection=None
+     reranker_score=0.710609
+     rrf=0.015384615384615385
+     vector=0.8490866602555919
+     keyword=None
+
+[10/20] Quelles sont les filières du parcours Gestion ?
+
+==========================================================================================
+b10 | filiere | Quelles sont les filières du parcours Gestion ?
+------------------------------------------------------------------------------------------
+Latency: 21.308s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Gestion
+     reranker_score=0.983594
+     rrf=0.06454091750396616
+     vector=0.8818056583404541
+     keyword=0.0477657
+  #2  03_filieres/04_management_ressources_humaines.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.766313
+     rrf=0.015384615384615385
+     vector=0.8558704342919344
+     keyword=None
+  #3  03_filieres/04_management_ressources_humaines.md
+     section=PROGRAMME
+     subsection=Semestre 1
+     reranker_score=0.117283
+     rrf=0.015625
+     vector=0.8559051752090454
+     keyword=None
+  #4  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Commerce
+     reranker_score=0.048535
+     rrf=0.06478053939714437
+     vector=0.8655823469161987
+     keyword=0.05090183
+  #5  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=None
+     reranker_score=0.001466
+     rrf=0.031746031746031744
+     vector=0.8312445878982544
+     keyword=0.04535329
+
+[11/20] Quelles sont les filières du parcours Commerce ?
+
+==========================================================================================
+b11 | filiere | Quelles sont les filières du parcours Commerce ?
+------------------------------------------------------------------------------------------
+Latency: 26.740s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  02_formation/01_formation_initiale.md
+     section=Filières du cycle ENCG
+     subsection=Parcours Commerce
+     reranker_score=0.849324
+     rrf=0.06557377049180328
+     vector=0.8859842419624329
+     keyword=0.06272264
+  #2  03_filieres/06_commerce_international.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.852780
+     rrf=0.015873015873015872
+     vector=0.8648510059803141
+     keyword=None
+  #3  03_filieres/05_marketing_action_commerciale.md
+     section=Présentation
+     subsection=None
+     reranker_score=0.847133
+     rrf=0.016129032258064516
+     vector=0.8717789649963379
+     keyword=None
+  #4  03_filieres/06_commerce_international.md
+     section=PROGRAMME
+     subsection=Semestre 1
+     reranker_score=0.264236
+     rrf=0.015625
+     vector=0.85749990597368
+     keyword=None
+  #5  03_filieres/06_commerce_international.md
+     section=PROGRAMME
+     subsection=Semestre 4
+     reranker_score=0.252651
+     rrf=0.015384615384615385
+     vector=0.8536611286603747
+     keyword=None
+
+[12/20] Combien de semestres comprend le cycle des ENCG ?
+
+==========================================================================================
+b12 | architecture | Combien de semestres comprend le cycle des ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 35.155s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/01_presentation_architecture_cursus.md
+     section=Architecture du cursus (Article 3)
+     subsection=None
+     reranker_score=0.997426
+     rrf=0.031054405392392875
+     vector=0.8900812995336954
+     keyword=0.04964738
+  #2  12_glossaire/01_glossaire.md
+     section=Sigles : l'école et les diplômes
+     subsection=None
+     reranker_score=0.997208
+     rrf=0.029513888888888888
+     vector=0.8706482648849487
+     keyword=0.051902514
+  #3  03_filieres/02_controle_audit_conseil.md
+     section=PROGRAMME
+     subsection=None
+     reranker_score=0.993389
+     rrf=0.03009207275993712
+     vector=0.8917276327772375
+     keyword=0.042450197
+  #4  09_reglement/01_presentation_architecture_cursus.md
+     section=Organisation des semestres et système de crédits (Article 4)
+     subsection=None
+     reranker_score=0.992104
+     rrf=0.028577260665441927
+     vector=0.8717419658014877
+     keyword=0.045489836
+  #5  03_filieres/03_finance.md
+     section=PROGRAMME
+     subsection=None
+     reranker_score=0.992025
+     rrf=0.015873015873015872
+     vector=0.8898150986543255
+     keyword=None
+
+[13/20] Combien de semestres durent les deux années préparatoires aux ENCG ?
+
+==========================================================================================
+b13 | formation | Combien de semestres durent les deux années préparatoires aux ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 39.853s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/01_presentation_architecture_cursus.md
+     section=Architecture du cursus (Article 3)
+     subsection=None
+     reranker_score=0.997400
+     rrf=0.03125763125763126
+     vector=0.873231716559441
+     keyword=0.051082764
+  #2  12_glossaire/01_glossaire.md
+     section=Sigles : l'école et les diplômes
+     subsection=None
+     reranker_score=0.996143
+     rrf=0.03177805800756621
+     vector=0.8523874194852975
+     keyword=0.057465404
+  #3  12_glossaire/01_glossaire.md
+     section=Sigles relatifs au cursus de l'ENCG Tanger
+     subsection=None
+     reranker_score=0.993308
+     rrf=0.028991596638655463
+     vector=0.8489045663688694
+     keyword=0.045318007
+  #4  09_reglement/01_presentation_architecture_cursus.md
+     section=Organisation des semestres et système de crédits (Article 4)
+     subsection=None
+     reranker_score=0.988558
+     rrf=0.029138513513513514
+     vector=0.847639629385507
+     keyword=0.051228415
+  #5  02_formation/01_formation_initiale.md
+     section=Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)
+     subsection=None
+     reranker_score=0.951043
+     rrf=0.030679156908665108
+     vector=0.8831904004102847
+     keyword=0.043958616
+
+[14/20] Quelle est la durée du stage d'initiation du cycle ENCG ?
+
+==========================================================================================
+b14 | formation | Quelle est la durée du stage d'initiation du cycle ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 20.369s | First relevant rank: 2 | MRR: 0.500
+Recall@1=0.000 | Recall@3=0.500 | Recall@5=0.500
+
+  #1  02_formation/01_formation_initiale.md
+     section=Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)
+     subsection=Stage d'initiation
+     reranker_score=0.999053
+     rrf=0.06557377049180328
+     vector=0.9059757646336711
+     keyword=0.065436594
+✓ #2  09_reglement/06_stages_pfe.md
+     section=Stages et Projet de Fin d'Études (Article 11)
+     subsection=Stage d'initiation
+     reranker_score=0.997843
+     rrf=0.03225806451612903
+     vector=0.901351809501648
+     keyword=0.0619185
+  #3  09_reglement/01_presentation_architecture_cursus.md
+     section=Architecture du cursus (Article 3)
+     subsection=None
+     reranker_score=0.972144
+     rrf=0.03125763125763126
+     vector=0.8767206815814221
+     keyword=0.040247023
+  #4  02_formation/01_formation_initiale.md
+     section=Diplôme de l'ENCG (DENCG)
+     subsection=None
+     reranker_score=0.732341
+     rrf=0.031754032258064516
+     vector=0.8536350218275192
+     keyword=0.029535124
+  #5  09_reglement/06_stages_pfe.md
+     section=Stages et Projet de Fin d'Études (Article 11)
+     subsection=Stage d'approfondissement
+     reranker_score=0.758002
+     rrf=0.03149801587301587
+     vector=0.8743980601788739
+     keyword=0.04482055
+
+[15/20] À quel semestre le PFE est-il réalisé et quelle est sa durée ?
+
+==========================================================================================
+b15 | formation | À quel semestre le PFE est-il réalisé et quelle est sa durée ?
+------------------------------------------------------------------------------------------
+Latency: 35.422s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/06_stages_pfe.md
+     section=Stages et Projet de Fin d'Études (Article 11)
+     subsection=Projet de Fin d'Études (PFE)
+     reranker_score=0.995466
+     rrf=0.03278688524590164
+     vector=0.8796796130943083
+     keyword=0.04522584
+  #2  04_masters/01_masters.md
+     section=Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)
+     subsection=Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)
+     reranker_score=0.936297
+     rrf=0.029709507042253523
+     vector=0.8343759080395659
+     keyword=0.028848393
+  #3  04_masters/01_masters.md
+     section=Master Management Portuaire, Multimodal, Digitalisation & Cybersécurité (MPMDC)
+     subsection=Cursus (4 semestres, 120 crédits, dont 30 pour le PFE)
+     reranker_score=0.855092
+     rrf=0.030621785881252923
+     vector=0.8378162384033263
+     keyword=0.032929383
+  #4  04_masters/01_masters.md
+     section=Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP)
+     subsection=Cursus (4 semestres)
+     reranker_score=0.855089
+     rrf=0.030621785881252923
+     vector=0.8543131860681302
+     keyword=0.022797266
+  #5  04_masters/01_masters.md
+     section=Master Management des Ressources Humaines et Expertise Professionnelle (MRHEP)
+     subsection=Cursus (4 semestres)
+     reranker_score=0.852843
+     rrf=0.030303030303030304
+     vector=0.8401357436261039
+     keyword=0.024556315
+
+[16/20] Quelles sont les conditions de validation du Cycle ENCG ?
+
+==========================================================================================
+b16 | reglement | Quelles sont les conditions de validation du Cycle ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 21.523s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/07_validation_cycles_diplomation.md
+     section=Validation des Cycles et Diplomation (Article 12)
+     subsection=Validation du Cycle ENCG (CENCG)
+     reranker_score=0.999848
+     rrf=0.03252247488101534
+     vector=0.9136220864282811
+     keyword=0.068055384
+  #2  09_reglement/07_validation_cycles_diplomation.md
+     section=Validation des Cycles et Diplomation (Article 12)
+     subsection=Validation du Cycle des Années Préparatoires (CAP-ENCG)
+     reranker_score=0.998255
+     rrf=0.03252247488101534
+     vector=0.8975673317909241
+     keyword=0.068775885
+  #3  09_reglement/05_validation_modules_compensation.md
+     section=Validation des Modules, Compensation Annuelle et Progression Pédagogique (Article 10)
+     subsection=Validation de la 1ère et de la 2ème année du Cycle ENCG
+     reranker_score=0.997228
+     rrf=0.03149801587301587
+     vector=0.8851049806208907
+     keyword=0.060424015
+  #4  02_formation/01_formation_initiale.md
+     section=Cycle des Écoles Nationales de Commerce et de Gestion (CENCG)
+     subsection=Stage d'initiation
+     reranker_score=0.934779
+     rrf=0.032266458495966696
+     vector=0.8736816719960185
+     keyword=0.03722146
+  #5  09_reglement/07_validation_cycles_diplomation.md
+     section=Validation des Cycles et Diplomation (Article 12)
+     subsection=Délibérations de cycle
+     reranker_score=0.893743
+     rrf=0.03076923076923077
+     vector=0.8778808785747974
+     keyword=0.05535795
+
+[17/20] À partir de quelle note un étudiant peut-il accéder à la session de rattrapage ?
+
+==========================================================================================
+b17 | reglement | À partir de quelle note un étudiant peut-il accéder à la session de rattrapage ?
+------------------------------------------------------------------------------------------
+Latency: 32.632s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/04_session_rattrapage.md
+     section=Session de Rattrapage (Article 9)
+     subsection=Conditions d'accès
+     reranker_score=0.998962
+     rrf=0.03278688524590164
+     vector=0.9054429857300859
+     keyword=0.041279003
+  #2  09_reglement/04_session_rattrapage.md
+     section=Session de Rattrapage (Article 9)
+     subsection=None
+     reranker_score=0.946918
+     rrf=0.030798389007344232
+     vector=0.8754337690899904
+     keyword=0.025564836
+  #3  09_reglement/08_assiduite_absences.md
+     section=Absences, Justificatifs et Conséquences Pédagogiques (Article 14)
+     subsection=Règle des 3 absences non justifiées
+     reranker_score=0.932548
+     rrf=0.03125763125763126
+     vector=0.8530333383967512
+     keyword=0.035462413
+  #4  09_reglement/04_session_rattrapage.md
+     section=Session de Rattrapage (Article 9)
+     subsection=Calcul de la note de rattrapage
+     reranker_score=0.911140
+     rrf=0.03225806451612903
+     vector=0.8876415159595469
+     keyword=0.037170216
+  #5  09_reglement/04_session_rattrapage.md
+     section=Session de Rattrapage (Article 9)
+     subsection=Absences au rattrapage
+     reranker_score=0.765011
+     rrf=0.030776515151515152
+     vector=0.8660464803008128
+     keyword=0.026773185
+
+[18/20] Comment est calculée la note finale d'un module en session normale ?
+
+==========================================================================================
+b18 | reglement | Comment est calculée la note finale d'un module en session normale ?
+------------------------------------------------------------------------------------------
+Latency: 32.319s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  09_reglement/03_evaluation_controle_continu_examen.md
+     section=Contrôle Continu et Examen Final (Article 8)
+     subsection=Pondération de la note finale (session normale)
+     reranker_score=0.998091
+     rrf=0.03278688524590164
+     vector=0.8933451835307386
+     keyword=0.065783985
+  #2  09_reglement/04_session_rattrapage.md
+     section=Session de Rattrapage (Article 9)
+     subsection=Calcul de la note de rattrapage
+     reranker_score=0.936987
+     rrf=0.03225806451612903
+     vector=0.866818368434906
+     keyword=0.060337897
+  #3  09_reglement/05_validation_modules_compensation.md
+     section=Validation des Modules, Compensation Annuelle et Progression Pédagogique (Article 10)
+     subsection=None
+     reranker_score=0.147518
+     rrf=0.029850746268656716
+     vector=0.828605960094575
+     keyword=0.030080331
+✓ #4  09_reglement/03_evaluation_controle_continu_examen.md
+     section=Contrôle Continu et Examen Final (Article 8)
+     subsection=Règles sur les absences et notes zéro (0/20)
+     reranker_score=0.087029
+     rrf=0.029513888888888888
+     vector=0.8118093721980245
+     keyword=0.040045988
+  #5  09_reglement/08_assiduite_absences.md
+     section=Absences, Justificatifs et Conséquences Pédagogiques (Article 14)
+     subsection=Règle des 3 absences non justifiées
+     reranker_score=0.084812
+     rrf=0.03125763125763126
+     vector=0.8344740370229475
+     keyword=0.040045988
+
+[19/20] Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?
+
+==========================================================================================
+b19 | admission | Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 61.241s | First relevant rank: None | MRR: 0.000
+Recall@1=0.000 | Recall@3=0.000 | Recall@5=0.000
+
+  #1  11_admission/01_admission.md
+     section=TAFEM -- Test d'Admissibilité à la Formation En Management
+     subsection=Résumé du concours TAFEM
+     reranker_score=0.995900
+     rrf=0.06452452301209573
+     vector=0.8632486707123526
+     keyword=0.04640049
+  #2  11_admission/01_admission.md
+     section=Voies d'accès à l'ENCG Tanger
+     subsection=None
+     reranker_score=0.967656
+     rrf=0.04738666351569577
+     vector=0.8562997750878603
+     keyword=0.045124773
+  #3  11_admission/01_admission.md
+     section=TAFSEM -- Concours Passerelle (accès en 3ème ou 4ème année)
+     subsection=Deux niveaux d'accès
+     reranker_score=0.961359
+     rrf=0.046634615384615385
+     vector=0.8571596826815809
+     keyword=0.041361257
+  #4  12_glossaire/01_glossaire.md
+     section=Sigles : concours et admission
+     subsection=None
+     reranker_score=0.998572
+     rrf=0.03278688524590164
+     vector=0.8728678974070672
+     keyword=0.04806155
+  #5  11_admission/01_admission.md
+     section=CNAEM -- Concours National d'Accès aux Écoles de Management
+     subsection=Public concerné et accès
+     reranker_score=0.539197
+     rrf=0.047907090265630725
+     vector=0.864519493041099
+     keyword=0.036537033
+
+[20/20] Quel concours permet aux élèves des classes préparatoires d'intégrer directement le Cycle ENCG ?
+
+==========================================================================================
+b20 | admission | Quel concours permet aux élèves des classes préparatoires d'intégrer directement le Cycle ENCG ?
+------------------------------------------------------------------------------------------
+Latency: 39.864s | First relevant rank: 1 | MRR: 1.000
+Recall@1=1.000 | Recall@3=1.000 | Recall@5=1.000
+
+✓ #1  11_admission/01_admission.md
+     section=CNAEM -- Concours National d'Accès aux Écoles de Management
+     subsection=Public concerné et accès
+     reranker_score=0.998692
+     rrf=0.03278688524590164
+     vector=0.8870476551623566
+     keyword=0.060792707
+  #2  02_formation/01_formation_initiale.md
+     section=Diplôme de l'ENCG (DENCG)
+     subsection=None
+     reranker_score=0.920936
+     rrf=0.03177805800756621
+     vector=0.8529573170568173
+     keyword=0.029879618
+  #3  12_glossaire/01_glossaire.md
+     section=Sigles : concours et admission
+     subsection=None
+     reranker_score=0.992657
+     rrf=0.03200204813108039
+     vector=0.8615174972106533
+     keyword=0.047896214
+  #4  02_formation/01_formation_initiale.md
+     section=Diplôme de l'ENCG (DENCG)
+     subsection=Cycle des deux années préparatoires (CAP-ENCG)
+     reranker_score=0.282289
+     rrf=0.030776515151515152
+     vector=0.8484878034300937
+     keyword=0.021277448
+  #5  02_formation/00_catalogue_formations.md
+     section=2. Formation initiale
+     subsection=None
+     reranker_score=0.236905
+     rrf=0.047907090265630725
+     vector=0.8607374090176052
+     keyword=0.023008352
+
+
+##########################################################################################
+BENCHMARK SUMMARY
+##########################################################################################
+Questions réussies : 20/20
+
+Latency moyenne : 26.388s
+Latency médiane : 23.431s
+Latency min      : 10.921s
+Latency max      : 61.241s
+
+recall@1    : 0.825
+recall@3    : 0.925
+recall@5    : 0.925
+hit@1       : 0.850
+hit@3       : 0.950
+hit@5       : 0.950
+mrr         : 0.900
+
+PERFORMANCE PAR CATEGORIE
+------------------------------------------------------------------------------------------
+admission          Recall@5=0.500 | MRR=0.500 | Latency=50.552s
+architecture       Recall@5=1.000 | MRR=1.000 | Latency=35.155s
+filiere            Recall@5=1.000 | MRR=1.000 | Latency=20.389s
+formation          Recall@5=0.833 | MRR=0.833 | Latency=31.881s
+programme          Recall@5=1.000 | MRR=0.750 | Latency=12.938s
+reglement          Recall@5=1.000 | MRR=1.000 | Latency=28.825s
+
+QUESTIONS AVEC ECHEC DE RETRIEVAL
+------------------------------------------------------------------------------------------
+b14 | Recall@5=0.500 | MRR=0.500 | Quelle est la durée du stage d'initiation du cycle ENCG ?
+b19 | Recall@5=0.000 | MRR=0.000 | Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?
+
+==========================================================================================
+Fichiers générés :
+  - benchmark_results.json
+  - benchmark_results.csv
+==========================================================================================

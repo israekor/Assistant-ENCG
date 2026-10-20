@@ -113,7 +113,7 @@ DATASET = [
         "question": "Quelles sont les filières de l'ENCG Tanger ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Filières du cycle ENCG",
             }
         ],
@@ -124,12 +124,12 @@ DATASET = [
         "question": "Quels sont les parcours proposés par l'ENCG ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Filières du cycle ENCG",
                 "subsection": "Parcours Gestion",
             },
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Filières du cycle ENCG",
                 "subsection": "Parcours Commerce",
             },
@@ -141,7 +141,7 @@ DATASET = [
         "question": "Quelles sont les filières du parcours Gestion ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Filières du cycle ENCG",
                 "subsection": "Parcours Gestion",
             }
@@ -153,7 +153,7 @@ DATASET = [
         "question": "Quelles sont les filières du parcours Commerce ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Filières du cycle ENCG",
                 "subsection": "Parcours Commerce",
             }
@@ -188,7 +188,7 @@ DATASET = [
         "question": "Quelle est la durée du stage d'initiation du cycle ENCG ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Diplôme de l'ENCG (DENCG)",
                 "subsection": "Stage d'initiation",
             },
@@ -252,7 +252,7 @@ DATASET = [
         "question": "Quel concours permet aux titulaires du baccalauréat d'accéder à la première année du CAP-ENCG ?",
         "relevant": [
             {
-                "source": "02_formation/02_formation_initiale.md",
+                "source": "02_formation/01_formation_initiale.md",
                 "section": "Diplôme de l'ENCG (DENCG)",
             }
         ],
